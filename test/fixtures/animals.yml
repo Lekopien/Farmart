@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  farmer: one
+  animal_type: MyString
+  breed: MyString
+  age: 1
+  price: 1.5
+  in_stock: false
+
+two:
+  farmer: two
+  animal_type: MyString
+  breed: MyString
+  age: 1
+  price: 1.5
+  in_stock: false

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  animal: one
+  total_price: 1.5
+  order_status: false
+  delivery_address: MyString
+
+two:
+  user: two
+  animal: two
+  total_price: 1.5
+  order_status: false
+  delivery_address: MyString
