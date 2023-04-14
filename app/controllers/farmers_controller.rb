@@ -22,7 +22,7 @@ class FarmersController < ApplicationController
     private
 
     def farmer_params
-        params.require(:farmer).permit(:name, :email, :password, :address)
+        params.require(:farmer).permit(:user_id, :farmer_name, :farmer_location, :contact_info)
     end
 end
 

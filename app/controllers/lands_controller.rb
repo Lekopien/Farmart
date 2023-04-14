@@ -22,7 +22,7 @@ class LandsController < ApplicationController
     private
 
     def land_params
-        params.require(:land).permit(:name, :address, :farmer_id)
+        params.require(:land).permit(:farmer_id, :price, :location)
     end
 end
 

@@ -22,7 +22,7 @@ class LeasesController < ApplicationController
     private
 
     def lease_params
-        params.require(:lease).permit(:start_date, :end_date, :land_id, :farmer_id)
+        params.require(:lease).permit(:user_id, :land_id, :lease_status)
     end
 end
 
