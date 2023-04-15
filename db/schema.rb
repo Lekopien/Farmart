@@ -10,14 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_13_192931) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_15_204736) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "animals", force: :cascade do |t|
+    t.bigint "farmer_id", null: false
+    t.string "animal_type"
+    t.string "breed"
+    t.integer "age"
+    t.integer "price"
+    t.boolean "in_stock"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["farmer_id"], name: "index_animals_on_farmer_id"
+  end
 
   create_table "farmers", force: :cascade do |t|
     t.string "farmer_name"
     t.string "farmer_location"
-    t.integer "contact_info" 
+    t.integer "contact_info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,4 +43,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_13_192931) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "animals", "farmers"
 end
