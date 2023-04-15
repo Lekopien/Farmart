@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :leases
   resources :orders
   resources :lands
   resources :animals
