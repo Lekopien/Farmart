@@ -39,6 +39,6 @@ class AnimalsController < ApplicationController
     private
 
     def animal_params
-        params.permit(:farmer_id, :animal_type, :breed, :age, :price, :in_stock)
+        params.permit(:farmer_id, :animal_type, :breed, :age, :price, :in_stock, :image)
     end
 end
