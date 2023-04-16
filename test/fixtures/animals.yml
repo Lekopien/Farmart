@@ -1,0 +1,13 @@
+one:
+  animal_type: MyString
+  breed: MyString
+  age: MyString
+  price: MyString
+  in_stock: MyString
+
+two:
+  animal_type: MyString
+  breed: MyString
+  age: MyString
+  price: MyString
+  in_stock: MyString

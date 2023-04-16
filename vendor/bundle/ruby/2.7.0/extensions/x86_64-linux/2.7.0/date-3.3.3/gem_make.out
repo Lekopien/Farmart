@@ -1,0 +1,21 @@
+current directory: /home/lewis/Farmart/vendor/bundle/ruby/2.7.0/gems/date-3.3.3/ext/date
+/home/lewis/.rbenv/versions/2.7.6/bin/ruby -I /home/lewis/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20230414-20790-1nh505r.rb extconf.rb
+checking for rb_category_warn()... no
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+
+current directory: /home/lewis/Farmart/vendor/bundle/ruby/2.7.0/gems/date-3.3.3/ext/date
+make "DESTDIR=" clean
+
+current directory: /home/lewis/Farmart/vendor/bundle/ruby/2.7.0/gems/date-3.3.3/ext/date
+make "DESTDIR="
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.so
+
+current directory: /home/lewis/Farmart/vendor/bundle/ruby/2.7.0/gems/date-3.3.3/ext/date
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 date_core.so ./.gem.20230414-20790-ucsdm6

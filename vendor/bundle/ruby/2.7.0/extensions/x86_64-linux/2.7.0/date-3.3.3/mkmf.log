@@ -1,0 +1,117 @@
+have_func: checking for rb_category_warn()... -------------------- no
+
+"gcc -o conftest -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0/x86_64-linux -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/backward -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0 -I. -I/home/lewis/.rbenv/versions/2.7.6/include    -g -O2 -fPIC conftest.c  -L. -L/home/lewis/.rbenv/versions/2.7.6/lib -Wl,-rpath,/home/lewis/.rbenv/versions/2.7.6/lib -L. -L/home/lewis/.rbenv/versions/2.7.6/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/lewis/.rbenv/versions/2.7.6/lib -L/home/lewis/.rbenv/versions/2.7.6/lib -lruby  -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+"gcc -o conftest -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0/x86_64-linux -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/backward -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0 -I. -I/home/lewis/.rbenv/versions/2.7.6/include    -g -O2 -fPIC conftest.c  -L. -L/home/lewis/.rbenv/versions/2.7.6/lib -Wl,-rpath,/home/lewis/.rbenv/versions/2.7.6/lib -L. -L/home/lewis/.rbenv/versions/2.7.6/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/lewis/.rbenv/versions/2.7.6/lib -L/home/lewis/.rbenv/versions/2.7.6/lib -lruby  -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:14:57: error: ‘rb_category_warn’ undeclared (first use in this function)
+   14 | int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_category_warn; return !p; }
+      |                                                         ^~~~~~~~~~~~~~~~
+conftest.c:14:57: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_category_warn; return !p; }
+/* end */
+
+"gcc -o conftest -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0/x86_64-linux -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/backward -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0 -I. -I/home/lewis/.rbenv/versions/2.7.6/include    -g -O2 -fPIC conftest.c  -L. -L/home/lewis/.rbenv/versions/2.7.6/lib -Wl,-rpath,/home/lewis/.rbenv/versions/2.7.6/lib -L. -L/home/lewis/.rbenv/versions/2.7.6/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/lewis/.rbenv/versions/2.7.6/lib -L/home/lewis/.rbenv/versions/2.7.6/lib -lruby  -lm   -lc"
+/usr/bin/ld: /tmp/cc3iA0AM.o: in function `t':
+/home/lewis/Farmart/vendor/bundle/ruby/2.7.0/gems/date-3.3.3/ext/date/conftest.c:15: undefined reference to `rb_category_warn'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void rb_category_warn();
+15: int t(void) { rb_category_warn(); return 0; }
+/* end */
+
+--------------------
+
+have_var: checking for timezone in time.h with  -Werror... -------------------- yes
+
+"gcc -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0/x86_64-linux -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/backward -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0 -I. -I/home/lewis/.rbenv/versions/2.7.6/include    -g -O2 -fPIC   -Werror -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <time.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: int t(void) { const volatile void *volatile p; p = &(&timezone)[0]; return !p; }
+/* end */
+
+--------------------
+
+have_var: checking for altzone in time.h with  -Werror... -------------------- no
+
+"gcc -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0/x86_64-linux -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/backward -I/home/lewis/.rbenv/versions/2.7.6/include/ruby-2.7.0 -I. -I/home/lewis/.rbenv/versions/2.7.6/include    -g -O2 -fPIC   -Werror -c conftest.c"
+conftest.c: In function ‘t’:
+conftest.c:16:55: error: ‘altzone’ undeclared (first use in this function)
+   16 | int t(void) { const volatile void *volatile p; p = &(&altzone)[0]; return !p; }
+      |                                                       ^~~~~~~
+conftest.c:16:55: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <time.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: int t(void) { const volatile void *volatile p; p = &(&altzone)[0]; return !p; }
+/* end */
+
+--------------------
+

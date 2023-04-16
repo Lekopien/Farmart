@@ -1,0 +1,7 @@
+one:
+  price: MyString
+  location: MyString
+
+two:
+  price: MyString
+  location: MyString
