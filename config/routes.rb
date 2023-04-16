@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :leases
-  resources :orders
-  resources :lands
-  resources :animals
+  # resources :leases
+  # resources :orders
+  # resources :lands
+  # resources :animals
   resources :farmers, only: [:index, :show, :create, :update]
   resources :users, only: [:index, :show, :create, :update]
   post "/farmers_login", to: "farmers#login"
