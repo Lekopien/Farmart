@@ -1,4 +1,6 @@
 class LeasesController < ApplicationController
+    before_action :authorize_user
+    before_action :authorize_farmer
         def index
             render json: Lease.all
         end

@@ -1,4 +1,5 @@
 class AnimalsController < ApplicationController
+    before_action :authorize_farmer
     def index
         render json: Animal.all
     end

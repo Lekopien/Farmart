@@ -31,15 +31,16 @@ require 'faker'
 #   end
 
 
-20.times do
-  Animal.create(
-    farmer_id: Faker::Number.between(from: 1, to: 10),
-    animal_type: Faker::Creature::Animal.name,
-    breed: Faker::Creature::Dog.breed,
-    age: rand(1..10),
-    price: rand(50..1000),
-    in_stock: [true, false].sample
-  )
-end
+# 20.times do
+#   Animal.create(
+#     farmer_id: Faker::Number.between(from: 1, to: 10),
+#     animal_type: Faker::Creature::Animal.name,
+#     breed: Faker::Creature::Dog.breed,
+#     age: rand(1..10),
+#     price: rand(50..1000),
+#     in_stock: [true, false].sample
+#   )
+# end
+
 
 puts 'end'
