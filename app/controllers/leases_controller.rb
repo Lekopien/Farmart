@@ -1,28 +1,46 @@
 class LeasesController < ApplicationController
-    def index
-        render json: Lease.all
-    end
+    # before_action :authorize_user
+    # before_action :authorize_farmer
+        def index
+            render json: Lease.all
+        end
 
-    def show
-        render json: Lease.find(params[:id])
-    end
+        def show
+            render json: Lease.find_by(id: params[:id])
+        end
 
-    def create
-        render json: Lease.create(lease_params)
-    end
+        def create
+            @lease = Lease.new(lease_params)
+            if @lease.save
+                render json: @lease, status: :created
+            else
+                render json: @lease.errors, status: :unprocessable_entity
+            end
+        end
 
-    def update
-        render json: Lease.update(params[:id], lease_params)
-    end
+        def update
+            @lease = Lease.find_by(id: params[:id])
+            if @lease.update(lease_params)
+                render json: { message: "lease details updated successfully" }
+            else
+                render json: @lease.errors, status: :unprocessable_entity
+            end
+        end
 
-    def destroy
-        render json: Lease.destroy(params[:id])
-    end
+        def destroy
+            @lease = Lease.find_by(id: params[:id])
 
-    private
+            if @lease.destroy
+                render json: { message: "record deleted successfully" }
+            else
+                render json: @lease.errors, status: :unprocessable_entity
+            end
+        end
 
-    def lease_params
-        params.require(:lease).permit(:user_id, :land_id, :lease_status)
-    end
+        private
+
+        def lease_params
+            params.permit(:user_id, :land_id, :lease_status)
+        end
+
 end
-

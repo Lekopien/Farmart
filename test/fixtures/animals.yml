@@ -5,7 +5,7 @@ one:
   animal_type: MyString
   breed: MyString
   age: 1
-  price: 1.5
+  price: 1
   in_stock: false
 
 two:
@@ -13,5 +13,5 @@ two:
   animal_type: MyString
   breed: MyString
   age: 1
-  price: 1.5
+  price: 1
   in_stock: false

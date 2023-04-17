@@ -5,7 +5,7 @@ class CreateAnimals < ActiveRecord::Migration[7.0]
       t.string :animal_type
       t.string :breed
       t.integer :age
-      t.float :price
+      t.integer :price
       t.boolean :in_stock
 
       t.timestamps

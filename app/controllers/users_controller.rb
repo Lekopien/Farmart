@@ -1,29 +1,48 @@
 class UsersController < ApplicationController
+  # before_action :authorize_user
+  # skip_before_action :authorize_user, only: [:login, :create]
+
     def index
         render json: User.all
-        
     end
 
     def show
-        render json: User.find(params[:id])
+      render json: User.find_by(id: params[:id])
     end
 
     def create
-        render json: User.create(user_params)
+      @user = User.new(user_params)
+      if @user.save
+        token = encode_token({user_id: @user.id})
+        render json: { user: @user, token: token }, status: :created
+      else
+        render json: @user.errors, status: :unprocessable_entity
+      end
     end
 
     def update
-        render json: User.update(params[:id], user_params)
+      @user = User.find_by(id: params[:id])
+      if @user.update(user_params)
+        render json: { message: "User successfully updated." }, status: :ok
+      else
+        render json: @user.errors.full_messages, status: :unprocessable_entity
+      end
     end
 
-    def destroy
-        render json: User.destroy(params[:id])
-    end
+      def login
+        @user = User.find_by(email: params[:email])
 
-    private
+        if @user && @user.authenticate(user_params[:password])
+          token = encode_token({user_id: @user.id})
+          render json: {user: @user, token: token }, status: :ok
+        else
+          render json: { error: "invalid email or password"}, status: :unprocessable_entity
+        end
+      end
 
-    def user_params
-        params.require(:user).permit(:name, :email, :password, :address)
-    end
+      private
+
+      def user_params
+        params.permit(:name, :email, :password, :address)
+      end
 end
-

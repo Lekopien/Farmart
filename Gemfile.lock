@@ -73,6 +73,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
+    bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -95,6 +96,8 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     erubi (1.12.0)
+    faker (3.1.1)
+      i18n (>= 1.8.11, < 2)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -109,6 +112,7 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     jsonapi-renderer (0.2.2)
+    jwt (2.7.0)
     loofah (2.20.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -121,6 +125,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.1)
     minitest (5.18.0)
     msgpack (1.7.0)
     net-imap (0.3.4)
@@ -133,6 +138,9 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
+    nokogiri (1.14.3)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.6)
@@ -214,15 +222,19 @@ GEM
     zeitwerk (2.6.7)
 
 PLATFORMS
+  ruby
   x86_64-linux
 
 DEPENDENCIES
   active_model_serializers
+  bcrypt (~> 3.1.7)
   bootsnap
   capybara
   debug
+  faker
   importmap-rails
   jbuilder
+  jwt
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)

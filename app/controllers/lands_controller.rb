@@ -1,28 +1,45 @@
 class LandsController < ApplicationController
-    def index
-        render json: Land.all
-    end
+    # before_action :authorize_farmer
+        def index
+            render json: Land.all
+        end
 
-    def show
-        render json: Land.find(params[:id])
-    end
+        def show
+            render json: Land.find_by(id: params[:id])
+        end
 
-    def create
-        render json: Land.create(land_params)
-    end
+        def create
+            @land = Land.new(land_params)
+            if @land.save
+                render json: @land, status: :created
+            else
+                render json: @land.errors, status: :unprocessable_entity
+            end
+        end
 
-    def update
-        render json: Land.update(params[:id], land_params)
-    end
+        def update
+            @land = Land.find_by(id: params[:id])
+            if @land.update(land_params)
+                render json: { message: "land details updated successfully" }
+            else
+                render json: @land.errors, status: :unprocessable_entity
+            end
+        end
 
-    def destroy
-        render json: Land.destroy(params[:id])
-    end
+        def destroy
+            @land = Land.find_by(id: params[:id])
 
-    private
+            if @land.destroy
+                render json: { message: "record deleted successfully" }
+            else
+                render json: @land.errors, status: :unprocessable_entity
+            end
+        end
 
-    def land_params
-        params.require(:land).permit(:farmer_id, :price, :location)
-    end
+        private
+
+        def land_params
+            params.permit(:farmer_id, :price, :location, :availability, :image)
+        end
+
 end
-
