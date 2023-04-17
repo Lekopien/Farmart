@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     end
 
       def update
-        @user = User.find(params[:id])
+        @user = User.find_by(id: params[:id])
         if @user.update(user_params)
           render json: { message: "user successfully updated." }
         else
