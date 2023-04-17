@@ -1,5 +1,5 @@
 class LandsController < ApplicationController
-    before_action :authorize_farmer
+    # before_action :authorize_farmer
         def index
             render json: Land.all
         end

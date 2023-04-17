@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :authorize_user
-  skip_before_action :authorize_user, only: [:login, :create]
+  # before_action :authorize_user
+  # skip_before_action :authorize_user, only: [:login, :create]
 
     def index
         render json: User.all
@@ -14,20 +14,20 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
       if @user.save
         token = encode_token({user_id: @user.id})
-        render json: {user: @user, token: token }, status: :created
+        render json: { user: @user, token: token }, status: :created
       else
         render json: @user.errors, status: :unprocessable_entity
       end
     end
 
-      def update
-        @user = User.find(params[:id])
-        if @user.update(user_params)
-          render json: { message: "user successfully updated." }
-        else
-          render json: { error: "Failed to update user." }
-        end
+    def update
+      @user = User.find_by(id: params[:id])
+      if @user.update(user_params)
+        render json: { message: "User successfully updated." }, status: :ok
+      else
+        render json: @user.errors.full_messages, status: :unprocessable_entity
       end
+    end
 
       def login
         @user = User.find_by(email: params[:email])
