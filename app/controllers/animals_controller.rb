@@ -1,61 +1,44 @@
 class AnimalsController < ApplicationController
-    before_action :set_animal, only: [:show, :edit, :update, :destroy]
-  
+    # before_action :authorize_farmer
     def index
-      @animals = Animal.all
+        render json: Animal.all
     end
-  
+
     def show
+        render json: Animal.find_by(id: params[:id])
     end
-  
-    def new
-      @animal = Animal.new
-    end
-  
-    def edit
-    end
-  
+
     def create
-      @animal = Animal.new(animal_params)
-  
-      respond_to do |format|
+        @animal = Animal.new(animal_params)
         if @animal.save
-          format.html { redirect_to @animal, notice: 'Animal was successfully created.' }
-          format.json { render :show, status: :created, location: @animal }
+            render json: @animal, status: :created
         else
-          format.html { render :new }
-          format.json { render json: @animal.errors, status: :unprocessable_entity }
+            render json: @animal.errors, status: :unprocessable_entity
         end
-      end
     end
-  
+
     def update
-      respond_to do |format|
+        @animal = Animal.find_by(id: params[:id])
         if @animal.update(animal_params)
-          format.html { redirect_to @animal, notice: 'Animal was successfully updated.' }
-          format.json { render :show, status: :ok, location: @animal }
+            render json: { message: "animal details updated successfully" }
         else
-          format.html { render :edit }
-          format.json { render json: @animal.errors, status: :unprocessable_entity }
+            render json: @animal.errors, status: :unprocessable_entity
         end
-      end
     end
-  
+
     def destroy
-      @animal.destroy
-      respond_to do |format|
-        format.html { redirect_to animals_url, notice: 'Animal was successfully destroyed.' }
-        format.json { head :no_content }
-      end
+        @animal = Animal.find_by(id: params[:id])
+
+        if @animal.destroy
+            render json: { message: "record deleted successfully" }
+        else
+            render json: @animal.errors, status: :unprocessable_entity
+        end
     end
-  
+
     private
-      def set_animal
-        @animal = Animal.find(params[:id])
-      end
-  
-      def animal_params
-        params.require(:animal).permit(:image, :animal_type, :breed, :age, :price, :in_stock, :farmer_id)
-      end
-  end
-  
+
+    def animal_params
+        params.permit(:farmer_id, :animal_type, :breed, :age, :price, :in_stock, :image)
+    end
+end

@@ -1,7 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
 one:
-  price: MyString
+  farmer_id: 1
+  price: 1.5
   location: MyString
 
 two:
-  price: MyString
+  farmer_id: 1
+  price: 1.5
   location: MyString

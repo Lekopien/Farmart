@@ -1,0 +1,22 @@
+current directory: /home/lewis/FARMART/Farmart/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.18/ext/mri
+/home/lewis/.rbenv/versions/2.7.6/bin/ruby -I /home/lewis/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20230417-18923-wptymo.rb extconf.rb
+creating Makefile
+
+current directory: /home/lewis/FARMART/Farmart/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.18/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/lewis/FARMART/Farmart/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.18/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt_blowfish.c
+gcc  -D__SKIP_GNU -I/home/lewis/.rbenv/versions/2.7.6/include     -c -o x86.o x86.S
+compiling crypt_gensalt.c
+compiling wrapper.c
+wrapper.c:182:60: warning: ‘struct crypt_data’ declared inside parameter list will not be visible outside of this definition or declaration
+  182 | char *crypt_r(const char *key, const char *setting, struct crypt_data *data)
+      |                                                            ^~~~~~~~~~
+linking shared-object bcrypt_ext.so
+
+current directory: /home/lewis/FARMART/Farmart/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.18/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20230417-18923-3egnfa
