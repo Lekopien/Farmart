@@ -1,8 +1,6 @@
 databases:
   - name: Farmart
     type: postgresql
-    version: "13"
-    diskSizeGB: 10
 
 services:
   - type: web
