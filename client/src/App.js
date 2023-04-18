@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import About from "./components/About";
 import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Products from "./components/Products";
@@ -14,7 +15,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<SignUp />} />
         <Route path="/products" element={<Products />} />
         <Route path="/about" element={<About />} />
         <Route path="/lease" element={<Lease />} />
