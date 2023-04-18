@@ -1,6 +1,6 @@
 databases:
   - name: Farmart
-    type: postgresql
+    type: myapp
 
 services:
   - type: web
