@@ -51,6 +51,10 @@ h1 {
     line-height: 1.5 !important;
 }
 
+.login-page {
+  display: flex;
+}
+
 .login-container {
   display: flex;
   flex-direction: column;
@@ -58,7 +62,7 @@ h1 {
   align-items: center;
   height: 100vh;
   width: 50%;
-  background-color: red;
+ 
 }
 
 .login-form {
@@ -66,6 +70,9 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
 }
 
 .login-header {
@@ -81,6 +88,15 @@ h1 {
   background-color: blue;
 }
 
+.login-image {
+  width:50vw;
+  background-image: url(https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100vh ;
+}
+
 label {
   font-weight: bold;
   display: flex;
@@ -94,10 +110,10 @@ input[type='email'],input[type='password'] {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42;
-  color: #555;
-  background-color: #fff;
+  color: #ac0f0f;
+  /* background-color: #fff; */
   background-image: none;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 4px;
 
 }
