@@ -82,4 +82,7 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
+<<<<<<< HEAD
   
+=======
+>>>>>>> 5c5ccb776610e5934588a3573c46fc2cfcf0edb7

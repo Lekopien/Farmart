@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2023_04_19_074631) do
+=======
+ActiveRecord::Schema[7.0].define(version: 2023_04_16_161736) do
+>>>>>>> 5c5ccb776610e5934588a3573c46fc2cfcf0edb7
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,6 +31,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_19_074631) do
     t.index ["farmer_id"], name: "index_animals_on_farmer_id"
   end
 
+<<<<<<< HEAD
   create_table "carts", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "animal_id", null: false
@@ -39,6 +44,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_19_074631) do
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
+=======
+>>>>>>> 5c5ccb776610e5934588a3573c46fc2cfcf0edb7
   create_table "farmers", force: :cascade do |t|
     t.string "farmer_name"
     t.string "farmer_location"
@@ -87,7 +94,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_19_074631) do
   end
 
   add_foreign_key "animals", "farmers"
+<<<<<<< HEAD
   add_foreign_key "carts", "animals"
   add_foreign_key "carts", "lands"
   add_foreign_key "carts", "users"
+=======
+>>>>>>> 5c5ccb776610e5934588a3573c46fc2cfcf0edb7
 end
