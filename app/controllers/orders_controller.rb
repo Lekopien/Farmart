@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
-   before_action :authorize_user
-   before_action :authorize_farmer
+  # before_action :authorize_user
+  # before_action :authorize_farmer
         def index
             render json: Order.all
         end
