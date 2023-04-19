@@ -31,4 +31,4 @@
 /config/master.key
 
 #Ignore client file for backend deployment on render
-client/
+# client/
