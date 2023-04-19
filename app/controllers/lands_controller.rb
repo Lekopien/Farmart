@@ -1,5 +1,12 @@
 class LandsController < ApplicationController
     # before_action :authorize_farmer
+    def index
+        @lands = Land.all
+      end
+      
+      def show
+        @lands = Land.find(params[:id])
+      end
         def index
             render json: Land.all
         end

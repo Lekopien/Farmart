@@ -1,6 +1,13 @@
 class AnimalsController < ApplicationController
     # before_action :authorize_farmer
     def index
+        @animals = Animal.all
+      end
+      
+      def show
+        @animal = Animal.find(params[:id])
+      end
+    def index
         render json: Animal.all
     end
 
