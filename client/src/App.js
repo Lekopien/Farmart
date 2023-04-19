@@ -9,6 +9,8 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Products from "./components/Products";
 import Lease from "./components/Lease";
+import Cart from "./components/cart";
+// import Checkout from "./components/Checkout";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/about" element={<About />} />
         <Route path="/lease" element={<Lease />} />
+        <Route path="/cart" element={<Cart />} />
+        {/* <Route path="/checkout" element={<Checkout />} /> */}
       </Routes>
       <Footer />
     </>
