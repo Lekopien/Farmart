@@ -22,7 +22,8 @@ Rails.application.routes.draw do
 =======
   post "/farmers_login", to: "farmers#login"
   post "/users_login", to: "users#login"
->>>>>>> 5c5ccb776610e5934588a3573c46fc2cfcf0edb7
+  post "/logout", to: "sessions#logout"
+  
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

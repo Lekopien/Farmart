@@ -56,6 +56,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_16_161736) do
     t.string "password_digest"
   end
 
+  create_table "jwt_blacklists", force: :cascade do |t|
+    t.string "jti"
+    t.datetime "exp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["jti"], name: "index_jwt_blacklists_on_jti"
+  end
+
   create_table "lands", force: :cascade do |t|
     t.integer "farmer_id"
     t.float "price"
