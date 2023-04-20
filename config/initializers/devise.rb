@@ -10,4 +10,3 @@
 #     jwt.blacklist_checker = JwtBlacklist
 #     jwt.revocation_strategy = JwtBlacklist
 #   end
-  

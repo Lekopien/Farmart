@@ -1,6 +1,6 @@
 class FarmersController < ApplicationController
-  # before_action :authorize_farmer
-  # skip_before_action :authorize_farmer, only: [:login, :create]
+   before_action :authorize_farmer
+   skip_before_action :authorize_farmer, only: [:login, :create]
 
   def index
     render json: Farmer.all, each_serializer: FarmerSerializer

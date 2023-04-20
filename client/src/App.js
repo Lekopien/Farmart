@@ -24,14 +24,14 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/login" element={<Login/>}/>
-       
+
         <Route element={<RequireAuth />}>
         <Route path="/lease" element={<Lease />} />
         </Route>
-      
-        
+
+
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
