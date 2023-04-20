@@ -34,7 +34,22 @@ function Home() {
         </div>
       </div>
     </section>
-  );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+);
 }
 
 export default Home;
