@@ -2,6 +2,7 @@ import{useRef,useState,useEffect } from "react"
 import { faCheck,faTimes, faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import axios from "../api/axios";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -11,6 +12,10 @@ const SIGNUP_URL = '/users'
 
 
 const SignUp = () => {
+  const navigate = useNavigate();
+  const location = useLocation()
+
+  const from = location.state?.from?.pathname || "/login"
 
   const userRef = useRef();
   const errRef = useRef();
@@ -69,19 +74,29 @@ const  handleSubmit = async (e) => {
 
   const v1 = USER_REGEX.test(user);
   const v2 = PASSWORD_REGEX.test(password)
+
+  const userData = {
+    name: user,
+    password: password,
+    email: email,
+    address: address
+  }
+
+  console.log(userData)
   if (!v1 || !v2) {
     setErrMsg("Invalid Entry");
     return;
   }
   try {
     const response = await axios.post(SIGNUP_URL,
-      JSON.stringify({user, password,email, address}),
+      userData,
       {
         headers: { 'Content-Type': 'application/json'},
-        withCredentials: true
+        // withCredentials: true
       })
       console.log(user)
       setSuccess(true)
+      navigate(from, {replace: true});
 
   } catch (err) {
     if(!err?.response) {
@@ -92,7 +107,7 @@ const  handleSubmit = async (e) => {
     errRef.current.focus();
 
   }
- 
+
 }
 
 
@@ -134,10 +149,10 @@ const  handleSubmit = async (e) => {
         <input
             type="text"
             id="email"
-            
+
             autoComplete="off"
             onChange={(e) => setEmail(e.target.value)}
-            
+
             required
             aria-invalid={validName ? "false" : "true"}
             aria-describedby="uidnote"
@@ -147,7 +162,7 @@ const  handleSubmit = async (e) => {
         <p id="uidnote" className={EmailFocus && email && !validEmail ? "instructions" : "offscreen"}>
             <FontAwesomeIcon icon={faInfoCircle} />
             Must include valid Email.<br />
-           
+
         </p>
 
 
@@ -160,7 +175,7 @@ const  handleSubmit = async (e) => {
             type="password"
             id="password"
             onChange={(e) => setPassword(e.target.value)}
-         
+
             required
             aria-invalid={validPassword ? "false" : "true"}
             aria-describedby="pwdnote"
@@ -184,7 +199,7 @@ const  handleSubmit = async (e) => {
             type="password"
             id="confirm_pwd"
             onChange={(e) => setConfirmPassword(e.target.value)}
-            
+
             required
             aria-invalid={validMatch ? "false" : "true"}
             aria-describedby="confirmnote"
@@ -204,7 +219,7 @@ const  handleSubmit = async (e) => {
         <input
             type="text"
             id="address"
-          
+
             autoComplete="off"
             onChange={(e) => setAddress(e.target.value)}
             required
@@ -234,5 +249,3 @@ const  handleSubmit = async (e) => {
 
 
 export default SignUp;
-
-

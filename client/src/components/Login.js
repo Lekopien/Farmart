@@ -16,10 +16,10 @@ const Login = ()  => {
   const userRef = useRef();
   const errRef  = useRef();
 
-  const [user, setUser] = useState('');
+  const [email, setEmail] = useState('');
   const  [password, setPassword] = useState('');
   const [errMsg,  setErrMsg]  =  useState('');
- 
+
 
 useEffect(() => {
   userRef.current.focus();
@@ -27,27 +27,32 @@ useEffect(() => {
 
 useEffect(() => {
   setErrMsg("");
-}, [user,password])
+}, [email,password])
 
 
 const handleSubmit = async (e) => {
   e.preventDefault();
 
+  const userData = {
+    email: email,
+    password: password
+  }
+
   try {
       const response = await axios.post(LOGIN_URL,
-          JSON.stringify({ user, password }),
+          userData,
           {
               headers: { 'Content-Type': 'application/json' },
-              withCredentials: true
+              // withCredentials: true
           }
       );
       const accessToken = response?.data?.accessToken;
       // const roles = response?.data?.roles;
-      setAuth({ user, password, accessToken });
-      setUser('');
+      setAuth({ email, password, accessToken });
+      setEmail('');
       setPassword('');
       navigate(from, {replace: true});
-     
+
   } catch (err) {
       if (!err?.response) {
           setErrMsg('No Server Response');
@@ -67,21 +72,21 @@ return (
     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
     <h1>Sign In</h1>
     <form onSubmit={handleSubmit}>
-    <label htmlFor="username">Username:</label>
+    <label htmlFor="username">Email:</label>
         <input
             type="text"
             id="username"
             ref={userRef}
             autoComplete="off"
-            onChange={(e) => setUser(e.target.value)}
-            value={user}
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
             required
         />
           <label htmlFor="password">Password:</label>
         <input
             type="password"
             id="password"
-            onChange={(e) => setUser(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             value={password}
             required
         />
@@ -90,13 +95,13 @@ return (
     <p>
                 Need an Account?<br />
                 <span className="line">
-                   
+
                 </span>
             </p>
   </section>
 )
 
-}  
+}
 
 
 
