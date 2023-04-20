@@ -86,7 +86,22 @@ function Header() {
                   </NavLink>
                 </li>
                 <li className="text-gray-600 hover:text-blue-600">
-                  Login/Signup
+                <NavLink
+                    className="hover:border-b-4 pb-2 border-white"
+                    to="/login"
+                  >
+                    Login
+                  </NavLink>
+                 
+                </li>
+                <li className="text-gray-600 hover:text-blue-600">
+                <NavLink
+                    className="hover:border-b-4 pb-2 border-white"
+                    to="/signup"
+                  >
+                    SignUp
+                  </NavLink>
+                 
                 </li>
               </ul>
             </div>

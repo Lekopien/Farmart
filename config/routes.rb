@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   post "/farmers_login", to: "farmers#login"
   post "/users_login", to: "users#login"
 
-  post '/add_to_cart/:animal_id/:land_id/:quantity', to: 'carts#create', as: 'add_to_cart'
-  delete '/remove_from_cart/:animal_id/:land_id', to: 'carts#destroy', as: 'remove_from_cart'
+
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  # Defines the root path route ("/")
+  # root "articles#index"
 end
