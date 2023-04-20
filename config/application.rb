@@ -23,6 +23,6 @@ module Myapp
           origins 'http://localhost:4000'
           resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options]
         end
-      
+      end
     end
 end
