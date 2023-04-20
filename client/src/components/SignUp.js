@@ -237,6 +237,7 @@ const  handleSubmit = async (e) => {
 
         <button disabled={!validName || !validPassword || !validMatch ? true : false}>Sign Up</button>
     </form>
+
     <p>
         Already registered?<br />
         <span className="line">
