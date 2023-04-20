@@ -8,6 +8,7 @@ html {
 
 body {
     @apply text-lg
+
 }
 
 .projects img {
@@ -51,79 +52,141 @@ h1 {
     line-height: 1.5 !important;
 }
 
-.login-page {
-  display: flex;
-}
 
-.login-container {
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+
+
+
+
+/* .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 50%;
- 
+  min-height: 100vh; 
+  padding: 1rem 0.5rem;
+} */
+
+/* section {
+    width: 100%;
+    max-width: 420px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.4);
+} */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    padding-bottom: 1rem;
 }
 
-.login-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  height: 400px;
-  border: 1px solid black;
+a, a:visited {
+    color: #fff;
 }
 
-.login-header {
-  height: 30%;
-  text-align: center;
+input[type="text"],
+input[type="password"],
+button,
+textarea {
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
 }
 
-.login-button,.sign-up-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  background-color: blue;
+label,
+button {
+  margin-top: 1rem;
 }
 
-.login-image {
-  width:50vw;
-  background-image: url(https://images.unsplash.com/photo-1495107334309-fcf20504a5ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height:100vh ;
+button {
+  padding: 0.5rem;
 }
 
-label {
-  font-weight: bold;
-  display: flex;
-  margin-bottom: 5px;
+li {
+    list-style-type: none;
+}
+
+.instructions {
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background: #000;
+    color: #fff;
+    padding: 0.25rem;
+    position: relative;
+    bottom: -10px;
+}
+
+.instructions > svg {
+    margin-right: 0.25rem;
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.hide {
+    display: none;
+}
+
+.valid {
+    color: limegreen;
+    margin-left: 0.25rem;
+}
+
+.invalid {
+    color: red;
+    margin-left: 0.25rem;
+}
+
+.errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.line {
+    display: inline-block;
+}
+
+.flexGrow {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 
-input[type='email'],input[type='password'] {
-  display: block;
-  width: 400px;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42;
-  color: #ac0f0f;
-  /* background-color: #fff; */
-  background-image: none;
-  border: 1px solid black;
-  border-radius: 4px;
-
+.persistCheck {
+    font-size: 0.75rem;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
-.form-control {
-  margin-bottom: 20px;
+.persistCheck label {
+    margin: 0;
 }
 
-.error {
-  color:red;
+[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    margin: 0 5px 2px 2px;
 }
-
-
