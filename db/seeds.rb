@@ -1,46 +1,66 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-puts 'start'
-
 require 'faker'
 
+# Generate fake data for users
 # 10.times do
 #   User.create(
 #     name: Faker::Name.name,
 #     email: Faker::Internet.email,
-#     password: Faker::Internet.password,
+#     password: Faker::Internet.password(min_length: 8),
 #     address: Faker::Address.full_address
 #   )
 # end
 
+# # Generate fake data for farmers
 # 10.times do
-#     farmer_name = Faker::Name.name
-#     farmer_location = Faker::Address.city
-#     contact_info = Faker::Number.between(from: 1111111111, to: 2222222222)
-
-#     Farmer.create!(
-#       farmer_name: farmer_name,
-#       farmer_location: farmer_location,
-#       contact_info: contact_info
-#     )
-#   end
-
-
-# 20.times do
-#   Animal.create(
-#     farmer_id: Faker::Number.between(from: 1, to: 10),
-#     animal_type: Faker::Creature::Animal.name,
-#     breed: Faker::Creature::Dog.breed,
-#     age: rand(1..10),
-#     price: rand(50..1000),
-#     in_stock: [true, false].sample
+#   Farmer.create(
+#     email: Faker::Internet.email,
+#     farmer_name: Faker::Name.name,
+#     farmer_location: Faker::Address.city,
+#     contact_info: Faker::PhoneNumber.phone_number,
+#     password: Faker::Internet.password(min_length: 8)
 #   )
 # end
 
+# # Generate fake data for animals
+# 10.times do
+#   Animal.create(
+#     farmer_id: Farmer.pluck(:id).sample,
+#     image: Faker::LoremFlickr.image(size: "300x300", search_terms: ['animal']),
+#     animal_type: Faker::Creature::Animal.name,
+#     breed: Faker::Creature::Dog.breed,
+#     age: Faker::Number.between(from: 1, to: 10),
+#     price: Faker::Commerce.price(range: 50..500.0),
+#     in_stock: Faker::Boolean.boolean
+#   )
+# end
 
-puts 'end'
+# # Generate fake data for lands
+# 10.times do
+#   Land.create(
+#     farmer_id: Farmer.pluck(:id).sample,
+#     image: Faker::LoremFlickr.image(size: "300x300", search_terms: ['landscape']),
+#     price: Faker::Commerce.price(range: 500..5000.0),
+#     location: Faker::Address.city,
+#     availability: Faker::Boolean.boolean
+#   )
+# end
+
+# # Generate fake data for orders
+# 10.times do
+#   Order.create(
+#     user_id: User.pluck(:id).sample,
+#     animal_id: Animal.pluck(:id).sample,
+#     total_price: Faker::Commerce.price(range: 50..500.0),
+#     order_status: Faker::Boolean.boolean,
+#     delivery_address: Faker::Address.full_address
+#   )
+# end
+
+# # Generate fake data for leases
+# 10.times do
+#   Lease.create(
+#     user_id: User.pluck(:id).sample,
+#     land_id: Land.pluck(:id).sample,
+#     lease_status: Faker::Boolean.boolean
+#   )
+# end
