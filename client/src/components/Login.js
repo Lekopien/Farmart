@@ -33,12 +33,17 @@ useEffect(() => {
 const handleSubmit = async (e) => {
   e.preventDefault();
 
+  const userData = {
+    name: user,
+    password: password
+  }
+
   try {
       const response = await axios.post(LOGIN_URL,
-          JSON.stringify({ user, password }),
+          userData,
           {
               headers: { 'Content-Type': 'application/json' },
-              withCredentials: true
+              // withCredentials: true
           }
       );
       const accessToken = response?.data?.accessToken;
@@ -81,7 +86,7 @@ return (
         <input
             type="password"
             id="password"
-            onChange={(e) => setUser(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             value={password}
             required
         />
