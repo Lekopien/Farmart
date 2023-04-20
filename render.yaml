@@ -1,5 +1,6 @@
 databases:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - name: mysite
     databaseName: mysite
     user: mysite
@@ -17,12 +18,22 @@ services:
   - type: web
     name: FarmartApp
 >>>>>>> 5c5ccb776610e5934588a3573c46fc2cfcf0edb7
+=======
+  - name: mysite
+    databaseName: mysite
+    user: mysite
+
+services:
+  - type: web
+    name: mysite
+>>>>>>> 9cbf467c24f92f115f6ab6169305c09bfe788f30
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
+<<<<<<< HEAD
 <<<<<<< HEAD
           name: mysite
           property: connectionString
@@ -34,3 +45,9 @@ services:
       - key: RAILS_MASTER_KEY
         sync: false
 >>>>>>> 5c5ccb776610e5934588a3573c46fc2cfcf0edb7
+=======
+          name: mysite
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+>>>>>>> 9cbf467c24f92f115f6ab6169305c09bfe788f30

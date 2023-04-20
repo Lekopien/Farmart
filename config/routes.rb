@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'home#index'
   resources :leases
   resources :orders
   resources :lands
@@ -16,10 +17,13 @@ Rails.application.routes.draw do
   post "/users_login", to: "users#login"
   post "/logout", to: "sessions#logout"
 
+<<<<<<< HEAD
   post "/farmers_login", to: "farmers#login"
   post "/users_login", to: "users#login"
   post "/logout", to: "sessions#logout"
   
+=======
+>>>>>>> 9cbf467c24f92f115f6ab6169305c09bfe788f30
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
