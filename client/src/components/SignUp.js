@@ -69,16 +69,25 @@ const  handleSubmit = async (e) => {
 
   const v1 = USER_REGEX.test(user);
   const v2 = PASSWORD_REGEX.test(password)
+
+  const userData = {
+    name: user,
+    password: password,
+    email: email,
+    address: address
+  }
+
+  console.log(userData)
   if (!v1 || !v2) {
     setErrMsg("Invalid Entry");
     return;
   }
   try {
     const response = await axios.post(SIGNUP_URL,
-      JSON.stringify({user, password,email, address}),
+      userData,
       {
         headers: { 'Content-Type': 'application/json'},
-        withCredentials: true
+        // withCredentials: true
       })
       console.log(user)
       setSuccess(true)
