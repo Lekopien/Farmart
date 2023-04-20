@@ -70,7 +70,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; 
+  min-height: 100vh;
   padding: 1rem 0.5rem;
 } */
 
@@ -94,7 +94,7 @@ form {
 }
 
 a, a:visited {
-    color: #fff;
+    color: #363232;
 }
 
 input[type="text"],
