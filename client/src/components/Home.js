@@ -23,6 +23,18 @@ function Home() {
           >
             Learn More
           </a>
+
+          <p className="py-5 mb-8">
+            Farmart app makes selling farm products easier. You can list your
+            products and connect with buyers in your area. Ensure high-quality
+            products and competitive pricing for success.
+          </p>
+          <a
+            href="/farmerprod"
+            className=" btn bg-accent  border-2 border-[#7477FF] text-white px-6 py-3 hover:bg-transparent"
+          >
+            Add my products
+          </a>
         </div>
 
         <div className="hero-img">
