@@ -1,24 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### FarmArt : The App
+- Our platform FarmArt connects farmers with people, where farmers can add their products online and people can add them to their basket, ranging from farm produce to land available for lease.
 
-Things you may want to cover:
+- You can signin/signup as a farmer or as a customer. Built with RESTful API architecture and CRUD functionality. 
 
-* Ruby version
+### Motivation
+Build a fullstack app that uses Ruby for the backend with PostgreSQL and React for the frontend.  
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+### Technical details
+- **PostgreSQL** database.
+- Authentication with **JWT**.
+- Developed a **Ruby on Rails** API backend with 5 different endpoints: for users, farmers, customers, products and categories.
+- Used **serializer** to format the JSON file.
 
-* Database initialization
+### Installation
+Fork and clone the project 
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+In your terminal, cd into the project directory
+- run `rails db:create`
+- `rails db:migrate`
+- `rails db:seed`
+- `rails s`
 
-* Deployment instructions
+The server should start on http://localhost:3000
 
-* ...
+
+### How to use?
+/TBD
+
+
+### Author(s)
+Frank Kinuthia
+Lewis Ndung'u
+Calvince Ogwel
