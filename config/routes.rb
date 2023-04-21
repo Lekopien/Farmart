@@ -1,32 +1,21 @@
 Rails.application.routes.draw do
-  root 'home#index'
-  resources :leases
-  resources :orders
-  resources :lands
-  resources :animals
-  resources :farmers, only: [:index, :show, :create, :update]
-  resources :users, only: [:index, :show, :create, :update]
-# <<<<<<< HEAD
-  resources :carts, only: [:index, :create, :update, :destroy] do
-    collection do
-      delete :clear_cart
-    end
-  end
-  
-  post "/farmers_login", to: "farmers#login"
-  post "/users_login", to: "users#login"
-  post "/logout", to: "sessions#logout"
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users, only: [:index, :show, :create, :new]
+  resources :customers, only: [:index, :show, :create, :new]
+  resources :farmers, only: [:index, :new, :create, :show]
+  resources :categories, only: [:index, :new, :create, :show]
+  resources :products, only: [:index, :new, :create, :show, :destroy]
+  resources :baskets, only: [:index, :new, :create, :show, :destroy]
+  resources :basket_products, only: [:index, :new, :create, :show, :destroy]
+  resources :category_products, only: [:index, :new, :create, :show, :destroy]
 
-<<<<<<< HEAD
-  post "/farmers_login", to: "farmers#login"
-  post "/users_login", to: "users#login"
-  post "/logout", to: "sessions#logout"
-  
-=======
->>>>>>> 9cbf467c24f92f115f6ab6169305c09bfe788f30
 
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  post '/signin', to: 'users#signin'
+  post '/signup', to: 'users#signup'
+  get '/validate', to: 'users#validate'
+  post '/remove', to: 'basket_products#remove'
+  get '/profile', to: 'users#profile'
+
+
 end

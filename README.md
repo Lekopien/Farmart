@@ -5,7 +5,7 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version-3.2.1
+* Ruby version
 
 * System dependencies
 
@@ -22,4 +22,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-# Farmart
