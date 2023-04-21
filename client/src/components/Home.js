@@ -19,7 +19,7 @@ function Home() {
 
           <a
             href="/about"
-            className=" btn bg-accent  border-2 border-[#7477FF] text-white px-6 py-3 hover:bg-transparent"
+            className=" btn bg-accent  border-2 border-[#93c47d] text-white px-6 py-3 hover:bg-transparent"
           >
             Learn More
           </a>
@@ -31,7 +31,7 @@ function Home() {
           </p>
           <a
             href="/farmerprod"
-            className=" btn bg-accent  border-2 border-[#7477FF] text-white px-6 py-3 hover:bg-transparent"
+            className=" btn bg-accent  border-2 border-[#93c47d] text-white px-6 py-3 hover:bg-transparent"
           >
             Add my products
           </a>
