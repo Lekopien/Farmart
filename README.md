@@ -34,6 +34,6 @@ The server should start on http://localhost:3000
 
 
 ### Author(s)
-Frank Kinuthia
-Lewis Ndung'u
-Calvince Ogwel
+* Frank Kinuthia
+* Lewis Ndung'u
+* Calvince Ogwel
