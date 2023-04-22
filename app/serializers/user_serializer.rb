@@ -1,6 +1,16 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :name, :email, :address
+  attributes :id, :first_name, :last_name, :address, :phone, :isAdmin, :farmer, :customer 
 
-  has_many :orders
-  has_many :leases
+  has_one :farmer
+  has_one :customer 
+
+
+  class FarmerSerializer < ActiveModel::Serializer
+    attributes :id, :farm
+  end
+
+  class CustomerSerializer < ActiveModel::Serializer
+    attributes :id
+  end
+
 end

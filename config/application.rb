@@ -6,7 +6,7 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Myapp
+module FarmartProper
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
@@ -18,11 +18,5 @@ module Myapp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.middleware.insert_before 0, Rack::Cors do
-        allow do
-          origins 'http://localhost:4000'
-          resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options]
-        end
-      end
-    end
+  end
 end
