@@ -327,14 +327,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-<<<<<<< HEAD
-   ruby 2.7.6p219
-
-BUNDLED WITH
-   2.4.9
-=======
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.4.12
->>>>>>> 8b29682a4c72af4ef6ffbcdd43865dca3584621a
+   2.4.9

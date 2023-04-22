@@ -1,0 +1,66 @@
+# container
+hash_delimiter:
+array_delimiter:
+set_delimiter:
+
+# delimiter
+comma:
+refers:
+
+# class
+class:
+- :bright
+class_separator:
+object_class:
+- :bright
+
+# object
+object_delimiter:
+object_description_prefix:
+object_description:
+object_address_prefix:
+object_address:
+object_line_prefix:
+object_line:
+object_line_number:
+object_variable_prefix:
+object_variable:
+
+# symbol
+symbol_prefix:
+symbol:
+- :bright
+symbol_string:
+- :bright
+symbol_string_delimiter:
+
+# string
+string:
+- :underline
+string_delimiter:
+
+# regexp
+regexp:
+- :underline
+regexp_delimiter:
+regexp_flags:
+
+# number
+number:
+- :bright
+special_number:
+- :bright
+range:
+rational:
+rational_separator:
+complex:
+
+# misc
+time:
+word:
+nil:
+- :inverse
+false:
+- :inverse
+true:
+- :inverse
