@@ -1,3 +1,0 @@
-current directory: /home/lewis/FARMART/Farmart/vendor/bundle/ruby/3.0.0/gems/mimemagic-0.3.10/ext/mimemagic
-/home/lewis/.rbenv/versions/3.0.3/bin/ruby -I/home/lewis/.rbenv/versions/3.0.3/lib/ruby/3.0.0 -rrubygems /home/lewis/FARMART/Farmart/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/exe/rake RUBYARCHDIR\=/home/lewis/FARMART/Farmart/vendor/bundle/ruby/3.0.0/extensions/x86_64-linux/3.0.0/mimemagic-0.3.10 RUBYLIBDIR\=/home/lewis/FARMART/Farmart/vendor/bundle/ruby/3.0.0/extensions/x86_64-linux/3.0.0/mimemagic-0.3.10
-mkdir -p /home/lewis/FARMART/Farmart/vendor/bundle/ruby/3.0.0/extensions/x86_64-linux/3.0.0/mimemagic-0.3.10/mimemagic
