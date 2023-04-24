@@ -7,28 +7,18 @@
 # Ignore bundler config.
 /.bundle
 
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
 
-# Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
-
-# Ignore uploaded files in development.
+# Ignore uploaded files in development
 /storage/*
 !/storage/.keep
-/tmp/storage/*
-!/tmp/storage/
-!/tmp/storage/.keep
 
-/public/assets
+.byebug_history
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-
-#Ignore client file for backend deployment on render
-client/

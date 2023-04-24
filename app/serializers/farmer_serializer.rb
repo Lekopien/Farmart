@@ -1,6 +1,10 @@
 class FarmerSerializer < ActiveModel::Serializer
-  attributes :id, :farmer_name, :farmer_location, :contact_info, :email
+  attributes :id, :farm, :products
 
-  has_many :animals
-  has_many :lands
+  has_many :products
+
+  class ProductSerializer < ActiveModel::Serializer
+    attributes :name, :price, :quantity, :url_img, :id
+  end
+
 end
