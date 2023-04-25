@@ -1,0 +1,13 @@
+current directory: /home/lewis/Farming/farms-to-peeps-server/vendor/bundle/ruby/2.6.0/gems/json-2.6.3/ext/json
+/home/lewis/.rbenv/versions/2.6.2/bin/ruby -I /home/lewis/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20230421-59100-kaiok1.rb extconf.rb
+creating Makefile
+
+current directory: /home/lewis/Farming/farms-to-peeps-server/vendor/bundle/ruby/2.6.0/gems/json-2.6.3/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/lewis/Farming/farms-to-peeps-server/vendor/bundle/ruby/2.6.0/gems/json-2.6.3/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /home/lewis/Farming/farms-to-peeps-server/vendor/bundle/ruby/2.6.0/gems/json-2.6.3/ext/json
+make "DESTDIR=" install

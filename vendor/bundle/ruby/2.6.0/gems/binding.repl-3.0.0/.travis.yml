@@ -1,0 +1,12 @@
+install: bundle install
+script: ruby -S rake
+
+rvm:
+  - 1.9.3
+  - 2.1.3
+  - ruby-head
+  - jruby
+  - rbx-2
+
+notifications:
+  email: true

@@ -1,0 +1,15 @@
+AllCops:
+  Exclude:
+    - "spec/**/*"
+    - "vendor/**/*"
+  TargetRubyVersion: 2.6
+
+Layout:
+  Enabled: false
+
+Metrics:
+  Enabled: false
+
+Style:
+  Enabled: false
+

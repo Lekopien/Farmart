@@ -1,0 +1,27 @@
+= RubyInfo
+
+Provides a +RubyInfo+ class that simplifies accessing global information. Run <tt>RubyInfo.list</tt> to get started. You can also run <tt>RubyInfo.all</tt> to get a hash of all available information (may be a lot).
+
+== Setup
+
+On your command-line:
+
+    $ gem install ruby_info
+
+In Ruby:
+
+    require 'ruby_info'
+
+== Usage
+
+Call methods on the +RubyInfo+ class. See the source for more documentation.
+
+== Also See
+
+https://github.com/janlelis/ruby_engine |
+https://github.com/janlelis/ruby_version |
+https://github.com/rdp/os
+
+== J-_-L
+
+Copyright (c) 2010-2014 Jan Lelis. MIT License. Originated from the zucker gem.

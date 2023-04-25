@@ -1,0 +1,9 @@
+== v3.0.0
+   * Remove Binding.repl 
+   * Remove bin/binding.repl
+   * Remove BindingRepl::Runner
+   * Remove BindingRepl::ExitValue#success?
+   * Remove BindingRepl::ExitValue.unknown
+   * Remove BindingRepl::ENV
+   * Remove support for $auto shell var
+   

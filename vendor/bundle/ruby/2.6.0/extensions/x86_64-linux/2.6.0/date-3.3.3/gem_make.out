@@ -1,0 +1,32 @@
+current directory: /home/lewis/Farming/farms-to-peeps-server/vendor/bundle/ruby/2.6.0/gems/date-3.3.3/ext/date
+/home/lewis/.rbenv/versions/2.6.2/bin/ruby -I /home/lewis/.rbenv/versions/2.6.2/lib/ruby/2.6.0 -r ./siteconf20230421-59100-1bkiv59.rb extconf.rb
+checking for rb_category_warn()... no
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+
+current directory: /home/lewis/Farming/farms-to-peeps-server/vendor/bundle/ruby/2.6.0/gems/date-3.3.3/ext/date
+make "DESTDIR=" clean
+
+current directory: /home/lewis/Farming/farms-to-peeps-server/vendor/bundle/ruby/2.6.0/gems/date-3.3.3/ext/date
+make "DESTDIR="
+compiling date_core.c
+date_core.c: In function ‘datetime_to_time’:
+date_core.c:310:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  310 |     union DateData *adat;\
+      |     ^~~~~
+date_core.c:9065:2: note: in expansion of macro ‘get_d1a’
+ 9065 |  get_d1a(self);
+      |  ^~~~~~~
+date_core.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.so
+
+current directory: /home/lewis/Farming/farms-to-peeps-server/vendor/bundle/ruby/2.6.0/gems/date-3.3.3/ext/date
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 date_core.so ./.gem.20230421-59100-1aj87k6

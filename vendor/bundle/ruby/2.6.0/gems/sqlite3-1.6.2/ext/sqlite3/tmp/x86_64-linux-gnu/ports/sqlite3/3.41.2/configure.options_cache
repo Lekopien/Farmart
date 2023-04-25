@@ -1,0 +1,1 @@
+["--host=x86_64-linux-gnu", "--enable-static", "--disable-shared", "--enable-shared=no", "--enable-static=yes", "CC=gcc", "CFLAGS=-fPIC -O2 -fvisibility=hidden", "--prefix=/home/lewis/Farming/farms-to-peeps-server/vendor/bundle/ruby/2.6.0/gems/sqlite3-1.6.2/ports/x86_64-linux-gnu/sqlite3/3.41.2"]
