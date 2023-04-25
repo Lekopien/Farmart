@@ -1,3 +1,0 @@
-current directory: /home/lewis/Farming/farms-to-peeps-server/vendor/bundle/ruby/2.6.0/gems/mimemagic-0.3.10/ext/mimemagic
-/home/lewis/.rbenv/versions/2.6.2/bin/ruby -rrubygems /home/lewis/Farming/farms-to-peeps-server/vendor/bundle/ruby/2.6.0/gems/rake-13.0.6/exe/rake RUBYARCHDIR\=/home/lewis/Farming/farms-to-peeps-server/vendor/bundle/ruby/2.6.0/extensions/x86_64-linux/2.6.0/mimemagic-0.3.10 RUBYLIBDIR\=/home/lewis/Farming/farms-to-peeps-server/vendor/bundle/ruby/2.6.0/extensions/x86_64-linux/2.6.0/mimemagic-0.3.10
-mkdir -p /home/lewis/Farming/farms-to-peeps-server/vendor/bundle/ruby/2.6.0/extensions/x86_64-linux/2.6.0/mimemagic-0.3.10/mimemagic
