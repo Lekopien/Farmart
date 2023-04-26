@@ -265,7 +265,8 @@ a#product-category {
   animation: moveFromTop;
   animation-duration: 3s;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 200px;
+  font-weight: 700;
 
 }
 
