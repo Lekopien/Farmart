@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
+ruby '3.0.3'
 source "https://rubygems.org"
 
 # gem "rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
-# Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -55,6 +54,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'jwt'
 
-gem 'rubocop', require: false
+
 gem 'rufo', require: false
 
