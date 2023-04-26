@@ -70,7 +70,8 @@ class ProductForm extends Component {
                         className="form-control mb-4" 
                         placeholder="500g? 4 pieces? 1 bunch?" 
                     />
-                    <input 
+                    <input
+                        type='file'
                         name='url_img' 
                         onChange={this.handleChange} 
                         value={url_img} 
