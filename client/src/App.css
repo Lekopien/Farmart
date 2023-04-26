@@ -260,6 +260,75 @@ a#product-category {
 
 }
 
+.landing-header {
+
+  animation: moveFromTop;
+  animation-duration: 3s;
+  text-transform: uppercase;
+  font-size: 20px;
+
+}
+
+#farmer-btn{
+  animation: moveFromBottom;
+  animation-duration: 3s;
+}
+
+.landing-comment {
+  animation: moveFromRight;
+  animation-duration: 3s;
+  font-weight: 600;
+}
+
+
+#farmer-btn {
+ background-color: #fff;
+ text-transform: uppercase;
+ padding: 15px 40px;
+ border-radius: 100px;
+}
+
+
+
+@keyframes moveFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+
+
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+
+
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
 @media screen and (max-width: 500px) {

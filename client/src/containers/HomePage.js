@@ -11,10 +11,10 @@ class HomePage extends Component {
                     <div className="container d-flex align-items-center justify-content-center h-100">
                         <div className="row d-flex justify-content-center text-center">
                             <div className="col-md-10">
-                                <h2 className="display-2 font-weight-bold white-text pt-5 mb-2">Farmers to Customers</h2>
+                                <h2 className="display-2 font-weight-bold white-text pt-5 mb-2 landing-header">Farmers to Customers</h2>
                                 <hr className="hr-light"/>
-                                <h3 className="white-text my-4">Connecting farmers with people with a single click of a button.</h3>
-                                <Link to='/signin'><button  id='farmer-btn' type="button" className="btn btn-lg btn-outline-green">GET STARTED</button></Link>
+                                <h3 className="white-text my-4 landing-comment">Connecting farmers with people with a single click of a button.</h3>
+                                <Link to='/signin'><button  id='farmer-btn' type="button" className="btn">GET STARTED</button></Link>
                             </div>
                         </div>
                     </div>
