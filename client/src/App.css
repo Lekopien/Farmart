@@ -8,6 +8,11 @@ body,
     height: 100%;
   }
 
+  body {
+    padding: 20px;
+  }
+  
+
 .App-link {
   color: #61dafb;
 }
@@ -248,6 +253,14 @@ a#product-category {
   padding-top: 10%;
 }
 
+
+.landing-header,.landing-comment{
+  color:#fff;
+  letter-spacing: 5px;
+
+}
+
+
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
 @media screen and (max-width: 500px) {
   #product-category-navbar a {
@@ -386,14 +399,18 @@ a#product-category {
 }
 
 #intro {
-  background: url("https://images.unsplash.com/photo-1498579397066-22750a3cb424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80")
-  no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-image:linear-gradient(to right,rgba(126,213,111,0.8),rgba(40,180,133,0.8)), url("https://images.unsplash.com/photo-1498579397066-22750a3cb424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-position: center;
   background-size: cover;
-  padding: 8%;
-  opacity: 0.9;
+  background-repeat: no-repeat;
+  height: 90vh;
+
+
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%,0 100%);
+  }
+
+  #farmer-btn {
+    margin-top: 40px;
   }
 
 #no-product-onsale {

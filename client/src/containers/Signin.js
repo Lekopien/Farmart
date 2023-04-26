@@ -34,7 +34,7 @@ class Signin extends Component {
 // <!-- Default form login -->
             <div id='signin-form-container'>
                 <form id='signin-form' className="text-center">
-                <h2><b>Welcome Back</b></h2>
+                <h2><b>RETURNING USER</b></h2>
                     <h2 className="h4 mb-4">Sign in</h2>
                     <br></br>
 
