@@ -289,6 +289,58 @@ a#product-category {
  border-radius: 100px;
 }
 
+.signup-image {
+  width: 50%;
+  height: 100vh;
+  
+   background-image: url('https://images.unsplash.com/photo-1429991889170-afd56b2a1210?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80https://images.unsplash.com/photo-1429991889170-afd56b2a1210?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   overflow: hidden;
+  
+}
+
+.signup-form {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ 
+  
+}
+
+.form-container {
+  width: 350px;
+  height: 575px;
+  border-radius: 30px;
+ 
+  box-shadow: -14px 11px 13px 5px rgba(0,0,0,0.75);
+-webkit-box-shadow: -14px 11px 13px 5px rgba(0,0,0,0.75);
+-moz-box-shadow: -14px 11px 13px 5px rgba(0,0,0,0.75);
+ 
+}
+
+.user-entry{
+  height: 0px;
+  margin-bottom: 60px;
+  padding: 10px;
+}
+
+
+.signup-btn {
+  width: 200px;
+}
+
+
+
+
+
+
+
+
 
 
 @keyframes moveFromTop {
@@ -328,6 +380,10 @@ a#product-category {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+#signup-form-container {
+  height: 100vh;
 }
 
 
@@ -370,11 +426,10 @@ a#product-category {
 }
 
 #signup-form-container {
-  background: url('https://images.unsplash.com/photo-1497005367839-6e852de72767?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1347&q=80') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+ 
+  display: flex;
+  flex-direction: row;
+  
 }
 
 #signin-form {
@@ -387,14 +442,7 @@ a#product-category {
   color:white;
 }
 
-#signup-form {
-  width: 80%;
-  padding-top: 10%;
-  padding-left: 30%;
-  padding-right: 10%;
-  padding-bottom: 20%;
-  margin-left: 25% !important;
-}
+
 
 #panel-content {
   height: 100%;
@@ -425,6 +473,7 @@ a#product-category {
 #product-form-and-preview {
   display: flex;
   justify-content: center;
+  height: 100vh;
 }
 
 

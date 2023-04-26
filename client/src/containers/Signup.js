@@ -45,21 +45,25 @@ class Signup extends Component {
         return (  
             // <!-- Default form login -->
             <div id='signup-form-container'>
-                  <form id='signup-form' className="text-center ">
+              <div className='signup-image'>hello</div>
+              <div className='signup-form'>
+              <div className='form-container'>
+                <form id='signup-form' className="text-center ">
 
-                  <h2>NEW USER</h2>
-                    <br></br>
-                    <fieldset>
-                        <div>
-                            <select className="form-control mb-4" id='select-user-type' onChange={this.handleUserType} value={this.state.value} >
-                                <option value=''> -- Select an option -- </option>
-                                <option value="farmer">I am a farmer</option>
-                                <option value="customer">I am a client</option>
-                            </select>
-                        </div>
-                    </fieldset>
+              <h2>NEW USER</h2>
+              <div className='user-entry'>
+              <fieldset>
+                  
+                      <select className="form-control mb-4" id='select-user-type' onChange={this.handleUserType} value={this.state.value} >
+                          <option value=''> -- Select an option -- </option>
+                          <option value="farmer">I am a farmer</option>
+                          <option value="customer">I am a client</option>
+                      </select>
+                
+              </fieldset>
+              </div>
 
-                    <br></br>
+
 
                     <fieldset>
                         {/* <legend>Step 2: Enter your details</legend> */}
@@ -116,11 +120,19 @@ class Signup extends Component {
                             placeholder="Password" 
                         />
                     </fieldset>
-                  
-                    <Link to='/signin'><button className="btn btn-block btn-outline-orange btn-lg" onClick={(e) => this.handleSubmit(e)}  type="submit">Sign me up!</button></Link>
-    
-                    </form>
-            </div>
+
+                    <Link to='/signin'><button className="btn  btn-outline-green btn-lg  signup-btn" onClick={(e) => this.handleSubmit(e)}  type="submit">Sign me up!</button></Link>
+
+                        </form>
+
+                                </div>
+                              
+                                </div>
+                                
+                                    
+                                    
+                                    
+                              </div>
           
         );
     }
