@@ -8,11 +8,6 @@ body,
     height: 100%;
   }
 
-  body {
-    padding: 20px;
-  }
-  
-
 .App-link {
   color: #61dafb;
 }
@@ -253,84 +248,6 @@ a#product-category {
   padding-top: 10%;
 }
 
-
-.landing-header,.landing-comment{
-  color:#fff;
-  letter-spacing: 5px;
-
-}
-
-.landing-header {
-
-  animation: moveFromTop;
-  animation-duration: 3s;
-  text-transform: uppercase;
-  font-size: 200px;
-  font-weight: 700;
-
-}
-
-#farmer-btn{
-  animation: moveFromBottom;
-  animation-duration: 3s;
-}
-
-.landing-comment {
-  animation: moveFromRight;
-  animation-duration: 3s;
-  font-weight: 600;
-}
-
-
-#farmer-btn {
- background-color: #fff;
- text-transform: uppercase;
- padding: 15px 40px;
- border-radius: 100px;
-}
-
-
-
-@keyframes moveFromTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-200px);
-  }
-
-
-  100%{
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(200px);
-  }
-
-
-  100%{
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(200px);
-  }
-
-
-  100%{
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
 @media screen and (max-width: 500px) {
   #product-category-navbar a {
@@ -362,7 +279,7 @@ a#product-category {
 }
 
 #signin-form-container {
-  background: url('https://images.unsplash.com/photo-1504198266287-1659872e6590?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+  background: url('https://www.usnews.com/object/image/00000150-3e4f-df61-a776-ff7f32eb0000/151006-farmertechnology-stock.jpg?update-time=1444154529519&size=responsive640') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -370,7 +287,7 @@ a#product-category {
 }
 
 #signup-form-container {
-  background: url('https://images.unsplash.com/photo-1497005367839-6e852de72767?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1347&q=80') no-repeat center center fixed;
+  background: url('https://www.cabi.org/wp-content/uploads/DSC09062-wpcf_1200x800.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -469,18 +386,14 @@ a#product-category {
 }
 
 #intro {
-  background-image:linear-gradient(to right,rgba(126,213,111,0.8),rgba(40,180,133,0.8)), url("https://images.unsplash.com/photo-1498579397066-22750a3cb424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
-  background-position: center;
+  background: url("https://kenyaseed.com/wp-content/uploads/2018/02/farm-product.png")
+  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
-  height: 90vh;
-
-
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75%,0 100%);
-  }
-
-  #farmer-btn {
-    margin-top: 40px;
+  padding: 8%;
+  opacity: 0.9;
   }
 
 #no-product-onsale {

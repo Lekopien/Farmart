@@ -56,8 +56,8 @@ class App extends Component {
 
   signout = () => {
       this.setState({email: '', current_user: ''})
-      this.setState({customerBasket: []})
       localStorage.removeItem('token')
+      this.setState({customerBasket:[]})
       this.props.history.push('/')
   }
    // def user type 

@@ -43,7 +43,7 @@ class ProductForm extends Component {
         const {name, price, quantity, url_img, farm, category} = this.state
         return (  
             <div id='product-form-container'>
-                    <h2>Enter a new product below</h2>
+                    <h2>Enter your item on sale below</h2>
                     <br></br>
                     <br></br>
                     <div id='product-form-and-preview'>
@@ -61,7 +61,7 @@ class ProductForm extends Component {
                         onChange={this.handleChange} 
                         value={price} 
                         className="form-control mb-4" 
-                        placeholder="£" 
+                        placeholder="Ksh(/=)" 
                     />
                     <input 
                         name='quantity' 
@@ -70,13 +70,12 @@ class ProductForm extends Component {
                         className="form-control mb-4" 
                         placeholder="500g? 4 pieces? 1 bunch?" 
                     />
-                    <input
-                        type='file'
+                    <input 
                         name='url_img' 
                         onChange={this.handleChange} 
                         value={url_img} 
                         className="form-control mb-4" 
-                        placeholder="Paste your image url here" 
+                        placeholder="Paste your produts/land for lease image url here" 
                     />
 
                     <input 
@@ -90,12 +89,9 @@ class ProductForm extends Component {
                     <div>
                         <select className="form-control mb-4" id='select-product-category' onChange={this.handleCategory} value={this.state.value} >
                             <option value=''> -- Select a category -- </option>
-                            <option value="Vegetable">Vegetable</option>
-                            <option value="Fruit">Fruit</option>
-                            <option value="Bakery">Bakery</option>
-                            <option value="Meat">Meat</option>
-                            <option value="Fish">Fish</option>
-                            <option value="Pantry">Pantry</option>
+                            <option value="Farm Products">Farm Products</option>
+                            <option value="Animals">Animals</option>
+                            <option value="Land">Land</option>
                         </select>
                     </div>
                     <br></br>
@@ -112,7 +108,7 @@ class ProductForm extends Component {
                         <div className="card-body ">
                             <h5 className="grey-text pb-2 pt-1"> {category}</h5>
                             <h4  className="font-weight-bold card-title">{name}</h4>
-                            <p className="card-text">£{price}</p>
+                            <p className="card-text">ksh{price}</p>
                             <p className="card-text">{quantity}</p>
                             <p className="card-text">{farm}</p>
                         </div>

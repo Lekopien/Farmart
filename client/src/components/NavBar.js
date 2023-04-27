@@ -16,7 +16,7 @@ class NavBar extends Component {
             <div className="collapse navbar-collapse" id="basicExampleNav">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
-                   <Link to='/'> <p className="navbar-brand">FarmArt</p> </Link>
+                   <Link to='/'> <p className="navbar-brand">FARMART</p> </Link>
                     </li>
                 </ul>
                 <ul className='nav form-inline my-2 my-lg-0 ml-auto '>
@@ -25,7 +25,7 @@ class NavBar extends Component {
                     {
                         !this.props.current_user 
                         ? 
-                            <Link to='/signup'><button className="btn btn-outline-dark btn-lg my-2 my-sm-0 ml-3">REGISTER</button></Link> 
+                            <Link to='/signup'><button className="btn btn-outline-dark btn-lg my-2 my-sm-0 ml-3">CREATE ACCOUNT</button></Link> 
                         : `Welcome back, ${this.props.current_user.first_name}!`}
                     </h5>
                     

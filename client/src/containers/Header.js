@@ -26,7 +26,7 @@ class Header extends Component {
         return ( 
             <nav className="naigation_bar sticky-top">
          
-            <Link to='/' className="navbar-logo">FarmArt</Link>
+            <Link to='/' className="navbar-logo">FARMART</Link>
             {   
                 this.props.current_user  && <p id='welcome-user'>Welcome, {this.props.current_user.first_name}! </p>  
             }
@@ -37,7 +37,7 @@ class Header extends Component {
                                 <ul id='navbar-general'>
                                     <Link to='/' id="about">About</Link>
                                     <Link to='/products' id='shop'> Shop</Link>
-                                    <Link to='/signup' id='register'>Create Account</Link>
+                                    <Link to='/signup' id='register'>Register  </Link>
                                     <Link to='/signin' id='login'> Login</Link>
                                 </ul>
                          

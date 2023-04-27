@@ -90,7 +90,6 @@ class Signup extends Component {
                             placeholder="address" 
                         />
                         <input 
-                            
                             name='email' 
                             id="defaultSignup" 
                             onChange={this.handleChange} 

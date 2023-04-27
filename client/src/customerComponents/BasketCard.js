@@ -11,7 +11,7 @@ class BasketCard extends Component {
         return (
 
             <Fragment >
-                <p id='basket-products'className="font-weight-bold">{name} - <span>£{price}</span><button className= ' delete-from-checkout btn btn-sm' onClick={() => this.props.deleteProduct(id, basket_id)}><i>Delete</i></button></p>
+                <p id='basket-products'className="font-weight-bold">{name} - <span>ksh{price}</span><button className= ' delete-from-checkout btn btn-sm' onClick={() => this.props.deleteProduct(id, basket_id)}><i>Remove</i></button></p>
                 {/* <div id='delete-from-checkout'></div> */}
             </Fragment>
         )
