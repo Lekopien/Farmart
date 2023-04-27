@@ -1,69 +1,82 @@
-import React, { Component } from 'react';
-import API from '../data/API'
+import React from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import API from '../data/API';
 
-class Signin extends Component {
-    state = {
-        email: '',
-        password: '', 
-        current_user: ''  
-    }
-    
-    handleSubmit = (e) => {
-        e.preventDefault()
-        API.signin(this.state)
-            .then(data => {
-                if (data.error){
-                    alert("Email adress not found")
-                }
-                else {
-                    // user is authentificated! 
-                    this.setState({current_user: data.user})
-                    this.props.signin(this.state.email, this.state.current_user, data.token)
+const validationSchema = Yup.object().shape({
+  email: Yup.string()
+    .email('Invalid email')
+    .required('Email is required'),
+  password: Yup.string()
+    .min(6, 'Password must be at least 6 characters')
+    .required('Password is required')
+});
 
-                }
-            })
-    }
+const initialValues = {
+  email: '',
+  password: '',
+};
 
-    handleChange = e => {
-        e.preventDefault()
-        this.setState({ [e.target.name]: e.target.value})
-    }
+const Signin = ({ signin }) => {
 
-    render() { 
-        return ( 
-// <!-- Default form login -->
-            <div id='signin-form-container'>
-              <div className='signin-container'>
-                <form id='signin-form' className="text-center">
-                <h2 className='signin-text'><b>RETURNING USER</b></h2>
-                    <h2 className="h4 mb-4 signin-text">Sign in</h2>
-                    <br></br>
+  const handleSubmit = (values, { setSubmitting }) => {
+    API.signin(values)
+      .then(data => {
+        setSubmitting(false);
+        if (data.error){
+          alert("Email address not found");
+        }
+        else {
+          // user is authenticated! 
+          signin(values.email, data.user, data.token);
+        }
+      });
+  };
 
-                    <input 
-                        name='email' 
-                        id="defaultLoginFormEmail" 
-                        onChange={this.handleChange} 
-                        value={this.state.email} 
-                        className="form-control mb-2 " 
-                        placeholder="email" 
-                    />
-                    <input 
-                        name='password' 
-                        type='password'
-                        id="defaultLoginFormPassword" 
-                        onChange={this.handleChange} 
-                        value={this.state.password} 
-                        className="form-control mb-4" 
-                        placeholder="Password" 
-                    />
-                 
-                    <button className="btn btn-outline-green btn-lg " onClick={(e) => this.handleSubmit(e)}> Sign me in! </button>
-                </form>
-                </div>
-              
-            </div>
-            );
-    }
+  return (
+    <div id='signin-form-container'>
+      <div className='signin-container'>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          {({ isSubmitting }) => (
+            <Form id='signin-form' className="text-center">
+              <h2 className='signin-text'><b>RETURNING USER</b></h2>
+              <h2 className="h4 mb-4 signin-text">Sign in</h2>
+              <br></br>
+
+              <Field 
+                name='email' 
+                id="defaultLoginFormEmail" 
+                className="form-control mb-2 " 
+                placeholder="Email" 
+              />
+              <ErrorMessage name='email' />
+
+              <Field 
+                name='password' 
+                type='password'
+                id="defaultLoginFormPassword" 
+                className="form-control mb-4" 
+                placeholder="Password" 
+              />
+              <ErrorMessage name='password' />
+
+              <button 
+                className="btn btn-outline-green btn-lg " 
+                type="submit"
+                disabled={isSubmitting}
+              > 
+                {isSubmitting ? 'Signing in...' : 'Sign me in!'}
+              </button>
+            </Form>
+          )}
+        </Formik>
+      </div>
+    </div>
+  );
 }
- 
+
 export default Signin;
