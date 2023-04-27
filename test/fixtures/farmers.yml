@@ -1,11 +1,13 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  farmer_name: MyString
-  farmer_location: MyString
-  contact_info: 1
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  phone: MyString
 
 two:
-  farmer_name: MyString
-  farmer_location: MyString
-  contact_info: 1
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  phone: MyString
