@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import Modal from 'react-modal'
 import SlidingPane from 'react-sliding-pane'
 import 'react-sliding-pane/dist/react-sliding-pane.css'
+
+import ProductForm from '../farmerComponents/ProductForm'
 import ProductCollection from '../farmerComponents/ProductCollection'
-import ProductForm from '../farmerComponents/ProductForm';
 
 
 class FarmerContainer extends Component {

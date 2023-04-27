@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default function ComingSoon(){
+class ComingSoon extends Component {
+    render() {
         return (
             <div className="bgimg">
                 <div className="topleft">
@@ -11,8 +12,11 @@ export default function ComingSoon(){
                     <hr></hr>
                 </div>
                 <div className="bottomleft">
-                    <p>Farms to Peeps</p>
+                    <p>FARMART</p>
                 </div>
             </div>
          );
     }
+}
+
+export default ComingSoon;

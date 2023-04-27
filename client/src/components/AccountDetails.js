@@ -53,5 +53,4 @@ class AccountDetails extends Component {
          );
     }
 }
-
 export default AccountDetails;

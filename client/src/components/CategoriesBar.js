@@ -27,5 +27,4 @@ class CategoriesBar extends Component {
          );
     }
 }
-
 export default CategoriesBar;

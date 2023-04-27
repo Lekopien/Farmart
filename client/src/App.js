@@ -1,18 +1,19 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import './App.css';
 
-import { Route, Routes, BrowserRouter } from 'react-router-dom'
+import { Route, Switch, withRouter } from 'react-router-dom'
 
 import API from './data/API'
 
 import Header from './containers/Header'
-import Signin from './containers/Signin';
-import Signup from './containers/Signup';
 import HomePage from './containers/HomePage';
-import CustomerProfile from './containers/CustomerProfile';
-import FarmerProfile from './containers/FarmerProfile';
+import FarmerProfile from './containers/FarmerProfile'
+import CustomerProfile from './containers/CustomerProfile'
+import Signin from './containers/Signin'
+import Signup from './containers/Signup'
 import CustomerContainer from './containers/CustomerContainer';
 import FarmerContainer from './containers/FarmerContainer';
+
 
 class App extends Component {
 
@@ -31,8 +32,8 @@ class App extends Component {
 
   signin = (email, current_user, token) => {
     localStorage.setItem('token', token)
-    this.setState({ email, current_user }, async () => {
-      this.defUserType()
+    this.setState({email, current_user}, async () => {
+      await this.defUserType()
 
       if (this.state.user_type === 'customer') {
         this.getCustomerData()
@@ -41,54 +42,55 @@ class App extends Component {
         this.props.history.push('/products')
       } else if (this.state.user_type === 'farmer') {
         this.getFarmerData()
-        // this.props.history.push('/farmers')
+        this.props.history.push('/farmers')
 
       } else {
-        // this.props.history.push('/')
+        this.props.history.push('/')
       }
-    })
+      })
   }
 
   signup = (email, user_type) => {
-    this.setState({ email, user_type })
-  }
+      this.setState({email, user_type})
+    }
 
   signout = () => {
-    this.setState({ email: '', current_user: '' })
-    localStorage.removeItem('token')
-    this.props.history.push('/')
+      this.setState({email: '', current_user: ''})
+      localStorage.removeItem('token')
+      this.setState({customerBasket:[]})
+      this.props.history.push('/')
   }
-  // def user type
+   // def user type
   defUserType = () => {
-    if (this.state.current_user.farmer_id) {
-      return this.setState({ user_type: 'farmer' })
-    } else if (this.state.current_user.customer_id) {
-      return this.setState({ user_type: 'customer' })
+    if (this.state.current_user.farmer_id){
+      return this.setState({user_type: 'farmer'})
+    } else if (this.state.current_user.customer_id){
+      return this.setState({user_type: 'customer'})
     } else {
-      return this.setState({ user_type: '' })
+      return this.setState({user_type: ''})
     }
   }
 
   getAllProducts = async () => {
     API.getProducts()
-      .then(allProducts => this.setState({ allProducts }))
+        .then(allProducts => this.setState({allProducts}))
   }
 
   getProductCategories = async () => {
     API.getCategories()
-      .then(productCategories => this.setState({ productCategories }))
+      .then(productCategories => this.setState({productCategories}))
   }
 
   // farmer functionalities
   getFarmerData = async () => {
     const id = this.state.current_user.farmer_id
-    return fetch(`http://localhost:3000/farmers/${id}`)
-      .then(resp => resp.json())
-      .then(data => this.setState({ farmerProducts: data.products, farm: data.farm }))
+    return fetch(`http://localhost:3001/farmers/${id}`)
+        .then(resp => resp.json())
+        .then(data => this.setState({farmerProducts: data.products, farm: data.farm}))
   }
 
   addToFarmerProducts = (newProduct) => {
-    this.setState({ farmerProducts: [...this.state.farmerProducts, newProduct] })
+    this.setState({farmerProducts: [...this.state.farmerProducts, newProduct]})
   }
 
   removeProduct = (id) => {
@@ -98,7 +100,7 @@ class App extends Component {
   }
 
   removeFromSale = (id) => {
-    this.setState({ farmerProducts: [...this.state.farmerProducts.filter(p => p.id !== id)] })
+    this.setState({farmerProducts: [...this.state.farmerProducts.filter(p => p.id !== id)]})
   }
 
   // customer functionalities
@@ -110,20 +112,20 @@ class App extends Component {
     }
     // basket = data.basket.products
     // add headers: {Authorization: localStorage.getItem('token')}
-    return fetch(`http://127.0.0.1:3000/customers/${id}`)
+    return fetch(`http://localhost:3001/customers/${id}`)
       .then(resp => resp.json())
       .then(data => {
-        if (data.basket) {
-          this.setState({ customerBasket: data.basket.products, basket_id: data.basket.id })
+        if (data.basket){
+          this.setState({customerBasket:  data.basket.products, basket_id: data.basket.id})
         } else {
           API.createCustomerBasket(customer)
-            .then(basket => this.setState({ basket_id: basket.id }))
+            .then(basket => this.setState({basket_id: basket.id}))
         }
       })
   }
 
   addToBasket = (product) => {
-    this.setState({ customerBasket: [...this.state.customerBasket, product] })
+    this.setState({customerBasket: [...this.state.customerBasket, product]})
   }
 
   deleteProduct = (id, basket_id) => {
@@ -132,15 +134,15 @@ class App extends Component {
   }
 
   removeFromBasket = (id) => {
-    this.setState({ customerBasket: [...this.state.customerBasket.filter(p => p.id !== id)] })
+    this.setState({customerBasket: [...this.state.customerBasket.filter(p => p.id !== id)]})
   }
 
   handleFilterCategory = (category) => {
-    this.setState({ filterCategory: category })
+    this.setState({filterCategory: category})
   }
 
   handleAllCategories = () => {
-    this.setState({ filterCategory: '' })
+    this.setState({filterCategory: ''})
   }
 
   filterProducts = (category) => {
@@ -150,30 +152,29 @@ class App extends Component {
   }
 
   componentDidMount() {
-    API.validate()
-      .then(data => {
-        if (data.error) {
-          this.getAllProducts()
-          this.getProductCategories()
-          this.props.history.push('/')
-        }
-        else {
-          this.signin(data.email, data.user, localStorage.getItem('token'))
-          if (this.state.user_type === 'farmer') {
-            this.getFarmerData()
-          } else if (this.state.user_type === 'customer') {
-            this.getCustomerData()
-            this.getAllProducts()
-            this.getProductCategories()
-          }
-        }
-      })
+        API.validate()
+          .then(data => {
+              if(data.error){
+                this.getAllProducts()
+                this.getProductCategories()
+                this.props.history.push('/')
+              }
+              else {
+                  this.signin(data.email, data.user, localStorage.getItem('token'))
+                  if (this.state.user_type === 'farmer'){
+                    this.getFarmerData()
+                  } else if (this.state.user_type === 'customer') {
+                    this.getCustomerData()
+                    this.getAllProducts()
+                    this.getProductCategories()
+                  }
+              }
+          })
   }
 
   render() {
-    const { signin, signup, signout, addToFarmerProducts, removeProduct, addToBasket, deleteProduct, filterProducts, handleFilterCategory, handleAllCategories } = this
-    const { current_user, user_type, farmerProducts, customerBasket, allProducts, basket_id, productCategories, filterCategory } = this.state
-
+    const {signin, signup, signout, addToFarmerProducts, removeProduct, addToBasket, deleteProduct, filterProducts, handleFilterCategory, handleAllCategories } = this
+    const {current_user, user_type, farmerProducts, customerBasket, allProducts, basket_id, productCategories, filterCategory} = this.state
     return (
       <div className="app-container">
         <Header
@@ -186,56 +187,56 @@ class App extends Component {
           farmerProducts={farmerProducts}
           addToFarmerProducts={addToFarmerProducts}
         />
-        <Routes>
-          <Route exact path='/' component={<HomePage/>}/>
-          <Route exact path='/signin' component={props => <Signin {...props} signin={signin} />} />
-          <Route exact path='/signup' component={props => <Signup {...props} signup={signup} />} />
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/signin' component={props => <Signin {...props} signin={signin}/>} />
+          <Route exact path='/signup' component={props => <Signup {...props} signup={signup}/>} />
           <Route
             exact path='/peep-profile'
             component={props => <CustomerProfile {...props}
-              current_user={current_user}
-              customerBasket={customerBasket}
-              basket_id={basket_id}
-              deleteProduct={deleteProduct} />}
+            current_user={current_user}
+            customerBasket={customerBasket}
+            basket_id={basket_id}
+            deleteProduct={deleteProduct}/>}
           />
-          <Route
+           <Route
             exact path='/farmer-profile'
             component={props => <FarmerProfile {...props}
-              current_user={current_user}
-              farmerProducts={farmerProducts} />}
+            current_user={current_user}
+            farmerProducts={farmerProducts} />}
           />
 
           <Route
             exact path='/products'
             component={props => <CustomerContainer {...props}
-              current_user={current_user}
-              basket_id={basket_id}
-              customerBasket={customerBasket}
-              addToBasket={addToBasket}
-              deleteProduct={deleteProduct}
-              allProducts={allProducts}
-              productCategories={productCategories}
-              handleFilterCategory={handleFilterCategory}
-              handleAllCategories={handleAllCategories}
-              filterProducts={filterProducts}
-              filterCategory={filterCategory}
-              signout={signout} />}
+            current_user={current_user}
+            basket_id={basket_id}
+            customerBasket={customerBasket}
+            addToBasket={addToBasket}
+            deleteProduct={deleteProduct}
+            allProducts={allProducts}
+            productCategories={productCategories}
+            handleFilterCategory={handleFilterCategory}
+            handleAllCategories={handleAllCategories}
+            filterProducts={filterProducts}
+            filterCategory={filterCategory}
+            signout={signout}/>}
           />
           <Route
             exact path='/farmers'
             component={props => <FarmerContainer {...props}
-              current_user={current_user}
-              farmerProducts={farmerProducts}
-              addToFarmerProducts={addToFarmerProducts}
-              removeProduct={removeProduct}
-              signout={signout} />}
+            current_user={current_user}
+            farmerProducts={farmerProducts}
+            addToFarmerProducts={addToFarmerProducts}
+            removeProduct={removeProduct}
+            signout={signout}/>}
           />
           <Route component={() => <h1>Page not found.</h1>} />
-        </Routes>
-      </div>
-    );
+        </Switch>
+    </div>
+     );
   }
 }
 
 
-export default BrowserRouter(App)
+export default withRouter(App)

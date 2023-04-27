@@ -37,12 +37,10 @@ class API {
         }).then(resp => resp.json())
     }
 
-
     static getProducts () {
         return fetch(this.productsUrl)
         .then(resp => resp.json())
     }
-
     static getCategories () {
         return fetch(this.categoriesUrl)
         .then(resp => resp.json())

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+
+import ProductCollection from '../customerComponents/ProductCollection';
 import CategoriesBar from '../components/CategoriesBar';
-import ProductCollection from '../customerComponents.js/ProductCollection';
 
 class CustomerContainer extends Component {
 
@@ -13,7 +14,7 @@ class CustomerContainer extends Component {
                     handleFilterCategory={this.props.handleFilterCategory}
                     handleAllCategories={this.props.handleAllCategories}
                 />
-                <h3 id='customer-title' className="d-flex justify-content-center">Shop the goods! </h3>
+                <h3 id='customer-title' className="d-flex justify-content-center">Shop our goods! </h3>
                 <ProductCollection
                     history={this.props.history}
                     current_user={this.props.current_user}
@@ -28,5 +29,4 @@ class CustomerContainer extends Component {
          );
     }
 }
-
 export default CustomerContainer;

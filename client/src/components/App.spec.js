@@ -8,3 +8,7 @@ describe('App', () => {
     expect(wrapper.find('div').length).toEqual(1);
   });
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> c5552994eb7105a3e248869868465a17f1c7afd1

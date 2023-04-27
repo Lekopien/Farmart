@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :baskets, only: [:index, :new, :create, :show, :destroy]
   resources :basket_products, only: [:index, :new, :create, :show, :destroy]
   resources :category_products, only: [:index, :new, :create, :show, :destroy]
+<<<<<<< HEAD
 
 
 
@@ -19,3 +20,16 @@ Rails.application.routes.draw do
 
 
 end
+=======
+
+
+
+  post '/signin', to: 'users#signin'
+  post '/signup', to: 'users#signup'
+  get '/validate', to: 'users#validate'
+  post '/remove', to: 'basket_products#remove'
+  get '/profile', to: 'users#profile'
+
+
+end
+>>>>>>> c5552994eb7105a3e248869868465a17f1c7afd1

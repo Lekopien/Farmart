@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
@@ -21,3 +22,16 @@ two:
   last_name: MyString
   address: MyString
   phone: MyString
+=======
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  password_digest: MyString
+  isAdmin: false
+
+two:
+  username: MyString
+  password_digest: MyString
+  isAdmin: false
+>>>>>>> c5552994eb7105a3e248869868465a17f1c7afd1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
@@ -5,3 +6,12 @@ one:
 
 two:
   customer_id: 1
+=======
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: one
+
+two:
+  customer: two
+>>>>>>> c5552994eb7105a3e248869868465a17f1c7afd1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
@@ -5,3 +6,20 @@ one:
 
 two:
   user_id: 1
+=======
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  adress: MyString
+  phone: MyString
+  email: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  adress: MyString
+  phone: MyString
+  email: MyString
+>>>>>>> c5552994eb7105a3e248869868465a17f1c7afd1

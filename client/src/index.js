@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 //bootstrap
 import 'bootstrap/dist/css/bootstrap.css';
@@ -17,9 +17,9 @@ import "mdbreact/dist/css/mdb.css";
 
 
 ReactDOM.render(
-    <BrowserRouter>
+    <Router>
         <App />
-    </BrowserRouter>,
+    </Router>,
     document.getElementById('root')
     );
 

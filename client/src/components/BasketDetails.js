@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import BasketCard from '../customerComponents.js/BasketCard';
+
+import BasketCard from '../customerComponents/BasketCard'
 
 class BasketDetails extends Component {
     state = {  }

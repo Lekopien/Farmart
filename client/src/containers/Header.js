@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom'
 import Modal from 'react-modal'
 import SlidingPane from 'react-sliding-pane'
 import 'react-sliding-pane/dist/react-sliding-pane.css'
-import Basket from '../customerComponents.js/Basket';
+
+import Basket from '../customerComponents/Basket'
 
 
 class Header extends Component {
@@ -25,7 +26,7 @@ class Header extends Component {
         return (
             <nav className="naigation_bar sticky-top">
 
-            <Link to='/' className="navbar-logo">Farms To Peeps</Link>
+            <Link to='/' className="navbar-logo">FARMART</Link>
             {
                 this.props.current_user  && <p id='welcome-user'>Welcome, {this.props.current_user.first_name}! </p>
             }
@@ -63,7 +64,7 @@ class Header extends Component {
                                                 <br />
                                                 { !this.props.customerBasket
                                                     ? `Your basket is currently empty`
-                                                    : <Basket
+                                                    :   <Basket
                                                             current_user={this.props.current_user}
                                                             basket_id={this.props.basket_id}
                                                             customerBasket={this.props.customerBasket}
@@ -95,6 +96,5 @@ class Header extends Component {
          );
     }
 }
-
 
 export default Header;

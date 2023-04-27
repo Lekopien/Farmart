@@ -16,5 +16,4 @@ class FarmerProfile extends Component {
           );
      }
 }
-
 export default FarmerProfile;
