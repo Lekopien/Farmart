@@ -9,7 +9,7 @@ class API {
     static removeUrl = API.baseUrl + '/remove'
     static categoriesUrl = API.baseUrl + '/categories'
     static FarmerProfileUrl = API.baseUrl + '/farmer-profile'
-    static peepProfileUrl = API.baseUrl + '/peep-profile'
+    static clientProfileUrl = API.baseUrl + '/client-profile'
 
 
     static signin (user) {

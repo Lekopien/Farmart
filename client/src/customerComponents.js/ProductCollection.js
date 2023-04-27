@@ -1,47 +1,59 @@
-import React, {Component} from 'react';
+import ProductCard from './ProductCard';
+import { useState } from 'react';
 
-import ProductCard from './ProductCard'
+function ProductCollection(props) {
+  const [productsPerPage, setProductsPerPage] = useState(3);
+  const [currentPage, setCurrentPage] = useState(1);
 
-function ProductCollection()  {
-        const {allProducts, filterCategory, filterProducts} = this.props
+  const handleLoadMore = () => {
+    setCurrentPage(currentPage + 1);
+  };
 
-        const product =
-            filterCategory === ''
-                ? allProducts.map(product => (
-                    <ProductCard
-                        key={product.id}
-                        id={product.id}
-                        product={product}
-                        addToBasket={this.props.addToBasket}
-                        basket_id={this.props.basket_id}
-                        customerBasket={this.props.customerBasket}
-                        history={this.props.history}
-                        current_user={this.props.current_user}
+  const handleGoBack = () => {
+    setCurrentPage(currentPage - 1);
+  };
 
-                    />
-                ))
-                : filterProducts(filterCategory).map(
-                    product => (
-                        <ProductCard
-                            key={product.id}
-                            id={product.id}
-                            product={product}
-                            addToBasket={this.props.addToBasket}
-                            basket_id={this.props.basket_id}
-                            customerBasket={this.props.customerBasket}
-                            history={this.props.history}
-                            current_user={this.props.current_user}
+  const { allProducts, filterCategory, filterProducts } = props;
 
+  const startIndex = (currentPage - 1) * productsPerPage;
+  const endIndex = startIndex + productsPerPage;
 
-                        />
-                    ))
+  const productsToDisplay =
+    filterCategory === ''
+      ? allProducts.slice(startIndex, endIndex)
+      : filterProducts(filterCategory).slice(startIndex, endIndex);
 
+  const canLoadMore = endIndex < (filterCategory === '' ? allProducts.length : filterProducts(filterCategory).length);
+  const canGoBack = currentPage > 1;
 
-        return (
-            <div className= 'productCollection row align-items-stretch'>
-                {product}
-            </div>
-        )
-    }
+  return (
+    <div className='productCollection row align-items-stretch'>
+      {productsToDisplay.map((product) => (
+        <ProductCard
+          key={product.id}
+          id={product.id}
+          product={product}
+          addToBasket={props.addToBasket}
+          basket_id={props.basket_id}
+          customerBasket={props.customerBasket}
+          history={props.history}
+          current_user={props.current_user}
+        />
+      ))}
+      <div className='pagination'>
+        {canGoBack && (
+          <button className='prev-btn' onClick={handleGoBack}>
+            Prev
+          </button>
+        )}
+        {canLoadMore && (
+          <button className='load-more-btn' onClick={handleLoadMore}>
+            Load More
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
 
-export default ProductCollection
+export default ProductCollection;

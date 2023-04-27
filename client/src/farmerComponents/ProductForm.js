@@ -61,7 +61,14 @@ class ProductForm extends Component {
                         onChange={this.handleChange}
                         value={price}
                         className="form-control mb-4"
-                        placeholder="Ksh(/=)"
+                        placeholder="Ksh"
+                    />
+                    <input
+                        name='quantity'
+                        onChange={this.handleChange}
+                        value={quantity}
+                        className="form-control mb-4"
+                        placeholder="500g? 4 pieces? 1 bunch?"
                     />
                     <input
                         name='quantity'
@@ -89,9 +96,10 @@ class ProductForm extends Component {
                     <div>
                         <select className="form-control mb-4" id='select-product-category' onChange={this.handleCategory} value={this.state.value} >
                             <option value=''> -- Select a category -- </option>
-                            <option value="Farm Products">Farm Products</option>
-                            <option value="Animals">Animals</option>
-                            <option value="Land">Land</option>
+                            <option value="Vegetable">Farm Products</option>
+                            <option value="Fruit">Animals</option>
+                            <option value="Bakery">Lands</option>
+
                         </select>
                     </div>
                     <br></br>
@@ -108,7 +116,7 @@ class ProductForm extends Component {
                         <div className="card-body ">
                             <h5 className="grey-text pb-2 pt-1"> {category}</h5>
                             <h4  className="font-weight-bold card-title">{name}</h4>
-                            <p className="card-text">ksh{price}</p>
+                            <p className="card-text">Ksh{price}</p>
                             <p className="card-text">{quantity}</p>
                             <p className="card-text">{farm}</p>
                         </div>

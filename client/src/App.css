@@ -2,11 +2,33 @@
   text-align: center;
 }
 
-html,
+
+.pagination-btn {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: grey;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+
+}
+
+/*
+html, */
 body,
 #intro {
     height: 100%;
   }
+
+  body {
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
 
 .App-link {
   color: #61dafb;
@@ -397,6 +419,14 @@ a#product-category {
   font-size: 15px;
 }
 
+.overaldiv{
+  height: 100vh;
+}
+
+.pagination{
+  height: 10vh;
+}
+
 .productCollection {
   display: flex;
   flex-wrap: wrap;
@@ -404,7 +434,7 @@ a#product-category {
   justify-content: space-around;
   padding-right: 4%;
   padding-left: 4%;
-  padding-bottom: 100%;
+  height: 90%;
 }
 
 #preview-title {
@@ -418,6 +448,24 @@ a#product-category {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signin-container {
+  width: 300px;
+  height: 400px;
+  background-color:  rgba(255, 255, 255,0.4);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-text {
+  color: green;
 }
 
 #signup-form-container {
@@ -427,15 +475,12 @@ a#product-category {
 
 }
 
-#signin-form {
-  width: 80%;
-  padding-top: 15%;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 20%;
-  margin: 0 auto;
-  color:white;
+#product-category-navbar {
+ background-color:rgba(126,213,111,0.8);
 }
+
+
+
 
 
 #panel-content {
@@ -550,7 +595,7 @@ a#product-category {
 /* Sidebar links */
 .sidebar p {
   display: block;
-  color: orangered;
+  color:rgba(126,213,111,0.8);
   font-weight: bold;
   padding: 16px;
   text-decoration: none;

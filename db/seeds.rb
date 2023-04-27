@@ -31,11 +31,9 @@ users = User.create([
 ])
 
 categories = Category.create([
+    
     {
-        name: 'Fruit'
-    },
-    {
-        name: 'Vegetable'
+        name: 'Farm Products'
     },
     {
         name: 'Animals'
@@ -149,7 +147,7 @@ products = Product.create([
         name: 'Beef',
         price: 8.50,
         quantity: '500g',
-        category: categories[3],
+        category: categories[2],
         farmer: farmers[0],
         url_img: 'http://cdn.shopify.com/s/files/1/1844/0771/products/84b26ca83f6ab9914c49f65957d4329f_grande.jpg?v=1511148760'
     },
@@ -157,7 +155,7 @@ products = Product.create([
         name: 'Sirloin Steak',
         price: 10.50,
         quantity: '800g',
-        category: categories[3],
+        category: categories[2],
         farmer: farmers[0],
         url_img: 'https://images.unsplash.com/photo-1448907503123-67254d59ca4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80'
     },
@@ -165,7 +163,7 @@ products = Product.create([
         name: 'Homemade Italian Sausage',
         price: 6.50,
         quantity: '500g',
-        category: categories[3],
+        category: categories[2],
         farmer: farmers[0],
         url_img: 'https://www.manusmenu.com/wp-content/uploads/2013/07/2-Salsiccia-3-1-of-1.jpg'
     },
@@ -173,7 +171,7 @@ products = Product.create([
         name: 'Pasture-raised Bacon',
         price: 5.50,
         quantity: '500g',
-        category: categories[3],
+        category: categories[2],
         farmer: farmers[0],
         url_img: 'https://images.unsplash.com/photo-1529856426070-e610ede5a2fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80'
     },
@@ -181,7 +179,7 @@ products = Product.create([
         name: 'Breakfast Salami',
         price: 4.80,
         quantity: '300g',
-        category: categories[3],
+        category: categories[2],
         farmer: farmers[0],
         url_img: 'https://images.unsplash.com/photo-1542901031-ec5eeb518e83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
     },

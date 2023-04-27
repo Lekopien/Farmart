@@ -38,5 +38,17 @@
 <% end -%>
 <% unless options.api? -%>
 
+<<<<<<< HEAD:vendor/bundle/ruby/3.0.0/gems/railties-7.0.4.3/lib/rails/generators/rails/app/templates/gitignore.tt
 /public/assets
 <% end -%>
+=======
+.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+/vendor/
+
+client/node_modules/
+
+>>>>>>> 49274cdf11e81991f5a0304018caf90b0b84925b:.gitignore
