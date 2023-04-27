@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-Rails.application.config.middleware.insert_before 0, Rack::Cors do
-    allow do
-      origins '*'
-      resource '*', headers: :any, methods: :any
-    end
-  end
-=======
 # Be sure to restart your server when you modify this file.
 
 # Avoid CORS issues when API is called from the frontend app.
@@ -22,4 +14,3 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
->>>>>>> c5552994eb7105a3e248869868465a17f1c7afd1
