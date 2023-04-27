@@ -27,31 +27,31 @@ class Basket extends Component {
     openModal = () => {
         this.setState({modalIsOpen: true});
     }
-     
+
     closeModal = () => {
         this.setState({modalIsOpen: false});
     }
 
-  
-    render() { 
+
+    render() {
         const {customerBasket} = this.props
         const subtotal = customerBasket.map(el => el.price).reduce((a, b) => a + b, 0)
         const deliveryFee = 200
         const totalPrice = (subtotal + deliveryFee).toFixed(2)
         const product = customerBasket.map(product => (
 
-                <BasketCard 
+                <BasketCard
                     key={product.id}
                     product={product}
                     deleteProduct={this.props.deleteProduct}
                     basket_id={this.props.basket_id}
                 />
-               
-            
+
+
         ))
         return (
             <div id ='panel-content'>
-                {product} 
+                {product}
                 <hr/>
                 <div id='summary-content'>
                     <p><i>Subtotal: ksh{subtotal}</i></p>
@@ -78,5 +78,5 @@ class Basket extends Component {
         )
     }
 }
- 
+
 export default Basket;

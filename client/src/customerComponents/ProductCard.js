@@ -17,12 +17,12 @@ class ProductCard extends Component {
                 alert('You already have this item in your basket!')
         } else {
             API.addToCustomerBasket(productForApi)
-            addToBasket(product);   
-        }       
+            addToBasket(product);
+        }
         } else {
             alert('You need to register first!')
             this.props.history.push('/signup')
-        }    
+        }
     }
 
 
