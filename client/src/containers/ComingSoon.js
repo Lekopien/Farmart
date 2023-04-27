@@ -12,7 +12,7 @@ class ComingSoon extends Component {
                     <hr></hr>
                 </div>
                 <div className="bottomleft">
-                    <p>Farms to Peeps</p>
+                    <p>FarmArt</p>
                 </div>
             </div>
          );

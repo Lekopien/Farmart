@@ -61,7 +61,7 @@ class ProductForm extends Component {
                         onChange={this.handleChange} 
                         value={price} 
                         className="form-control mb-4" 
-                        placeholder="£" 
+                        placeholder="Ksh" 
                     />
                     <input 
                         name='quantity' 
@@ -112,7 +112,7 @@ class ProductForm extends Component {
                         <div className="card-body ">
                             <h5 className="grey-text pb-2 pt-1"> {category}</h5>
                             <h4  className="font-weight-bold card-title">{name}</h4>
-                            <p className="card-text">£{price}</p>
+                            <p className="card-text">Ksh{price}</p>
                             <p className="card-text">{quantity}</p>
                             <p className="card-text">{farm}</p>
                         </div>

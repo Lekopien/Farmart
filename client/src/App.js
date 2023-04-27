@@ -84,7 +84,7 @@ class App extends Component {
   // farmer functionalities
   getFarmerData = async () => {
     const id = this.state.current_user.farmer_id
-    return fetch(`http://localhost:3001/farmers/${id}`)
+    return fetch(`http://localhost:3000/farmers/${id}`)
         .then(resp => resp.json())
         .then(data => this.setState({farmerProducts: data.products, farm: data.farm}))
   }
@@ -112,7 +112,7 @@ class App extends Component {
     }
     // basket = data.basket.products
     // add headers: {Authorization: localStorage.getItem('token')}
-    return fetch(`http://localhost:3001/customers/${id}`)
+    return fetch(`http://localhost:3000/customers/${id}`)
       .then(resp => resp.json())
       .then(data => {
         if (data.basket){
@@ -192,7 +192,7 @@ class App extends Component {
           <Route exact path='/signin' component={props => <Signin {...props} signin={signin}/>} />
           <Route exact path='/signup' component={props => <Signup {...props} signup={signup}/>} />
           <Route 
-            exact path='/peep-profile' 
+            exact path='/client-profile' 
             component={props => <CustomerProfile {...props} 
             current_user={current_user}
             customerBasket={customerBasket}
