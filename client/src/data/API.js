@@ -1,5 +1,5 @@
 class API {
-    static baseUrl = 'http://localhost:3001'
+    static baseUrl = 'http://localhost:3000'
     static signinUrl = API.baseUrl + '/signin'
     static signupUrl = API.baseUrl + '/signup'
     static validateUrl = API.baseUrl + '/validate'
