@@ -54,9 +54,9 @@ class Basket extends Component {
                 {product} 
                 <hr/>
                 <div id='summary-content'>
-                    <p><i>Subtotal: £{subtotal}</i></p>
-                    <p><i>Delivery Fee: £{deliveryFee}</i></p>
-                    <p><b>Total: £{totalPrice}</b></p>
+                    <p><i>Subtotal: Ksh{subtotal}</i></p>
+                    <p><i>Delivery Fee: Ksh{deliveryFee}</i></p>
+                    <p><b>Total: ksh{totalPrice}</b></p>
                 </div>
                 <hr/>
                 <div id='checkout-btn'>

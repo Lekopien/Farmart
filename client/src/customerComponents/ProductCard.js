@@ -36,14 +36,14 @@ class ProductCard extends Component {
                 <div className="card-body ">
                     <p className="grey-text"> <i>{category.name}</i></p>
                     <h5  className="font-weight-bold">{name}</h5>
-                    <p className="card-text">£{price} - <span>{quantity}</span></p>
+                    <p className="card-text">ksh{price} - <span>{quantity}</span></p>
                     <p className="card-text">Chalk Farm</p>
                 </div>
                 <div className="card-footer text-muted text-center">
                     <button
                     onClick={() => this.handleSubmit(id, this.props.product)}
                     id='add-basket-btn'
-                    className="btn btn-outline-orange lighten-1">ADD TO BASKET
+                    className="btn btn-outline-green lighten-1">ADD TO BASKET
                     </button>
                 </div>
             </div>
