@@ -10,6 +10,7 @@ body,
 
   body {
     padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
 
@@ -450,6 +451,10 @@ a#product-category {
   
 }
 
+#product-category-navbar {
+ background-color:rgba(126,213,111,0.8);
+}
+
 
 
 
@@ -570,7 +575,7 @@ a#product-category {
 /* Sidebar links */
 .sidebar p {
   display: block;
-  color: orangered;
+  color:rgba(126,213,111,0.8);
   font-weight: bold;
   padding: 16px;
   text-decoration: none;
