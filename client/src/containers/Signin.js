@@ -33,9 +33,10 @@ class Signin extends Component {
         return ( 
 // <!-- Default form login -->
             <div id='signin-form-container'>
+              <div className='signin-container'>
                 <form id='signin-form' className="text-center">
-                <h2><b>RETURNING USER</b></h2>
-                    <h2 className="h4 mb-4">Sign in</h2>
+                <h2 className='signin-text'><b>RETURNING USER</b></h2>
+                    <h2 className="h4 mb-4 signin-text">Sign in</h2>
                     <br></br>
 
                     <input 
@@ -56,8 +57,9 @@ class Signin extends Component {
                         placeholder="Password" 
                     />
                  
-                    <button className="btn btn-outline-orange btn-lg " onClick={(e) => this.handleSubmit(e)}> Sign me in! </button>
+                    <button className="btn btn-outline-green btn-lg " onClick={(e) => this.handleSubmit(e)}> Sign me in! </button>
                 </form>
+                </div>
               
             </div>
             );

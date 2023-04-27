@@ -423,6 +423,24 @@ a#product-category {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signin-container {
+  width: 300px;
+  height: 400px;
+  background-color:  rgba(255, 255, 255,0.4);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-text {
+  color: green;
 }
 
 #signup-form-container {
@@ -432,15 +450,7 @@ a#product-category {
   
 }
 
-#signin-form {
-  width: 80%;
-  padding-top: 15%;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 20%;
-  margin: 0 auto;
-  color:white;
-}
+
 
 
 
