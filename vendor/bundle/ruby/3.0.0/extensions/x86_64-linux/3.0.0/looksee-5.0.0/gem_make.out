@@ -1,0 +1,15 @@
+current directory: /home/lewis/Farmart/vendor/bundle/ruby/3.0.0/gems/looksee-5.0.0/ext
+/home/lewis/.rbenv/versions/3.0.3/bin/ruby -I /home/lewis/.rbenv/versions/3.0.3/lib/ruby/3.0.0 -r ./siteconf20230428-29831-36000r.rb extconf.rb
+creating Makefile
+
+current directory: /home/lewis/Farmart/vendor/bundle/ruby/3.0.0/gems/looksee-5.0.0/ext
+make DESTDIR\= clean
+
+current directory: /home/lewis/Farmart/vendor/bundle/ruby/3.0.0/gems/looksee-5.0.0/ext
+make DESTDIR\=
+compiling mri/mri.c
+linking shared-object looksee/mri.so
+
+current directory: /home/lewis/Farmart/vendor/bundle/ruby/3.0.0/gems/looksee-5.0.0/ext
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 mri.so ./.gem.20230428-29831-tkqse3/looksee
