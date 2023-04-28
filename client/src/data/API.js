@@ -55,6 +55,21 @@ class API {
         }).then(resp => resp.json())
      }
 
+     static updateProduct = async (productId, product) => {
+        const response = await fetch(`${this.productsUrl}/${productId}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: localStorage.getItem('token')
+            },
+            body: JSON.stringify(product)
+        });
+
+        const data = await response.json();
+        return data;
+    }
+
+
     static removeProductFromSale (id) {
         return fetch(`${this.productsUrl}/${id}`, {
             method: "DELETE",
