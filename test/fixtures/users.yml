@@ -1,0 +1,37 @@
+<<<<<<< HEAD
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  password_digest: MyString
+  isAdmin: false
+  customer_id: 1
+  farmer_id: 1
+  first_name: MyString
+  last_name: MyString
+  address: MyString
+  phone: MyString
+
+two:
+  email: MyString
+  password_digest: MyString
+  isAdmin: false
+  customer_id: 1
+  farmer_id: 1
+  first_name: MyString
+  last_name: MyString
+  address: MyString
+  phone: MyString
+=======
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  password_digest: MyString
+  isAdmin: false
+
+two:
+  username: MyString
+  password_digest: MyString
+  isAdmin: false
+>>>>>>> c5552994eb7105a3e248869868465a17f1c7afd1
