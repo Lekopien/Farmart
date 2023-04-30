@@ -1,5 +1,6 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 import API from '../data/API';
 import NavBar from '../components/NavBar';
@@ -88,6 +89,7 @@ const Signin = ({ signin }) => {
               > 
                 {isSubmitting ? 'Signing in...' : 'Sign me in!'}
               </button>
+              <Link to='/signup'><p >Register an Account?</p></Link>
             </Form>
           )}
         </Formik>

@@ -6,11 +6,13 @@ html,
 body,
 #intro {
     height: 100%;
+   
   }
 
   body {
     padding: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    
   }
   
 
@@ -809,7 +811,17 @@ input[type=month]::-webkit-calendar-picker-indicator {
 }
 
 
+#signup-btn{
+  border-radius: 12px;
+}
 
+#signup-btn:hover {
+  background-color: #019875;
+  color: white;
+}
 
+#signup-question {
+  margin-top: 10px;
+} 
 
   

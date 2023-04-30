@@ -55,7 +55,7 @@ class Signup extends Component {
                             <select className="form-control mb-4" id='select-user-type' onChange={this.handleUserType} value={this.state.value} >
                                 <option value=''> -- Select an option -- </option>
                                 <option value="farmer">I am a farmer</option>
-                                <option value="customer">I am a Clie {/* <legend>Step 2: Enter your details</legend> */}nt</option>
+                                <option value="customer">I am a Customer</option>
                             </select>
                         </div>
                     </fieldset>
@@ -117,7 +117,8 @@ class Signup extends Component {
                         />
                     </fieldset>
                   
-                    <Link to='/signin'><button className="btn btn-block btn-outline-green btn-lg" onClick={(e) => this.handleSubmit(e)}  type="submit">Sign me up!</button></Link>
+                    <Link to='/signin'><button className="btn btn-block btn-outline-green btn-lg" id='signup-btn' onClick={(e) => this.handleSubmit(e)}  type="submit">Sign me up!</button></Link>
+                    <Link to='/signin'><p id='signup-question'>Already have an Account?</p></Link>
     
                     </form>
             </div>
