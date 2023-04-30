@@ -76,7 +76,8 @@ class Header extends Component {
                                         </SlidingPane>
                                     </div>
                                     <Link to='/products' id="shop-2">Shop</Link>
-                                    <Link to='/peep-profile' id="profile">Profile</Link> 
+                                    <Link to='/client-profile' id="profile">Profile</Link> 
+                                    <Link to='/resources' id='resources'>Resources</Link>
                                     <a id='logout' onClick={this.props.signout}>Logout</a>
                                  
                             </ul>
@@ -84,6 +85,7 @@ class Header extends Component {
                             :  <ul id='navbar-farmer'>
                                     <Link to='/farmers' id="sales">Sales</Link> 
                                     <Link to='/farmer-profile' id='farmer-profile'>Profile</Link> 
+                                    <Link to='/resources' id='resources'>Resources</Link>
                                     <a id='logout' onClick={this.props.signout}>Logout</a>
      
                                 </ul>

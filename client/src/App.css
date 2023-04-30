@@ -824,4 +824,62 @@ input[type=month]::-webkit-calendar-picker-indicator {
   margin-top: 10px;
 } 
 
-  
+.resources-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom right, #FFA500, #12c91c);
+
+}
+
+.resources-content {
+  margin-top: 2rem;
+  align-items: center;
+
+}
+
+.youtube-cards {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+.youtube-card {
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.youtube-card iframe {
+  width: 100%;
+  height: 200px;
+}
+
+.youtube-card p {
+  padding: 1rem;
+  text-align: justify;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.random-button {
+  background-color: #00bfff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.random-button:hover {
+  transform: scale(1.05);
+}
