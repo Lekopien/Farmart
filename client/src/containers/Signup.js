@@ -45,7 +45,7 @@ class Signup extends Component {
         return (  
             // <!-- Default form login -->
             <div id='signup-form-container'>
-              <div id='signup-image'>Hello</div>
+              <div id='signup-image'></div>
                   <form id='signup-form' className="text-center ">
 
                   <h2>NEW USER</h2>
