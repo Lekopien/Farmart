@@ -2,6 +2,7 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import API from '../data/API';
+import NavBar from '../components/NavBar';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
@@ -35,6 +36,7 @@ const Signin = ({ signin }) => {
 
   return (
     <div id='signin-form-container'>
+     
       <div className='signin-container'>
         <Formik
           initialValues={initialValues}
@@ -43,9 +45,9 @@ const Signin = ({ signin }) => {
         >
           {({ isSubmitting }) => (
             <Form id='signin-form' className="text-center">
-              <h2 className='signin-text'><b>RETURNING USER</b></h2>
-              <h2 className="h4 mb-4 signin-text">Sign in</h2>
-              <br></br>
+              {/* <h2 className='signin-text'><b>RETURNING USER</b></h2> */}
+              <h2 className="h4 mb-4 signin-text">Login</h2>
+             
 
               <Field 
                 name='email' 
@@ -53,7 +55,12 @@ const Signin = ({ signin }) => {
                 className="form-control mb-2 " 
                 placeholder="Email" 
               />
-              <ErrorMessage name='email' />
+              <div className='error-message'>
+
+                <ErrorMessage name='email' />
+
+              </div>
+            
 
               <Field 
                 name='password' 
@@ -61,11 +68,16 @@ const Signin = ({ signin }) => {
                 id="defaultLoginFormPassword" 
                 className="form-control mb-4" 
                 placeholder="Password" 
+
+                
               />
-              <ErrorMessage name='password' />
+
+             
+              
 
               <button 
-                className="btn btn-outline-green btn-lg " 
+                className=" btn-outline" 
+                id='login-btn'
                 type="submit"
                 disabled={isSubmitting}
               > 

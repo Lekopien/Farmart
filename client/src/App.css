@@ -2,8 +2,7 @@
   text-align: center;
 }
 
-html,
-body,
+
 #intro {
     height: 100%;
   }
@@ -111,7 +110,9 @@ a#logout {
   padding: 1em;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+
+
+  
 }
 
 .navbar-logo {
@@ -119,7 +120,8 @@ a#logout {
   text-transform: uppercase;
   letter-spacing: .1em;
   font-weight: bold;
-  font-size: 1.9em;
+  font-size: 1.4em;
+ 
   padding-left: 2%;
   font-family: "Lato", Courier, monospace;
 }
@@ -384,7 +386,7 @@ a#product-category {
 }
 
 #signup-form-container {
-  height: 100vh;
+  height: 84vh;
 }
 
 
@@ -419,18 +421,26 @@ a#product-category {
 }
 
 #signin-form-container {
-  background: url('https://images.unsplash.com/photo-1504198266287-1659872e6590?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+ 
+  height: 84vh;
+  overflow-y: hidden;
+  background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.909),rgba(255,255,255,0.3)), url('https://images.unsplash.com/photo-1533515809464-7746c3303fe8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+ 
+ 
 }
 
-.signin-container {
+#nav-container {
+ 
+  height: 25%;
+}
+
+.signin-container{
   width: 300px;
   height: 400px;
   background-color:  rgba(255, 255, 255,0.4);
@@ -440,8 +450,39 @@ a#product-category {
   align-items: center;
 }
 
+#signin-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.error-message {
+  color: red;
+  font-weight: 300;
+}
+
 .signin-text {
   color: green;
+  font-size: 10px;
+}
+
+#login-btn {
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #019875;
+  background-color: white;
+  width: 150px;
+  text-align: center;
+  margin-left: 40px;
+ 
+}
+
+#login-btn:hover {
+
+  color: white;
+  background-color: #019875;
 }
 
 #signup-form-container {
