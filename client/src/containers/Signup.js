@@ -109,7 +109,7 @@ class Signup extends Component {
                         <input 
                             name='password' 
                             type='password'
-                            id="defaultSignupPassword" 
+                            id="defaultSignup" 
                             onChange={this.handleChange} 
                             value={this.state.password} 
                             className="form-control mb-4" 
