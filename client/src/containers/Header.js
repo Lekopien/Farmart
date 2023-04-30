@@ -39,6 +39,7 @@ class Header extends Component {
                                     <Link to='/products' id='shop'> Shop</Link>
                                     <Link to='/signup' id='register'>Create Account</Link>
                                     <Link to='/signin' id='login'> Login</Link>
+                                    <Link to='/resources' id='resources'>Resources</Link>
                                 </ul>
                          
                         : (

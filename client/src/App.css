@@ -698,6 +698,30 @@ input[type=month]::-webkit-calendar-picker-indicator {
   letter-spacing: 1.5px;
   cursor: pointer;
 }
+.resources-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.video-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-card {
+  width: 30%;
+  margin: 1rem;
+}
+
+.video {
+  border: none;
+}
+
+
 
 
 
