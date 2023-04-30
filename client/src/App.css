@@ -2,7 +2,8 @@
   text-align: center;
 }
 
-
+html,
+body,
 #intro {
     height: 100%;
   }
@@ -195,6 +196,20 @@ a#logout {
 
 }
 
+#create-container {
+  background-color: blue;
+  height: 100vh;
+  display: flex;
+  
+}
+
+.image-create {
+  background-color: red;
+  width: 35%;
+}
+
+
+
 #customer-title {
   margin-top: 5%;
   font-family: "Lato", Courier, monospace !important;
@@ -292,50 +307,54 @@ a#product-category {
  border-radius: 100px;
 }
 
-.signup-image {
-  width: 50%;
-  height: 100vh;
+#signup-image {
+  width: 40%;
+ 
   
    background-image: url('https://images.unsplash.com/photo-1429991889170-afd56b2a1210?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80https://images.unsplash.com/photo-1429991889170-afd56b2a1210?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
-   overflow: hidden;
+   overflow-y: hidden;
   
 }
 
-.signup-form {
-  width: 50%;
-  height: 100vh;
+
+
+
+#signup-form {
+ 
+  width: 60%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
- 
-  
 }
 
-.form-container {
-  width: 350px;
-  height: 575px;
-  border-radius: 30px;
- 
-  box-shadow: -14px 11px 13px 5px rgba(0,0,0,0.75);
--webkit-box-shadow: -14px 11px 13px 5px rgba(0,0,0,0.75);
--moz-box-shadow: -14px 11px 13px 5px rgba(0,0,0,0.75);
- 
+.signup-container {
+  height: 100vh;
+  display: flex;
+
 }
+
+
+
+
+
+
+
+
 
 .user-entry{
-  height: 0px;
-  margin-bottom: 60px;
+  
+  margin-bottom: 10px;
   padding: 10px;
 }
 
 
 .signup-btn {
   width: 200px;
-}
+} 
 
 
 
@@ -385,8 +404,18 @@ a#product-category {
   }
 }
 
-#signup-form-container {
-  height: 84vh;
+
+
+#create-form {
+  height: 300px;
+  background-color: red;
+ 
+}
+
+.create-sign {
+  background-color: red;
+  width: 300px;
+  height: 550px;
 }
 
 
@@ -489,6 +518,7 @@ a#product-category {
  
   display: flex;
   flex-direction: row;
+  height: 100vh;
   
 }
 
@@ -548,8 +578,8 @@ a#product-category {
 
 
 #select-user-type {
-  height: 55px;
-  width: 40%;
+  height: 40px;
+  width: 200px;
   margin: 0 auto;
   text-align-last:center;
 }
@@ -738,6 +768,26 @@ input[type=month]::-webkit-calendar-picker-indicator {
   text-shadow: 0px 2px rgba(0, 0, 0, 0.2);
   letter-spacing: 1.5px;
   cursor: pointer;
+}
+
+
+
+#firstName , #lastName,#address,#email,#phone,
+#password{
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+#defaultSignup{
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+
+#signup-form > a{
+  border-radius: 20px;
 }
 
 

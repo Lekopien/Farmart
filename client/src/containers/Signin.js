@@ -68,9 +68,14 @@ const Signin = ({ signin }) => {
                 id="defaultLoginFormPassword" 
                 className="form-control mb-4" 
                 placeholder="Password" 
-
                 
-              />
+                
+               />
+                <div className='error-message'>
+
+                  <ErrorMessage name='password' />
+
+                </div>
 
              
               
