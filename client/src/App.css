@@ -1,0 +1,827 @@
+.App {
+  text-align: center;
+}
+
+html,
+body,
+#intro {
+    height: 100%;
+   
+  }
+
+  body {
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    
+  }
+  
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+/* navbar */
+.logout {
+  padding-left: 5% !important;
+}
+
+.fa-shopping-basket {
+  padding-top: 2%;
+  font-size: 2em;
+  color: orangered;
+}
+
+.fa-shopping-basket:hover {
+  cursor: pointer;
+}
+
+.panel-icon {
+  font-size:1.3em;
+  font-weight: bold;
+  padding: 0 1em;
+
+}
+
+#basket-products {
+  text-align: left;
+
+}
+
+.delete-from-checkout:focus {
+ outline: none; 
+}
+
+#panel-title {
+  text-align: center;
+  padding-top: 15%;
+  text-decoration: underline;
+}
+
+
+a {
+  color: #000 !important;
+  text-decoration: none;
+  font-family: "Lato", Courier, monospace;
+}
+
+a:hover {
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#register, #login, #shop, #about {
+  /* width: 100%; */
+  padding: 0 0.7em;
+  font-family: "Lato", Courier, monospace;
+  font-size: 1.3em;
+}
+
+#farmer-profile, #sales {
+  padding: 0 0.7em;
+}
+
+#shop2 {
+  padding: 0 0.7em;
+}
+
+#profile {
+  padding: 0 0.7em
+}
+
+a#logout {
+  color: orangered !important;
+  font-weight: bold;
+}
+
+.naigation_bar {
+  display: flex;
+  padding: 1em;
+  justify-content: space-between;
+  align-items: center;
+
+
+  
+}
+
+.navbar-logo {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: bold;
+  font-size: 1.4em;
+ 
+  padding-left: 2%;
+  font-family: "Lato", Courier, monospace;
+}
+
+#welcome-user{
+  font-family: "Lato", Courier, monospace;
+  font-size: 25px;
+  margin: 0;
+  letter-spacing: .4em;
+}
+
+#nav-content {
+  display: flex;
+  align-items: center;
+}
+
+#navbar-customer {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+}
+
+#navbar-general {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+
+}
+
+#navbar-farmer {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+
+}
+
+#delete-from-checkout:hover {
+  cursor: pointer;
+  color: orangered;
+}
+
+#summary-content {
+  text-align: center;
+}
+
+#checkout-btn {
+    text-align: center;
+}
+
+#products-container {
+  background-color: #f5ecec;
+}
+
+#productCard {
+  margin-top: 5%;
+  margin-left: 1%;
+  width: 260px;
+  height: 400px;
+}
+
+.card-body {
+  text-align: center;
+  padding-top: 10px !important;
+
+
+}
+
+#create-container {
+  background-color: blue;
+  height: 100vh;
+  display: flex;
+  
+}
+
+.image-create {
+  background-color: red;
+  width: 35%;
+}
+
+
+
+#customer-title {
+  margin-top: 5%;
+  font-family: "Lato", Courier, monospace !important;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  font-size: 2.5em;
+
+}
+
+#product-category-navbar  {
+  height: 40px !important; /*i assume your navbar size 100px*/
+  padding: 0  !important;
+  justify-content: center;
+  font-family: "Lato", Courier, monospace;
+}
+
+.sale-content {
+  margin-top: 0;
+  padding-top: 10%;
+  padding-left: 3%; 
+  padding-bottom: 100%;
+  text-align: center;
+  color:white;
+  font-weight: bold;
+  background-image: url('https://images.unsplash.com/photo-1540736086231-18770daec04e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+a#product-category {
+  float: left;
+  display: block !important;
+  color: white !important;
+  text-transform: lowercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  width: 8%; 
+  margin-top: 0%;
+  text-align: center;
+  font-family: "Lato", Courier, monospace !important;
+  letter-spacing: 0.1em;
+}
+
+.card-body {
+  color: grey !important;
+}
+
+#register-login-link {
+  margin-bottom: 1%;
+  right: 0 !important;
+}
+
+#sale-container {
+  text-align: center;
+  padding-top: 10%;
+}
+
+
+.landing-header,.landing-comment{
+  color:#fff;
+  letter-spacing: 5px;
+
+}
+
+.landing-header {
+
+  animation: moveFromTop;
+  animation-duration: 3s;
+  text-transform: uppercase;
+  font-size: 3rem;
+  
+
+}
+
+#landing-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 84vh;
+}
+
+#farmer-btn{
+  animation: moveFromBottom;
+  animation-duration: 3s;
+  background-color: #fff;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  border-radius: 100px;
+  margin-top: 40px;
+}
+
+
+
+.landing-comment {
+  animation: moveFromRight;
+  animation-duration: 3s;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+
+
+
+#signup-image {
+  width: 40%;
+ 
+  
+   background-image: url('https://images.unsplash.com/photo-1429991889170-afd56b2a1210?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80https://images.unsplash.com/photo-1429991889170-afd56b2a1210?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   overflow-y: hidden;
+  
+}
+
+
+
+
+#signup-form {
+ 
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container {
+  height: 100vh;
+  display: flex;
+
+}
+
+
+
+
+
+
+
+
+
+.user-entry{
+  
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+
+.signup-btn {
+  width: 200px;
+} 
+
+
+
+
+
+
+
+
+
+
+@keyframes moveFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+
+
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+
+
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+
+#create-form {
+  height: 300px;
+  background-color: red;
+ 
+}
+
+.create-sign {
+  background-color: red;
+  width: 300px;
+  height: 550px;
+}
+
+
+/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+@media screen and (max-width: 500px) {
+  #product-category-navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left; /* If you want the text to be left-aligned on small screens */
+  }
+}
+
+#add-basket-btn {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.productCollection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-right: 4%;
+  padding-left: 4%;  
+  padding-bottom: 100%;
+}
+
+#preview-title {
+  color: grey !important;
+  text-align: center;
+}
+
+#signin-form-container {
+ 
+  height: 84vh;
+  overflow-y: hidden;
+  background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.909),rgba(255,255,255,0.3)), url('https://images.unsplash.com/photo-1533515809464-7746c3303fe8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+ 
+}
+
+#nav-container {
+ 
+  height: 25%;
+  background-color: white;
+}
+
+.signin-container{
+  width: 300px;
+  height: 400px;
+  background-color:  rgba(255, 255, 255,0.4);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#signin-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.error-message {
+  color: red;
+  font-weight: 300;
+}
+
+.signin-text {
+  color: green;
+  font-size: 10px;
+}
+
+#login-btn {
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #019875;
+  background-color: white;
+  width: 150px;
+  text-align: center;
+  margin-left: 40px;
+ 
+}
+
+#login-btn:hover {
+
+  color: white;
+  background-color: #019875;
+}
+
+#farmer-btn:hover {
+
+  color: white;
+  background-color: #019875;
+}
+
+#signup-form-container {
+ 
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  
+}
+
+#product-category-navbar {
+ background-color:rgba(126,213,111,0.8);
+}
+
+
+
+
+
+#panel-content {
+  height: 100%;
+}
+
+#panel-content-basket {
+  height: 100%;
+  text-align: center;
+}
+
+.slide-pane_content {
+  padding: 0;
+}
+
+#product-form-container {
+  background: url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&auto=format&fit=crop&w=1231&q=80')no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#product-form-and-preview {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+#product-form {
+  width: 30%;
+  color:white;
+  margin-left: 15%;
+  margin-right: 5%;
+  padding-top: 2%;
+
+
+}
+#preview-container {
+  width: 15%;
+}
+
+
+#select-user-type {
+  height: 40px;
+  width: 200px;
+  margin: 0 auto;
+  text-align-last:center;
+}
+
+#LoginFormEmail{
+  border-radius: 50px;
+  margin-bottom: 2%;
+
+}
+
+#LoginFormPassword{
+  border-radius: 50px;
+  margin-bottom: 2%;
+
+}
+
+.product-form-panel {
+  background-color: #61dafb;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7)
+
+}
+
+#intro {
+  background-image:linear-gradient(to right,rgba(126,213,111,0.8),rgba(40,180,133,0.8)), url("https://images.unsplash.com/photo-1498579397066-22750a3cb424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+
+
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%,0 100%);
+  }
+
+
+#no-product-onsale {
+  padding-top: 20%;
+  padding-bottom: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold !important;
+  background-image: url('https://images.unsplash.com/photo-1540736086231-18770daec04e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+  /* The side navigation menu */
+.sidebar {
+  margin-left: 5%;
+  margin-top: 2%;
+  padding-left: 0;
+  width: 250px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 28%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar p {
+  display: block;
+  color:rgba(126,213,111,0.8);
+  font-weight: bold;
+  padding: 16px;
+  text-decoration: none;
+  font-family: "Lato", Courier, monospace;
+
+}
+
+/* User profile details */
+#profile-container {
+  background: url('https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width:100 !important;
+  margin-top:0 !important;
+  font-weight: bold;
+}
+
+.account-details {
+  padding-bottom: 5%;
+  padding-left: 10%;
+
+}
+
+#personal-info {
+  padding-top: 5%;
+
+}
+div.content {
+  margin-left: 25%;
+  padding: 1px 20px;
+  height: 1000px;
+}
+
+/* Checkout */
+
+.checkout {
+  height: 430px;
+  background: #2f2c33;
+  color: white;
+}
+
+.checkout-container {
+  padding: 35px 25px;
+}
+
+.input {
+  padding: 5px 0;
+}
+
+.input label {
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #78757c;
+}
+
+.input input {
+  width: 100%;
+  padding: 5px 10px;
+  color: white;
+  letter-spacing: 0px;
+  font-size: 14px;
+  background: 0;
+  border: 0;
+}
+
+.input input:focus {
+  outline: 0;
+}
+
+.input-field {
+  border: 1px solid #78757c;
+  border-radius: 5px;
+  position: relative;
+}
+
+.input-field img {
+  width: 25px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  margin-right: 5px;
+}
+
+/* Removes form Controls  */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+input[type=month]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type=month]::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.checkout-btn {
+  background: linear-gradient(0deg, #019875, #029875);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  margin-top: 50px;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0px 2px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+
+
+#firstName , #lastName,#address,#email,#phone,
+#password{
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+#defaultSignup{
+  height: 35px;
+  
+  padding: 14px;
+ 
+  width: 400px;
+  
+}
+
+
+#signup-form > a{
+  border-radius: 20px;
+}
+
+
+#signup-btn{
+  border-radius: 12px;
+}
+
+#signup-btn:hover {
+  background-color: #019875;
+  color: white;
+}
+
+#signup-question {
+  margin-top: 10px;
+} 
+
+  
