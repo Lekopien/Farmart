@@ -36,10 +36,10 @@ categories = Category.create([
         name: 'Farm Products'
     },
     {
-        name: 'Animals'
+        name: 'Animal Products'
     },
     {
-        name: 'Lands'
+        name: 'Lands for Lease'
     }
 ])
 
@@ -55,366 +55,351 @@ farmers = Farmer.create([
 ])
 
 products = Product.create([
-    {   
-        name: 'Pears',
-        price: 2.50,
-        quantity: '1 kg',
-        category: categories[0],
-        farmer: farmers[0],
-        url_img: 'https://media.self.com/photos/5b6b0bd7ff2fab32610fafc2/4:3/w_728,c_limit/pears.jpg'
-    },
-    {
-        name: 'Artichokes',
-        price: 3.60,
-        quantity: '3 pieces',
-        category: categories[1],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1518735869015-566a18eae4be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
-    },
-    {
-        name: 'Lemon',
-        price: 1.49,
-        quantity: '6 pieces',
-        category: categories[0],
-        farmer: farmers[0],
-        url_img: 'https://www.realfoods.co.uk/ProductImagesID/277_1.jpg'
-    },
-    {
-        name: 'Apricots',
-        price: 4.50,
-        quantity: '500g',
-        category: categories[0],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1501746877-14782df58970?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
-    },
-    {
-        name: 'Yellow Peaches',
-        price: 3.20,
-        quantity: '8 pieces',
-        category: categories[0],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1542296663-c8002b3c8422?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2266&q=80'
-    },
-    {
-        name: 'Apples',
-        price: 1.60,
-        quantity: '250g',
-        category: categories[0],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1515681412668-16d6d4a54ab1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80'
-    },
-    {
-        name: 'Raspberries',
-        price: 2,
-        quantity: '1 kg',
-        category: categories[0],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1549301014-95d119f5c960?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
-    },
-    {
-        name: 'Zucchinis',
-        price: 3.30,
-        quantity: '6 pieces',
-        category: categories[1],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1549223672-c262a3763aab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
-    },
-    {
-        name: 'Brown onions',
-        price: 1.30,
-        quantity: '500g',
-        category: categories[1],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1518977956812-cd3dbadaaf31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
-    },
-    {
-        name: 'Avocados',
-        price: 3.00,
-        quantity: '6 pieces',
-        category: categories[1],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1512070904629-fa988dab2fe1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
-    },
-    {
-        name: 'Green Beans',
-        price: 2.10,
-        quantity: '500g',
-        category: categories[1],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/uploads/141143339879512fe9b0d/f72e2c85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
-    },
-    {
-        name: 'Beef',
-        price: 8.50,
-        quantity: '500g',
-        category: categories[2],
-        farmer: farmers[0],
-        url_img: 'http://cdn.shopify.com/s/files/1/1844/0771/products/84b26ca83f6ab9914c49f65957d4329f_grande.jpg?v=1511148760'
-    },
-    {
-        name: 'Sirloin Steak',
-        price: 10.50,
-        quantity: '800g',
-        category: categories[2],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1448907503123-67254d59ca4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80'
-    },
-    {
-        name: 'Homemade Italian Sausage',
-        price: 6.50,
-        quantity: '500g',
-        category: categories[2],
-        farmer: farmers[0],
-        url_img: 'https://www.manusmenu.com/wp-content/uploads/2013/07/2-Salsiccia-3-1-of-1.jpg'
-    },
-    {
-        name: 'Pasture-raised Bacon',
-        price: 5.50,
-        quantity: '500g',
-        category: categories[2],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1529856426070-e610ede5a2fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80'
-    },
-    {
-        name: 'Breakfast Salami',
-        price: 4.80,
-        quantity: '300g',
-        category: categories[2],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1542901031-ec5eeb518e83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
-    },
-    {
-        name: 'Brussels Sprouts',
-        price: 2,
-        quantity: '500g',
-        category: categories[1],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1438118907704-7718ee9a191a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
-    },
-    {
-        name: 'Spinach',
-        price: 1.20,
-        quantity: '500g',
-        category: categories[1],
-        farmer: farmers[0],
-        url_img: 'https://www.adaptiveseeds.com/wp-content/uploads/2014/12/p-10485-spinach_verdil2.jpg'
-    },
-    {
-        name: 'Strawberries',
-        price: 2.50,
-        quantity: '500g',
-        category: categories[0],
-        farmer: farmers[0],
-        url_img: 'https://i2.wp.com/gardenmuseum.org.uk/wp-content/uploads/2019/05/Strawberries.jpg?resize=640%2C360&ssl=1'
-    },
-    {
-        name: 'Peas',
-        price: 2,
-        quantity: '500g',
-        category: categories[1],
-        farmer: farmers[0],
-        url_img: 'https://portalvhds26k4f5tktj3ck.blob.core.windows.net/spotpics/sp42263.jpg'
-    },
-    {
-        name: 'Melon',
-        price: 3,
-        quantity: '3 pieces',
-        category: categories[0],
-        farmer: farmers[0],
-        url_img: 'https://www.adaptiveseeds.com/wp-content/uploads/2014/12/p-7997-melon_farthest_north4.jpg'
-    },
-    {
-        name: 'Blueburries',
-        price: 1.90,
-        quantity: '150g',
-        category: categories[0],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1425934398893-310a009a77f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80'
-    },
-    {
-        name: 'Cucumbers',
-        price: 1.80,
-        quantity: '500g',
-        category: categories[1],
-        farmer: farmers[0],
-        url_img: 'https://munchies-images.vice.com/wp_upload/cucumber-tesco-valentines-day.jpg?crop=0.7111111111111111xw%3A1xh%3Bcenter%2Ccenter&resize=650%3A*&output-quality=55'
-    },
-    {
-        name: 'Mixed Tomatoes',
-        price: 3.50,
-        quantity: '500g',
-        category: categories[1],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1443131612988-32b6d97cc5da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
-    },
-    {
-        name: 'Rye Bread',
-        price: 6,
-        quantity: '1 piece',
-        category: categories[2],
-        farmer: farmers[0],
-        url_img: 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--77451_11.jpg?itok=7W6mnqnB'
-    },
-    {
-        name: 'Croissants',
-        price: 5.20,
-        quantity: '6 pieces',
-        category: categories[2],
-        farmer: farmers[0],
-        url_img: 'https://www.foodiewithfamily.com/wp-content/uploads/2020/04/How-to-make-croissants-2.jpg'
-    },
-    {
-        name: 'Pain au Raisin',
-        price: 2.90,
-        quantity: '3 pieces',
-        category: categories[2],
-        farmer: farmers[0],
-        url_img: 'https://www.thespruceeats.com/thmb/1I6a8k1SGUBcpO_7ea4Ax_VixB4=/2250x2250/smart/filters:no_upscale()/pain-aux-raisins-GettyImages-124761833-57b5975f3df78cd39c5f6f73.jpg'
-    },
-    {
-        name: 'Olive Bread',
-        price: 3.90,
-        quantity: '3 pieces',
-        category: categories[2],
-        farmer: farmers[0],
-        url_img: 'https://i.ytimg.com/vi/ZCPJ4tKj5A4/maxresdefault.jpg'
-    },
-    {
-        name: 'Mini Breads',
-        price: 4.90,
-        quantity: '3 pieces',
-        category: categories[2],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1511278475330-1a31a6fc4dcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80'
-    },
-    {
-        name: 'Bastard Bread',
-        price: 5.90,
-        quantity: '1 piece',
-        category: categories[2],
-        farmer: farmers[0],
-        url_img: 'https://images.unsplash.com/photo-1515823808611-65fd8e56c71a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
-    },
-    {
-        name: 'Baguette',
-        price: 1.20,
-        quantity: '1 piece',
-        category: categories[2],
-        farmer: farmers[0],
-        url_img: 'https://www.surlatable.com/images/customers/c1079/PRO-2635449/PRO-2635449_detail/zoom_variation_Default_view_1_1278x1278.jpg'
-    },
-    {
-        name: 'Rhubarb',
-        price: 5,
-        quantity: '500g',
-        category: categories[0],
-        farmer: farmers[0],
-        url_img: 'https://www.lesboitesameuh.com/images/Image/Rhubarbe-500-g---Isabelle-Glatre-91.jpg'
-    },
-    {
-        name: 'Tuscan Kale',
-        price: 1.50,
-        quantity: '1 bunch',
-        category: categories[1],
-        farmer: farmers[0],
-        url_img: 'http://wildco.co.uk/veggies/wp-content/uploads/2016/05/tuscan-kale-alt.jpg'
-    },
-    {
-        name: 'Green apples',
-        price: 2,
-        quantity: '1kg',
-        category: categories[0],
-        farmer: farmers[0],
-        url_img: 'https://www.concordmonitor.com/getattachment/f428f090-1f79-4bfb-b837-381835570822/pectin-lw-080417-ph3'
-    },
-    {
-        name: 'Blue Potatoes',
-        price: 2,
-        quantity: '2kg',
-        category: categories[1],
-        farmer: farmers[0],
-        url_img: 'https://cdn.dtbrownseeds.co.uk/product-images/op/z/POT-154.jpg'
-    },
-    {
-        name: 'Broccoli',
-        price: 1.50,
-        quantity: '3 pieces',
-        category: categories[1],
-        farmer: farmers[0],
-        url_img: 'https://www.sciencedaily.com/images/2019/05/190516142913_1_540x360.jpg'
-    },
-    {
-        name: 'Jerusalem Artichokes',
-        price: 2.50,
-        quantity: '500g',
-        category: categories[1],
-        farmer: farmers[0],
-        url_img: 'http://eatdrinkpaleo.com.au/wp-content/uploads/2016/10/jerusalem-artichoke-recipes.jpg'
-    },
-    {
-        name: 'Honey',
-        price: 5.50,
-        quantity: '1 pot - 500g',
-        farmer: farmers[0],
-        category: categories[5],
-        url_img: 'https://www.abelandcole.co.uk/media/1606_18557_z.jpg'
-    },
-    {
-        name: 'Organic Almond Butter',
-        price: 6.60,
-        quantity: '1 pot - 500g',
-        farmer: farmers[0],
-        category: categories[5],
-        url_img: 'https://simple-veganista.com/wp-content/uploads/2012/09/homemade-almond-butter-8.jpg'
-    },
-    {
-        name: 'Wild Scottish Salmon',
-        price: 10.50,
-        quantity: '400g',
-        farmer: farmers[1],
-        category: categories[4],
-        url_img: 'https://images.costco-static.com/ImageDelivery/imageService?profileId=12026540&itemId=1214619-847&recipeName=680'
-    },
-    {
-        name: 'Mussels',
-        price: 6.95,
-        quantity: '1kg',
-        farmer: farmers[1],
-        category: categories[4],
-        url_img: 'https://images.unsplash.com/photo-1466553556096-7e2c49388e34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80'
-    },
-    {
-        name: 'Oysters',
-        price: 7.25,
-        quantity: '6 pieces',
-        farmer: farmers[1],
-        category: categories[4],
-        url_img: 'https://images.unsplash.com/photo-1557496897-125a203038eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60'
-    },
-    {
-        name: 'Smoked Haddock',
-        price: 6.50,
-        quantity: '260g',
-        farmer: farmers[1],
-        category: categories[4],
-        url_img: 'https://s3.amazonaws.com/parkers-production/cache/product_hero/2018/09/14/5b9c0cbfabaac.jpg'
-    },
-    {
-        name: 'Arbroath Smokies',
-        price: 11.50,
-        quantity: '1 packet',
-        farmer: farmers[1],
-        category: categories[4],
-        url_img: 'https://cdn.shopify.com/s/files/1/0607/6073/products/uV0aH1B_48269eb1-8a6c-4dea-884b-8e25f6b9900c_1024x1024.jpeg?v=1440148578'
-    },
-    {
-        name: 'Shrimps',
-        price: 6.50,
-        quantity: '300g',
-        farmer: farmers[1],
-        category: categories[4],
-        url_img: 'https://foodprint.org/wp-content/uploads/2018/10/imageedit_13_8456135112.jpg'
-    }
+{
+name: 'Apples',
+price: 300.00,
+quantity: '1 kg',
+category: categories[0],
+farmer: farmers[0],
+url_img: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/10/22/apples-farmers-market-boxes.jpg.rend.hgtvcom.406.305.suffix/1634877716796.jpeg'
+},
+
+{
+name: 'Chicken Eggs',
+price: 200.50,
+quantity: '1 dozen',
+category: categories[1],
+farmer: farmers[0],
+url_img: 'https://i.roamcdn.net/hz/pi/listing-gallery-full-1920w/767776529d4c49807c0eef6cca41d392/-/horizon-files-prod/pi/picture/q4zn689/0136f6c7c57069c0a384b30ca5b9c054f8129abe.jpg'
+},
+
+{
+name: 'Tomatoes',
+price: 60.50,
+quantity: '1 kg',
+category: categories[0],
+farmer: farmers[0],
+url_img: 'https://www.afrimillz.com.ng/wp-content/uploads/2019/04/Afrimillz-Tomoatoes.jpg'
+},
+
+{
+name: 'Beef',
+price: 1200.00,
+quantity: '1 kg',
+category: categories[1],
+farmer: farmers[0],
+url_img: 'https://c8.alamy.com/comp/2C8XNC9/fresh-raw-beef-rib-eye-steak-for-sale-in-grocery-store-2C8XNC9.jpg'
+},
+
+{
+name: 'Carrots',
+price: 120.00,
+quantity: '1 kg',
+category: categories[0],
+farmer: farmers[0],
+url_img: 'https://kaleandcoffee.ca/wp-content/uploads/2019/05/carrots-for-sale-e1484076352571-1080x675.jpg'
+},
+
+{
+name: 'Goat Cheese',
+price: 800.00,
+quantity: '250 g',
+category: categories[1],
+farmer: farmers[0],
+url_img: 'https://pyxis.nymag.com/v1/imgs/ffd/e9e/a3c5172b78eaafc895046836ca71572439-18-goat-cheese.rsquare.w700.jpg'
+},
+{
+name: 'Salmon',
+price: 1500.00,
+quantity: '1 kg',
+category: categories[1],
+farmer: farmers[0],
+url_img: 'https://static2.bigstockphoto.com/4/1/3/large1500/314799334.jpg'
+},
+
+{
+name: 'Corn',
+price: 300.50,
+quantity: '1 dozen',
+category: categories[0],
+farmer: farmers[0],
+url_img: 'https://www.southernliving.com/thmb/x6_u-R2hLl6DMFs6EehPilN2rl0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-576557520-2000-01086cf94ec94d978c6efd7bff32deea.jpg'
+},
+{
+name: 'Duck Eggs',
+price: 400.00,
+quantity: 'dozen',
+category: categories[1],
+farmer: farmers[0],
+url_img: 'https://yongsooneggs.com.my/wp-content/uploads/2018/08/duck-eggs-2.jpg'
+},
+
+{
+name: 'Beef Steak',
+price: 2000.00,
+quantity: '1 kg',
+category: categories[1],
+farmer: farmers[0],
+url_img: 'https://prod-cdn-thekrazycouponlady.imgix.net/wp-content/uploads/2022/09/albertsons-petite-sirloin-steak-sept-15-2022-1663275281-1663275281.jpg'
+},
+
+{
+name: 'WHite Tomatoes',
+price: 300.00,
+quantity: '1 kg',
+category: categories[0],
+farmer: farmers[0],
+url_img: 'https://cdn3.volusion.com/ph9xz.o9ecs/v/vspfiles/photos/TF-0481-2.jpg?v-cache=1574145194'
+},
+
+{
+name: 'Pork Chops',
+price: 1800.00,
+quantity: '1 kg',
+category: categories[1],
+farmer: farmers[0],
+url_img: 'https://storage.googleapis.com/images-sof-prd-9fa6b8b.sof.prd.v8.commerce.mi9cloud.com/product-images/detail/00266436000001.jpg'
+},
+
+{
+name: 'Blueberries',
+price: 500.00,
+quantity: '250 g',
+category: categories[0],
+farmer: farmers[0],
+url_img: 'https://i0.wp.com/italianberry.it/wp-content/uploads/2019/11/dimeo-blueberries-for-sale.jpg'
+},
+{
+name: 'Spinach',
+price: 100.50,
+quantity: '200 g',
+category: categories[0],
+farmer: farmers[0],
+url_img: 'https://www.harpak-ulma.com/wp-content/uploads/2019/06/whole-spinach-leaves-packaging-in-vertical-machine-vffs.jpg'
+},
+
+{
+name: 'Beef Steaks',
+price: 1800.00,
+quantity: '1 kg',
+category: categories[1],
+farmer: farmers[0],
+url_img: 'https://clv.h-cdn.co/assets/17/20/2560x1440/hd-aspect-1495034879-gettyimages-2832593.jpg'
+},
+
+{
+name: 'Cucumbers',
+price: 100.80,
+quantity: '500 g',
+category: categories[0],
+farmer: farmers[0],
+url_img: 'https://i.pinimg.com/originals/2e/73/ec/2e73ecc3e3f99a101e78fced9bf93519.jpg'
+},
+
+{
+name: 'Guine Fowl Eggs',
+price: 300.50,
+quantity: 'dozen',
+category: categories[1],
+farmer: farmers[0],
+url_img: 'https://www.guineafarm.com/wp-content/uploads/2014/01/Eggs.jpg'
+},
+
+{
+name: 'Watermelon',
+price: 60.00,
+quantity: '1 piece',
+category: categories[0],
+farmer: farmers[0],
+url_img: 'https://fsi.colostate.edu/wp-content/uploads/2020/08/watermelon-2636_1920-1170x659.jpg'
+},
+{
+name: 'Salmon',
+price: 1200.50,
+quantity: '250 g',
+category: categories[1],
+farmer: farmers[0],
+url_img: 'https://www.tasteofhome.com/wp-content/uploads/2022/04/GettyImages-922666820-e1649868333475.jpg'
+},
+
+{
+name: 'Potatoes',
+price: 2000.00,
+quantity: '1 kg',
+category: categories[0],
+farmer: farmers[0],
+url_img: 'https://kilimonews.co.ke/wp-content/uploads/2021/05/Extended-potato-packaging-scaled.jpg'
+},
+
+{
+name: 'Chicken Breast',
+price: 500.00,
+quantity: '500 g',
+category: categories[1],
+farmer: farmers[0],
+url_img: 'https://www.bakeryandsnacks.com/var/wrbm_gb_food_pharma/storage/images/_aliases/wrbm_large/3/2/0/0/1330023-1-eng-GB/Poultry-producer-pecks-at-portion-packaging.jpg'
+},
+
+{
+name: 'Honey',
+price: 500.00,
+quantity: '500 g',
+category: categories[0],
+farmer: farmers[0],
+url_img: 'https://www.kenyanews.go.ke/wp-content/uploads/2022/03/KVDA-honey-300x200.jpg'
+},
+
+{
+name: 'Pork Chops',
+price: 800.00,
+quantity: '500 g',
+category: categories[1],
+farmer: farmers[0],
+url_img: 'https://www.budgetbytes.com/wp-content/uploads/2011/01/Pork-Chops-in-package.jpg'
+},
+{
+name: 'Asparagus',
+price: 300.99,
+quantity: '1 kg',
+category: categories[0],
+farmer: farmers[0],
+url_img: 'https://cdn.producebusiness.com/2023/01/november-categorysalesperuvianasparagus-feature.jpg'
+},
+
+{
+name: 'Pork Belly',
+price: 800.50,
+quantity: '1 kg',
+category: categories[1],
+farmer: farmers[0],
+url_img: 'https://www.extraordinarybbq.com/wp-content/uploads/2021/07/Whole-Pork-Belly-at-Costco.jpg'
+},
+
+{
+name: 'Broccoli',
+price: 200.50,
+quantity: '1 kg',
+category: categories[0],
+farmer: farmers[0],
+url_img: 'https://www.kayco.com/wp-content/uploads/2020/09/710750-scaled.jpg'
+},
+
+{
+name: 'Venison',
+price: 1600.00,
+quantity: '1 kg',
+category: categories[1],
+farmer: farmers[0],
+url_img: 'https://m.media-amazon.com/images/I/71NAGKKP7YL._SL1007_.jpg'
+},
+
+{
+name: 'Strawberries',
+price: 400.50,
+quantity: '1 kg',
+category: categories[0],
+farmer: farmers[0],
+url_img: 'https://previews.123rf.com/images/wanchanta/wanchanta1805/wanchanta180500013/101031647-fresh-strawberry-in-plastic-box-of-packaging-for-sell.jpg'
+},
+{
+  name: 'Land for Lease',
+  price: 5000.00,
+  quantity: '1 acre',
+  category: categories[2],
+  farmer: farmers[0],
+  url_img: 'https://propscout.co.ke/storage/properties/files/lands-plots/thumbnails/-land-for-lease-in-isinya-kantafu-m37vb.jpg'
+},
+{
+  name: 'Farmland for Rent',
+  price: 10000.00,
+  quantity: '5 acres',
+  category: categories[2],
+  farmer: farmers[1],
+  url_img: 'https://images.kenyapropertycentre.com/properties/images/15455/0627e71647bc81-thika-18-acre-commercial-plot-touching-garissa-highway-commercial-land-for-sale-thika-kiambu.jpg'
+},
+{
+  name: 'Orchard for Lease',
+  price: 7500.00,
+  quantity: '2 acres',
+  category: categories[2],
+  farmer: farmers[0],
+  url_img: 'https://ipropertiesafrica.co.ke/wp-content/uploads/2019/09/55.jpg'
+},
+{
+  name: 'Land for Lease',
+  price: 5000.00,
+  quantity: '1 acre',
+  category: categories[2],
+  farmer: farmers[0],
+  url_img: 'https://westkenyarealestate.com/wp-content/uploads/2015/01/20150128_104158.jpg'
+},
+{
+  name: 'Farmland for Rent',
+  price: 10000.00,
+  quantity: '5 acres',
+  category: categories[2],
+  farmer: farmers[1],
+  url_img: 'https://hapakenya.com/wp-content/uploads/2021/11/Land-Kenya.jpg'
+},
+{
+  name: 'Orchard for Lease',
+  price: 7500.00,
+  quantity: '2 acres',
+  category: categories[2],
+  farmer: farmers[1],
+  url_img: 'https://www.pointproperties.org/wp-content/uploads/2018/02/1-720x450.jpg'
+},
+{
+  name: 'Land for Lease',
+  price: 5000.00,
+  quantity: '1 acre',
+  category: categories[2],
+  farmer: farmers[0],
+  url_img: 'https://cdn.statically.io/img/proproperty.co.ke/f=auto/uploads/media/IMG-20210824-WA0000-1629810730-800X500.jpg'
+},
+{
+  name: 'Farmland for Rent',
+  price: 10000.00,
+  quantity: '5 acres',
+  category: categories[2],
+  farmer: farmers[1],
+  url_img: 'https://www.dealkenya.com/oc-content/uploads/65/5785.jpg'
+},
+{
+  name: 'Orchard for Lease',
+  price: 7500.00,
+  quantity: '2 acres',
+  category: categories[2],
+  farmer: farmers[1],
+  url_img: 'https://images.kenyapropertycentre.com/properties/images/thumbs/8999/060e699a8445b8-cabbanas-mombasa-rd-5-prime-vacant-acres-commercial-mixed-use-land-for-rent-imara-daima-embakasi-nairobi.jpg'
+},
+{
+  name: 'Land for Lease',
+  price: 5000.00,
+  quantity: '1 acre',
+  category: categories[2],
+  farmer: farmers[0],
+  url_img: 'https://propscout.co.ke/storage/properties/files/lands-plots/thumbnails/-land-for-lease-in-industrial-area-nzgmz.jpg'
+},
+{
+  name: 'Farmland for Rent',
+  price: 10000.00,
+  quantity: '5 acres',
+  category: categories[2],
+  farmer: farmers[1],
+  url_img: 'https://victormatara.com/wp-content/uploads/2017/07/edenhomepage2017-1200x900.jpg'
+},
+{
+  name: 'Orchard for Lease',
+  price: 7500.00,
+  quantity: '2 acres',
+  category: categories[2],
+  farmer: farmers[1],
+  url_img: 'https://propscout.co.ke/storage/properties/files/lands-plots/land-for-lease-in-isinya-kantafu-sfcf5.jpg'
+},
+
+
+
 ])
 
 
