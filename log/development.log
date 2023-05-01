@@ -10948,3 +10948,296 @@ Completed 200 OK in 2274ms (Views: 70.1ms | ActiveRecord: 1871.1ms | Allocations
 Completed 200 OK in 3005ms (Views: 3001.0ms | ActiveRecord: 3.1ms | Allocations: 47970)
 
 
+Started POST "/signup" for ::1 at 2023-05-01 17:38:47 +0300
+Processing by UsersController#signup as */*
+  Parameters: {"email"=>"victorkinoti03@gmail.com", "first_name"=>"victor", "last_name"=>"karemu", "address"=>"ssdsdd", "phone"=>"0714295161", "password"=>"[FILTERED]", "user_type"=>"customer", "user"=>{"email"=>"victorkinoti03@gmail.com", "first_name"=>"victor", "last_name"=>"karemu", "address"=>"ssdsdd", "phone"=>"0714295161"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:18:in `signup'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "victorkinoti03@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `signup'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:18:in `signup'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23:in `signup'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "victorkinoti03@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `signup'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:23:in `signup'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.93ms)
+Completed 200 OK in 571ms (Views: 9.5ms | ActiveRecord: 1.2ms | Allocations: 5823)
+
+
+Started POST "/signin" for ::1 at 2023-05-01 17:38:59 +0300
+Processing by UsersController#signin as */*
+  Parameters: {"email"=>"victorkinoti03@gmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"victorkinoti03@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "victorkinoti03@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `signin'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 400 Bad Request in 276ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 686)
+
+
+Started GET "/validate" for ::1 at 2023-05-01 17:39:07 +0300
+Processing by UsersController#validate as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `get_current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 404 Not Found in 176ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 791)
+
+
+Started GET "/products" for ::1 at 2023-05-01 17:39:07 +0300
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+Started GET "/categories" for ::1 at 2023-05-01 17:39:07 +0300
+Processing by CategoriesController#index as */*
+[active_model_serializers]   [1m[36mCategory Load (4.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:5:in `map'
+No serializer found for resource: "Farm Products"
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.12ms)
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 0.7ms | Allocations: 1636)
+
+
+[active_model_serializers]   [1m[36mCategory Load (5.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2503.75ms)
+Completed 200 OK in 2513ms (Views: 2499.8ms | ActiveRecord: 12.3ms | Allocations: 45054)
+
+
+Started POST "/signup" for ::1 at 2023-05-01 17:43:40 +0300
+Processing by UsersController#signup as */*
+  Parameters: {"email"=>"j@gmail.com", "first_name"=>"edd", "last_name"=>"erf", "address"=>"dfdsdf", "phone"=>"0714295161", "password"=>"[FILTERED]", "user_type"=>"farmer", "user"=>{"email"=>"j@gmail.com", "first_name"=>"edd", "last_name"=>"erf", "address"=>"dfdsdf", "phone"=>"0714295161"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:18:in `signup'
+  [1m[36mUser Exists? (10.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "j@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `signup'
+  [1m[36mUser Create (49.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "first_name", "last_name", "address", "phone") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "j@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2023-05-01 14:43:40.836793"], ["updated_at", "2023-05-01 14:43:40.836793"], ["first_name", "edd"], ["last_name", "erf"], ["address", "dfdsdf"], ["phone", "0714295161"]]
+  ↳ app/controllers/users_controller.rb:18:in `signup'
+  [1m[36mTRANSACTION (67.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:18:in `signup'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:12:in `define_user_type'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12:in `define_user_type'
+  [1m[36mFarmer Create (27.8ms)[0m  [1m[32mINSERT INTO "farmers" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2023-05-01 14:43:41.037267"], ["updated_at", "2023-05-01 14:43:41.037267"], ["user_id", 4]]
+  ↳ app/models/user.rb:12:in `define_user_type'
+  [1m[36mTRANSACTION (43.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:12:in `define_user_type'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23:in `signup'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "j@gmail.com"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23:in `signup'
+  [1m[36mUser Update (25.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "farmer_id" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2023-05-01 14:43:41.115187"], ["farmer_id", 4], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:23:in `signup'
+  [1m[36mTRANSACTION (44.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23:in `signup'
+[active_model_serializers]   [1m[36mFarmer Load (0.3ms)[0m  [1m[34mSELECT "farmers".* FROM "farmers" WHERE "farmers"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:26:in `signup'
+[active_model_serializers]   [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:26:in `signup'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.99ms)
+Completed 200 OK in 649ms (Views: 3.8ms | ActiveRecord: 270.2ms | Allocations: 10436)
+
+
+Started GET "/validate" for ::1 at 2023-05-01 17:45:41 +0300
+Processing by UsersController#validate as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `get_current_user'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 404 Not Found in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 791)
+
+
+Started GET "/categories" for ::1 at 2023-05-01 17:45:41 +0300
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:5:in `map'
+No serializer found for resource: "Farm Products"
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.06ms)
+Completed 200 OK in 101ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 884)
+
+
+Started GET "/products" for ::1 at 2023-05-01 17:45:41 +0300
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/products_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1910.32ms)
+Completed 200 OK in 1970ms (Views: 1967.7ms | ActiveRecord: 1.8ms | Allocations: 43557)
+
+
+Started POST "/signin" for ::1 at 2023-05-01 17:53:55 +0300
+Processing by UsersController#signin as */*
+  Parameters: {"email"=>"victorkinoti03@gmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"victorkinoti03@gmail.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "victorkinoti03@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `signin'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.31ms)
+Completed 200 OK in 712ms (Views: 0.9ms | ActiveRecord: 134.3ms | Allocations: 3803)
+
+
+Started GET "/farmers/3" for ::1 at 2023-05-01 17:53:56 +0300
+Processing by FarmersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mFarmer Load (16.8ms)[0m  [1m[34mSELECT "farmers".* FROM "farmers" WHERE "farmers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/farmers_controller.rb:12:in `show'
+[active_model_serializers]   [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."farmer_id" = $1[0m  [["farmer_id", 3]]
+[active_model_serializers]   ↳ app/controllers/farmers_controller.rb:14:in `show'
+[active_model_serializers] Rendered FarmerSerializer with ActiveModelSerializers::Adapter::Attributes (27.67ms)
+Completed 200 OK in 47ms (Views: 27.7ms | ActiveRecord: 17.2ms | Allocations: 1757)
+
+
