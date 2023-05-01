@@ -699,6 +699,36 @@ input[type=month]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
+.productCollection {
+  /* display: flex;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* align-content: flex-start; */
+  /* justify-content: space-between; */
+  /* height: 90%;  */
+}
+
+.productCollection button {
+  margin-top: auto;
+  align-self: center;
+}
+
+.productCollection-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-bottom: 100px;
+  background-color: aqua;
+}
+
+.productCollection-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  background-color: red;
+  height: 10%;
+}
 
 
 
