@@ -45,28 +45,25 @@ class Signup extends Component {
         return (  
             // <!-- Default form login -->
             <div id='signup-form-container'>
-              <div className='signup-image'>hello</div>
-              <div className='signup-form'>
-              <div className='form-container'>
-                <form id='signup-form' className="text-center ">
+              <div id='signup-image'></div>
+                  <form id='signup-form' className="text-center ">
 
-              <h2>NEW USER</h2>
-              <div className='user-entry'>
-              <fieldset>
-                  
-                      <select className="form-control mb-4" id='select-user-type' onChange={this.handleUserType} value={this.state.value} >
-                          <option value=''> -- Select an option -- </option>
-                          <option value="farmer">I am a farmer</option>
-                          <option value="customer">I am a client</option>
-                      </select>
-                
-              </fieldset>
-              </div>
+                  <h2>NEW USER</h2>
+                    <br></br>
+                    <fieldset>
+                        <div>
+                            <select className="form-control mb-4" id='select-user-type' onChange={this.handleUserType} value={this.state.value} >
+                                <option value=''> -- Select an option -- </option>
+                                <option value="farmer">I am a farmer</option>
+                                <option value="customer">I am a Customer</option>
+                            </select>
+                        </div>
+                    </fieldset>
 
-
+                    <br></br>
 
                     <fieldset>
-                        {/* <legend>Step 2: Enter your details</legend> */}
+                       
 
                         <input 
                             name='first_name' 
@@ -94,7 +91,6 @@ class Signup extends Component {
                             placeholder="address" 
                         />
                         <input 
-                            
                             name='email' 
                             id="defaultSignup" 
                             onChange={this.handleChange} 
@@ -113,26 +109,19 @@ class Signup extends Component {
                         <input 
                             name='password' 
                             type='password'
-                            id="defaultSignupPassword" 
+                            id="defaultSignup" 
                             onChange={this.handleChange} 
                             value={this.state.password} 
                             className="form-control mb-4" 
                             placeholder="Password" 
                         />
                     </fieldset>
-
-                    <Link to='/signin'><button className="btn  btn-outline-green btn-lg  signup-btn" onClick={(e) => this.handleSubmit(e)}  type="submit">Sign me up!</button></Link>
-
-                        </form>
-
-                                </div>
-                              
-                                </div>
-                                
-                                    
-                                    
-                                    
-                              </div>
+                  
+                    <Link to='/signin'><button className="btn btn-block btn-outline-green btn-lg" id='signup-btn' onClick={(e) => this.handleSubmit(e)}  type="submit">Sign me up!</button></Link>
+                    <Link to='/signin'><p id='signup-question'>Already have an Account?</p></Link>
+    
+                    </form>
+            </div>
           
         );
     }
