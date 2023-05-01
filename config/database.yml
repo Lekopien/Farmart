@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: Farmart_proper_production
-  username: Farmart_proper
-  password: <%= ENV["FARMART_PROPER_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
