@@ -1,18 +1,18 @@
 databases:
-  - name: Farmart
+  - name: Farmart_proper_development
     databaseName: postgresql
-    user: Farmart
+    user: Farmart_proper_development
 
 services:
   - type: web
-    name: Farmart
+    name: Farmart_proper_development
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: Farmart
+          name: Farmart_proper_development
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
