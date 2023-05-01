@@ -6,10 +6,10 @@ class CategoriesBar extends Component {
         const categories = this.props.productCategories
     
         return ( 
-            <nav id='product-category-navbar' className="navbar navbar-dark navbar-dark  deep-orange ">
+            <nav id='product-category-navbar' className="navbar navbar-dark navbar-dark  light-green ">
                 <a  
-                    href='#allProduces'
-                    key='all produces'
+                    href='#AllProduces'
+                    key='All produces'
                     onClick={this.props.handleAllCategories}
                     id='product-category'>All Produces
                 </a>

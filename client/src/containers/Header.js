@@ -76,7 +76,7 @@ class Header extends Component {
                                         </SlidingPane>
                                     </div>
                                     <Link to='/products' id="shop-2">Shop</Link>
-                                    <Link to='/client-profile' id="profile">Profile</Link> 
+                                    <Link to='/peep-profile' id="profile">Profile</Link> 
                                     <Link to='/resources' id='resources'>Resources</Link>
                                     <a id='logout' onClick={this.props.signout}>Logout</a>
                                  

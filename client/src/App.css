@@ -883,3 +883,19 @@ input[type=month]::-webkit-calendar-picker-indicator {
 .random-button:hover {
   transform: scale(1.05);
 }
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.blink {
+  animation: blink 1s ease-in-out infinite;
+}
+

@@ -4,6 +4,9 @@
   "private": true,
   "proxy": "http://localhost:3000",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^1.3.6",
     "babel-polyfill": "^6.26.0",
     "bbc-goodfood-scraped": "0.0.3",

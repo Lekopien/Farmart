@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import API from '../data/API'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+
 
 class ProductCard extends Component {
 
@@ -40,11 +43,14 @@ class ProductCard extends Component {
                     <p className="card-text">Chalk Farm</p>
                 </div>
                 <div className="card-footer text-muted text-center">
-                    <button
-                    onClick={() => this.handleSubmit(id, this.props.product)}
-                    id='add-basket-btn'
-                    className="btn btn-outline-green lighten-1">ADD TO BASKET
-                    </button>
+                <button
+    onClick={() => this.handleSubmit(id, this.props.product)}
+    id='add-basket-btn'
+    className="btn btn-outline-green lighten-1 blink">
+    <FontAwesomeIcon icon={faShoppingCart} />
+</button>
+
+
                 </div>
             </div>
         )

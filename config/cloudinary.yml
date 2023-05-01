@@ -1,0 +1,7 @@
+development: cloud_name: "dlmnwuk7x" 
+             api_key: "985682375716965" 
+             api_secret: "rVRNLjPkPe1VNadH12A_v3LTZno"
+
+production: cloud_name: "dlmnwuk7x" 
+             api_key: "985682375716965" 
+             api_secret: "rVRNLjPkPe1VNadH12A_v3LTZno"
