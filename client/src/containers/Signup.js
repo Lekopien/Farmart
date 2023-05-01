@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import API from '../data/API'
 
 
+
 class Signup extends Component {
     state = {
         email: '',
@@ -30,6 +31,8 @@ class Signup extends Component {
                 }
             })
     }
+
+    
 
     handleChange = e => {
         e.preventDefault()

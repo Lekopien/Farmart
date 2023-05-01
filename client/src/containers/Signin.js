@@ -26,7 +26,7 @@ const Signin = ({ signin }) => {
       .then(data => {
         setSubmitting(false);
         if (data.error){
-          alert("Email address not found");
+          window.alert("Email address not found");
         }
         else {
           // user is authenticated! 
