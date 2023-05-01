@@ -1,0 +1,24 @@
+"g++ -o conftest -I../../../.ext/include/x86_64-linux -I../../.././include -I../../.././ext/-test-/cxxanyargs     conftest.cc  -L. -L../../.. -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/usr/local/lib -L/usr/local/lib -lruby-static -lz -lpthread -lrt -lrt -lgmp -ldl -lcrypt -lm   -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby/config.h"
+ 2: 
+ 3: namespace {
+ 4:     typedef int conftest1[SIZEOF_LONG == sizeof(long) ? 1 : -1];
+ 5:     typedef int conftest2[SIZEOF_VOIDP == sizeof(void*) ? 1 : -1];
+ 6: }
+ 7: 
+ 8: int
+ 9: main(int argc, const char** argv)
+10: {
+11:     return !!argv[argc];
+12: }
+/* end */
+
+extconf.h is:
+/* begin */
+1: #ifndef EXTCONF_H
+2: #define EXTCONF_H
+3: #endif
+/* end */
+

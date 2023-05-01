@@ -1,0 +1,9 @@
+#define ABS_SRCDIR "/home/volta/PHASE5-PROJECT/Farmart/ruby-3.0.3"
+#define BUILDDIR   "/home/volta/PHASE5-PROJECT/Farmart/ruby-3.0.3"
+#define LIBPATHENV "LD_LIBRARY_PATH"
+#define PRELOADENV "LD_PRELOAD"
+#define PATH_SEPARATOR ":"
+#define PATH_SEP   ':'
+#define EXTOUT     ".ext"
+#define ARCH       "x86_64-linux"
+#define SOEXT      "so"

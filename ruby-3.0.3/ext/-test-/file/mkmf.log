@@ -1,0 +1,255 @@
+have_header: checking for sys/param.h... -------------------- yes
+
+"gcc -o conftest -I../../../.ext/include/x86_64-linux -I../../.././include -I../../.././ext/-test-/file    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable conftest.c  -L. -L../../.. -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/usr/local/lib -L/usr/local/lib -lruby-static -lz -lpthread -lrt -lrt -lgmp -ldl -lcrypt -lm   -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+"gcc -E -I../../../.ext/include/x86_64-linux -I../../.././include -I../../.././ext/-test-/file    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/param.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/mount.h... -------------------- yes
+
+"gcc -E -I../../../.ext/include/x86_64-linux -I../../.././include -I../../.././ext/-test-/file    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/mount.h>
+/* end */
+
+--------------------
+
+have_header: checking for sys/vfs.h... -------------------- yes
+
+"gcc -E -I../../../.ext/include/x86_64-linux -I../../.././include -I../../.././ext/-test-/file    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/vfs.h>
+/* end */
+
+--------------------
+
+have_type: checking for struct statfs in sys/param.h,sys/mount.h,sys/vfs.h... -------------------- yes
+
+"gcc -I../../../.ext/include/x86_64-linux -I../../.././include -I../../.././ext/-test-/file    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/param.h>
+4: #include <sys/mount.h>
+5: #include <sys/vfs.h>
+6: 
+7: /*top*/
+8: typedef struct statfs conftest_type;
+9: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct statfs.f_fstypename in sys/param.h,sys/mount.h,sys/vfs.h... -------------------- no
+
+"gcc -I../../../.ext/include/x86_64-linux -I../../.././include -I../../.././ext/-test-/file    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable   -c conftest.c"
+conftest.c:8:37: error: ‘struct statfs’ has no member named ‘f_fstypename’
+    8 | int s = (char *)&((struct statfs*)0)->f_fstypename - (char *)0;
+      |                                     ^~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/param.h>
+ 4: #include <sys/mount.h>
+ 5: #include <sys/vfs.h>
+ 6: 
+ 7: /*top*/
+ 8: int s = (char *)&((struct statfs*)0)->f_fstypename - (char *)0;
+ 9: int main(int argc, char **argv)
+10: {
+11:   return !!argv[argc];
+12: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct statfs.f_type in sys/param.h,sys/mount.h,sys/vfs.h... -------------------- yes
+
+"gcc -I../../../.ext/include/x86_64-linux -I../../.././include -I../../.././ext/-test-/file    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable   -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/param.h>
+ 4: #include <sys/mount.h>
+ 5: #include <sys/vfs.h>
+ 6: 
+ 7: /*top*/
+ 8: int s = (char *)&((struct statfs*)0)->f_type - (char *)0;
+ 9: int main(int argc, char **argv)
+10: {
+11:   return !!argv[argc];
+12: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct statfs.f_flags in sys/param.h,sys/mount.h,sys/vfs.h... -------------------- yes
+
+"gcc -I../../../.ext/include/x86_64-linux -I../../.././include -I../../.././ext/-test-/file    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable   -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/param.h>
+ 4: #include <sys/mount.h>
+ 5: #include <sys/vfs.h>
+ 6: 
+ 7: /*top*/
+ 8: int s = (char *)&((struct statfs*)0)->f_flags - (char *)0;
+ 9: int main(int argc, char **argv)
+10: {
+11:   return !!argv[argc];
+12: }
+/* end */
+
+--------------------
+
+have_header: checking for sys/statvfs.h... -------------------- yes
+
+"gcc -E -I../../../.ext/include/x86_64-linux -I../../.././include -I../../.././ext/-test-/file    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/statvfs.h>
+/* end */
+
+--------------------
+
+have_type: checking for struct statvfs in sys/statvfs.h... -------------------- yes
+
+"gcc -I../../../.ext/include/x86_64-linux -I../../.././include -I../../.././ext/-test-/file    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sys/statvfs.h>
+4: 
+5: /*top*/
+6: typedef struct statvfs conftest_type;
+7: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct statvfs.f_fstypename in sys/statvfs.h... -------------------- no
+
+"gcc -I../../../.ext/include/x86_64-linux -I../../.././include -I../../.././ext/-test-/file    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable   -c conftest.c"
+conftest.c:6:38: error: ‘struct statvfs’ has no member named ‘f_fstypename’
+    6 | int s = (char *)&((struct statvfs*)0)->f_fstypename - (char *)0;
+      |                                      ^~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/statvfs.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct statvfs*)0)->f_fstypename - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return !!argv[argc];
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct statvfs.f_basetype in sys/statvfs.h... -------------------- no
+
+"gcc -I../../../.ext/include/x86_64-linux -I../../.././include -I../../.././ext/-test-/file    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable   -c conftest.c"
+conftest.c:6:38: error: ‘struct statvfs’ has no member named ‘f_basetype’
+    6 | int s = (char *)&((struct statvfs*)0)->f_basetype - (char *)0;
+      |                                      ^~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/statvfs.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct statvfs*)0)->f_basetype - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return !!argv[argc];
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for struct statvfs.f_type in sys/statvfs.h... -------------------- no
+
+"gcc -I../../../.ext/include/x86_64-linux -I../../.././include -I../../.././ext/-test-/file    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable   -c conftest.c"
+conftest.c:6:38: error: ‘struct statvfs’ has no member named ‘f_type’
+    6 | int s = (char *)&((struct statvfs*)0)->f_type - (char *)0;
+      |                                      ^~
+cc1: note: unrecognized command-line option ‘-Wno-self-assign’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may have been intended to silence earlier diagnostics
+cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <sys/statvfs.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((struct statvfs*)0)->f_type - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return !!argv[argc];
+10: }
+/* end */
+
+--------------------
+
+extconf.h is:
+/* begin */
+ 1: #ifndef EXTCONF_H
+ 2: #define EXTCONF_H
+ 3: #define HAVE_SYS_PARAM_H 1
+ 4: #define HAVE_SYS_MOUNT_H 1
+ 5: #define HAVE_SYS_VFS_H 1
+ 6: #define HAVE_TYPE_STRUCT_STATFS 1
+ 7: #define HAVE_STRUCT_STATFS_F_TYPE 1
+ 8: #define HAVE_ST_F_TYPE 1
+ 9: #define HAVE_STRUCT_STATFS_F_FLAGS 1
+10: #define HAVE_ST_F_FLAGS 1
+11: #define HAVE_SYS_STATVFS_H 1
+12: #define HAVE_TYPE_STRUCT_STATVFS 1
+13: #define TEST_INIT_FUNCS(X) X(fs) X(stat)
+14: #endif
+/* end */
+

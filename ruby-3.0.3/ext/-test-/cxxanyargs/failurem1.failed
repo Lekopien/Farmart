@@ -1,0 +1,68 @@
+make[3]: Entering directory '/home/volta/PHASE5-PROJECT/Farmart/ruby-3.0.3/ext/-test-/cxxanyargs'
+compiling failurem1.cpp
+In file included from ../../.././include/ruby/internal/anyargs.h:83,
+                 from ../../.././include/ruby/ruby.h:24,
+                 from failurem1.cpp:1:
+failurem1.cpp: In function ‘void Init_failure()’:
+../../.././include/ruby/backward/cxxanyargs.hpp:653:145: error: no matching function for call to ‘define(VALUE&, const char [6], VALUE (&)(int, VALUE*, VALUE))’
+  653 | #define rb_define_method(klass, mid, func, arity)           ruby::backward::cxxanyargs::define_method::rb_define_method::specific<arity>::define(klass, mid, func)
+      |                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+failurem1.cpp:12:5: note: in expansion of macro ‘rb_define_method’
+   12 |     rb_define_method(rb_cObject, "argm1", func_argm1, 0);
+      |     ^~~~~~~~~~~~~~~~
+In file included from ../../.././include/ruby/internal/anyargs.h:83,
+                 from ../../.././include/ruby/ruby.h:24,
+                 from failurem1.cpp:1:
+../../.././include/ruby/backward/cxxanyargs.hpp:544:9: note: candidate: ‘static void ruby::backward::cxxanyargs::define_method::driver<T, F>::engine<N, U>::define(VALUE, T, VALUE (*)(...)) [with int N = 0; U = long unsigned int (*)(long unsigned int); T = const char*; void (* F)(VALUE, T, VALUE (*)(...), int) = rb_define_method; VALUE = long unsigned int; ruby::backward::cxxanyargs::type = long unsigned int(...)]’ (near match)
+  544 |         define(VALUE klass, T mid, type func)
+      |         ^~~~~~
+../../.././include/ruby/backward/cxxanyargs.hpp:544:9: note:   conversion of argument 3 would be ill-formed:
+In file included from ../../.././include/ruby/internal/anyargs.h:83,
+                 from ../../.././include/ruby/ruby.h:24,
+                 from failurem1.cpp:1:
+failurem1.cpp:12:43: error: invalid conversion from ‘VALUE (*)(int, VALUE*, VALUE)’ {aka ‘long unsigned int (*)(int, long unsigned int*, long unsigned int)’} to ‘VALUE (*)(...)’ {aka ‘long unsigned int (*)(...)’} [-fpermissive]
+   12 |     rb_define_method(rb_cObject, "argm1", func_argm1, 0);
+      |                                           ^~~~~~~~~~
+      |                                           |
+      |                                           VALUE (*)(int, VALUE*, VALUE) {aka long unsigned int (*)(int, long unsigned int*, long unsigned int)}
+../../.././include/ruby/backward/cxxanyargs.hpp:653:158: note: in definition of macro ‘rb_define_method’
+  653 | #define rb_define_method(klass, mid, func, arity)           ruby::backward::cxxanyargs::define_method::rb_define_method::specific<arity>::define(klass, mid, func)
+      |                                                                                                                                                              ^~~~
+In file included from ../../.././include/ruby/internal/anyargs.h:83,
+                 from ../../.././include/ruby/ruby.h:24,
+                 from failurem1.cpp:1:
+../../.././include/ruby/backward/cxxanyargs.hpp:554:9: note: candidate: ‘static void ruby::backward::cxxanyargs::define_method::driver<T, F>::engine<N, U>::define(VALUE, T, U) [with int N = 0; U = long unsigned int (*)(long unsigned int); T = const char*; void (* F)(VALUE, T, VALUE (*)(...), int) = rb_define_method; VALUE = long unsigned int]’ (near match)
+  554 |         define(VALUE klass, T mid, U func)
+      |         ^~~~~~
+../../.././include/ruby/backward/cxxanyargs.hpp:554:9: note:   conversion of argument 3 would be ill-formed:
+In file included from ../../.././include/ruby/internal/anyargs.h:83,
+                 from ../../.././include/ruby/ruby.h:24,
+                 from failurem1.cpp:1:
+failurem1.cpp:12:43: error: invalid conversion from ‘VALUE (*)(int, VALUE*, VALUE)’ {aka ‘long unsigned int (*)(int, long unsigned int*, long unsigned int)’} to ‘long unsigned int (*)(long unsigned int)’ [-fpermissive]
+   12 |     rb_define_method(rb_cObject, "argm1", func_argm1, 0);
+      |                                           ^~~~~~~~~~
+      |                                           |
+      |                                           VALUE (*)(int, VALUE*, VALUE) {aka long unsigned int (*)(int, long unsigned int*, long unsigned int)}
+../../.././include/ruby/backward/cxxanyargs.hpp:653:158: note: in definition of macro ‘rb_define_method’
+  653 | #define rb_define_method(klass, mid, func, arity)           ruby::backward::cxxanyargs::define_method::rb_define_method::specific<arity>::define(klass, mid, func)
+      |                                                                                                                                                              ^~~~
+In file included from ../../.././include/ruby/internal/anyargs.h:83,
+                 from ../../.././include/ruby/ruby.h:24,
+                 from failurem1.cpp:1:
+../../.././include/ruby/backward/cxxanyargs.hpp:561:9: note: candidate: ‘static void ruby::backward::cxxanyargs::define_method::driver<T, F>::engine<N, U>::define(VALUE, T, VALUE (*)(int, const VALUE*, VALUE, VALUE)) [with int N = 0; U = long unsigned int (*)(long unsigned int); T = const char*; void (* F)(VALUE, T, VALUE (*)(...), int) = rb_define_method; VALUE = long unsigned int; ruby::backward::cxxanyargs::define_method::notimpl_type = long unsigned int(int, const long unsigned int*, long unsigned int, long unsigned int)]’ (near match)
+  561 |         define(VALUE klass, T mid, notimpl_type func)
+      |         ^~~~~~
+../../.././include/ruby/backward/cxxanyargs.hpp:561:9: note:   conversion of argument 3 would be ill-formed:
+In file included from ../../.././include/ruby/internal/anyargs.h:83,
+                 from ../../.././include/ruby/ruby.h:24,
+                 from failurem1.cpp:1:
+failurem1.cpp:12:43: error: invalid conversion from ‘VALUE (*)(int, VALUE*, VALUE)’ {aka ‘long unsigned int (*)(int, long unsigned int*, long unsigned int)’} to ‘VALUE (*)(int, const VALUE*, VALUE, VALUE)’ {aka ‘long unsigned int (*)(int, const long unsigned int*, long unsigned int, long unsigned int)’} [-fpermissive]
+   12 |     rb_define_method(rb_cObject, "argm1", func_argm1, 0);
+      |                                           ^~~~~~~~~~
+      |                                           |
+      |                                           VALUE (*)(int, VALUE*, VALUE) {aka long unsigned int (*)(int, long unsigned int*, long unsigned int)}
+../../.././include/ruby/backward/cxxanyargs.hpp:653:158: note: in definition of macro ‘rb_define_method’
+  653 | #define rb_define_method(klass, mid, func, arity)           ruby::backward::cxxanyargs::define_method::rb_define_method::specific<arity>::define(klass, mid, func)
+      |                                                                                                                                                              ^~~~
+make[3]: [Makefile:244: failurem1.o] Error 1 (ignored)
+make[3]: Leaving directory '/home/volta/PHASE5-PROJECT/Farmart/ruby-3.0.3/ext/-test-/cxxanyargs'
