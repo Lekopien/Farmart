@@ -57,6 +57,8 @@ gem 'carrierwave'
 
 gem 'cloudinary'
 
+gem 'sendgrid-ruby'
+
 
 gem 'jwt'
 

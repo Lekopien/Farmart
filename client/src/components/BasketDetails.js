@@ -16,7 +16,7 @@ class BasketDetails extends Component {
 
         return ( 
             <div id='basketContainer'>
-            <h2>Your Basket</h2>
+            <h2>Your Cart</h2>
             <div className="productCollection">
                 <div > {product} </div>
             </div>

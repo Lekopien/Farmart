@@ -269,8 +269,11 @@ GEM
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     ruby_engine (2.0.0)
+    ruby_http_client (3.5.5)
     ruby_version (1.0.3)
     rufo (0.16.0)
+    sendgrid-ruby (6.6.2)
+      ruby_http_client (~> 3.4)
     spoon (0.0.6)
       ffi
     spring (2.1.1)
@@ -316,6 +319,7 @@ DEPENDENCIES
   rails
   rubocop
   rufo
+  sendgrid-ruby
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data

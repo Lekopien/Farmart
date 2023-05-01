@@ -899,3 +899,94 @@ input[type=month]::-webkit-calendar-picker-indicator {
   animation: blink 1s ease-in-out infinite;
 }
 
+/* Style the input fields and labels */
+form input[type="text"], form textarea {
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: none;
+}
+
+form label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #aaa;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background-color: #eee;
+}
+
+form input:focus + label, form textarea:focus + label, form input:not(:placeholder-shown) + label, form textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 0;
+  font-size: 12px;
+  color: #333;
+}
+
+/* Style the form button */
+form button {
+  background-color: #f3a712;
+  border: none;
+  border-radius: 0;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e19207;
+  cursor: pointer;
+}
+
+/* Style the section heading */
+#contact h2 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+/* Style the form section */
+#contact form {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  padding: 40px;
+}
+.basket-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.basket-card__name {
+  margin: 0;
+}
+
+.basket-card__price {
+  margin: 0;
+}
+
+.basket-card__delete {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+
+
