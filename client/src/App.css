@@ -454,9 +454,20 @@ a#product-category {
   justify-content: space-around;
   padding-right: 4%;
   padding-left: 4%;  
-  padding-bottom: 100%;
+  /* padding-bottom: 100%; */
+  height: 60%;
+  overflow-y: hidden;
 }
 
+/* .productCollection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-right: 4%;
+  padding-left: 4%;
+  height: 90%;
+} */
 #preview-title {
   color: grey !important;
   text-align: center;
@@ -787,36 +798,6 @@ input[type=month]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-.productCollection {
-  /* display: flex;
-  /* flex-direction: column; */
-  /* flex-wrap: wrap; */
-  /* align-content: flex-start; */
-  /* justify-content: space-between; */
-  /* height: 90%;  */
-}
-
-.productCollection button {
-  margin-top: auto;
-  align-self: center;
-}
-
-.productCollection-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  margin-bottom: 100px;
-  background-color: aqua;
-}
-
-.productCollection-buttons {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-  background-color: red;
-  height: 10%;
-}
 
 
 #firstName , #lastName,#address,#email,#phone,
@@ -854,169 +835,35 @@ input[type=month]::-webkit-calendar-picker-indicator {
   margin-top: 10px;
 } 
 
-.resources-container {
+.pagination-btn {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: grey;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  /* margin-bottom: 100px; */
+  /* padding-bottom: 100px; */
+
+}
+
+.pagination-btn:hover {
+  background-color: #019875;
+  color: white;
+}
+
+.pagination{
+  height: 10vh;
+}
+
+
+.overaldiv{
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: linear-gradient(to bottom right, #FFA500, #12c91c);
-
+  justify-content: space-around;
 }
-
-.resources-content {
-  margin-top: 2rem;
-  align-items: center;
-
-}
-
-.youtube-cards {
-  display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
-  justify-items: center;
-}
-
-.youtube-card {
-  border: 1px solid #ccc;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-
-.youtube-card iframe {
-  width: 100%;
-  height: 200px;
-}
-
-.youtube-card p {
-  padding: 1rem;
-  text-align: justify;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.random-button {
-  background-color: #00bfff;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.random-button:hover {
-  transform: scale(1.05);
-}
-@keyframes blink {
-  0% {
-      opacity: 1;
-  }
-  50% {
-      opacity: 0.5;
-  }
-  100% {
-      opacity: 1;
-  }
-}
-
-.blink {
-  animation: blink 1s ease-in-out infinite;
-}
-
-/* Style the input fields and labels */
-form input[type="text"], form textarea {
-  background-color: #f7f7f7;
-  border: none;
-  border-radius: 0;
-  padding: 10px;
-  margin-bottom: 20px;
-  box-shadow: none;
-}
-
-form label {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: #aaa;
-  transition: all 0.3s ease;
-  pointer-events: none;
-}
-
-form input:focus, form textarea:focus {
-  outline: none;
-  box-shadow: none;
-  border: none;
-  background-color: #eee;
-}
-
-form input:focus + label, form textarea:focus + label, form input:not(:placeholder-shown) + label, form textarea:not(:placeholder-shown) + label {
-  top: -10px;
-  left: 0;
-  font-size: 12px;
-  color: #333;
-}
-
-/* Style the form button */
-form button {
-  background-color: #f3a712;
-  border: none;
-  border-radius: 0;
-  padding: 10px 20px;
-  color: #fff;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-form button:hover {
-  background-color: #e19207;
-  cursor: pointer;
-}
-
-/* Style the section heading */
-#contact h2 {
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 50px;
-  color: #333;
-}
-
-/* Style the form section */
-#contact form {
-  background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-  padding: 40px;
-}
-.basket-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.basket-card__name {
-  margin: 0;
-}
-
-.basket-card__price {
-  margin: 0;
-}
-
-.basket-card__delete {
-  background-color: #dc3545;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 3px;
-}
-
-
-
