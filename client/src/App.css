@@ -22,13 +22,14 @@ html, */
 body,
 #intro {
     height: 100%;
+
   }
 
   body {
     padding: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
+    font-family: 'Poppins', sans-serif;
 
+  }
 
 .App-link {
   color: #61dafb;
@@ -127,7 +128,9 @@ a#logout {
   padding: 1em;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+
+
+
 }
 
 .navbar-logo {
@@ -135,7 +138,8 @@ a#logout {
   text-transform: uppercase;
   letter-spacing: .1em;
   font-weight: bold;
-  font-size: 1.9em;
+  font-size: 1.4em;
+
   padding-left: 2%;
   font-family: "Lato", Courier, monospace;
 }
@@ -208,6 +212,20 @@ a#logout {
 
 
 }
+
+#create-container {
+  background-color: blue;
+  height: 100vh;
+  display: flex;
+
+}
+
+.image-create {
+  background-color: red;
+  width: 35%;
+}
+
+
 
 #customer-title {
   margin-top: 5%;
@@ -282,67 +300,82 @@ a#product-category {
   animation: moveFromTop;
   animation-duration: 3s;
   text-transform: uppercase;
-  font-size: 200px;
-  font-weight: 700;
+  font-size: 3rem;
 
+
+}
+
+#landing-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 84vh;
 }
 
 #farmer-btn{
   animation: moveFromBottom;
   animation-duration: 3s;
+  background-color: #fff;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  border-radius: 100px;
+  margin-top: 40px;
 }
+
+
 
 .landing-comment {
   animation: moveFromRight;
   animation-duration: 3s;
-  font-weight: 600;
+  font-weight: 300;
+  font-size: 1.4rem;
 }
 
 
-#farmer-btn {
- background-color: #fff;
- text-transform: uppercase;
- padding: 15px 40px;
- border-radius: 100px;
-}
 
-.signup-image {
-  width: 50%;
-  height: 100vh;
+
+#signup-image {
+  width: 40%;
+
 
    background-image: url('https://images.unsplash.com/photo-1429991889170-afd56b2a1210?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80https://images.unsplash.com/photo-1429991889170-afd56b2a1210?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
-   overflow: hidden;
+   overflow-y: hidden;
 
 }
 
-.signup-form {
-  width: 50%;
-  height: 100vh;
+
+
+
+#signup-form {
+
+  width: 60%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
 
-
+.signup-container {
+  height: 100vh;
+  display: flex;
 
 }
 
-.form-container {
-  width: 350px;
-  height: 575px;
-  border-radius: 30px;
 
-  box-shadow: -14px 11px 13px 5px rgba(0,0,0,0.75);
--webkit-box-shadow: -14px 11px 13px 5px rgba(0,0,0,0.75);
--moz-box-shadow: -14px 11px 13px 5px rgba(0,0,0,0.75);
 
-}
+
+
+
+
+
 
 .user-entry{
-  height: 0px;
-  margin-bottom: 60px;
+
+  margin-bottom: 10px;
   padding: 10px;
 }
 
@@ -399,8 +432,18 @@ a#product-category {
   }
 }
 
-#signup-form-container {
-  height: 100vh;
+
+
+#create-form {
+  height: 300px;
+  background-color: red;
+
+}
+
+.create-sign {
+  background-color: red;
+  width: 300px;
+  height: 550px;
 }
 
 
@@ -434,27 +477,47 @@ a#product-category {
   justify-content: space-around;
   padding-right: 4%;
   padding-left: 4%;
-  height: 90%;
+  /* padding-bottom: 100%; */
+  height: 60%;
+  overflow-y: hidden;
 }
 
+/* .productCollection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-right: 4%;
+  padding-left: 4%;
+  height: 90%;
+} */
 #preview-title {
   color: grey !important;
   text-align: center;
 }
 
 #signin-form-container {
-  background: url('https://www.usnews.com/object/image/00000150-3e4f-df61-a776-ff7f32eb0000/151006-farmertechnology-stock.jpg?update-time=1444154529519&size=responsive640') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+
+  height: 84vh;
+  overflow-y: hidden;
+  background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.909),rgba(255,255,255,0.3)), url('https://images.unsplash.com/photo-1533515809464-7746c3303fe8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
+
 }
 
-.signin-container {
+#nav-container {
+
+  height: 25%;
+  background-color: white;
+}
+
+.signin-container{
   width: 300px;
   height: 400px;
   background-color:  rgba(255, 255, 255,0.4);
@@ -464,14 +527,52 @@ a#product-category {
   align-items: center;
 }
 
+#signin-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.error-message {
+  color: red;
+  font-weight: 300;
+}
+
 .signin-text {
   color: green;
+  font-size: 10px;
+}
+
+#login-btn {
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #019875;
+  background-color: white;
+  width: 150px;
+  text-align: center;
+  margin-left: 40px;
+
+}
+
+#login-btn:hover {
+
+  color: white;
+  background-color: #019875;
+}
+
+#farmer-btn:hover {
+
+  color: white;
+  background-color: #019875;
 }
 
 #signup-form-container {
 
   display: flex;
   flex-direction: row;
+  height: 100vh;
 
 }
 
@@ -531,8 +632,8 @@ a#product-category {
 
 
 #select-user-type {
-  height: 55px;
-  width: 40%;
+  height: 40px;
+  width: 200px;
   margin: 0 auto;
   text-align-last:center;
 }
@@ -557,15 +658,16 @@ a#product-category {
 }
 
 #intro {
-  background: url("https://kenyaseed.com/wp-content/uploads/2018/02/farm-product.png")
-  no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-image:linear-gradient(to right,rgba(126,213,111,0.8),rgba(40,180,133,0.8)), url("https://images.unsplash.com/photo-1498579397066-22750a3cb424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-position: center;
   background-size: cover;
-  padding: 8%;
-  opacity: 0.9;
+  background-repeat: no-repeat;
+  height: 90vh;
+
+
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%,0 100%);
   }
+
 
 #no-product-onsale {
   padding-top: 20%;
@@ -721,5 +823,70 @@ input[type=month]::-webkit-calendar-picker-indicator {
 
 
 
+#firstName , #lastName,#address,#email,#phone,
+#password{
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+#defaultSignup{
+  height: 35px;
+
+  padding: 14px;
+
+  width: 400px;
+
+}
 
 
+#signup-form > a{
+  border-radius: 20px;
+}
+
+
+#signup-btn{
+  border-radius: 12px;
+}
+
+#signup-btn:hover {
+  background-color: #019875;
+  color: white;
+}
+
+#signup-question {
+  margin-top: 10px;
+}
+
+.pagination-btn {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: grey;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  /* margin-bottom: 100px; */
+  /* padding-bottom: 100px; */
+
+}
+
+.pagination-btn:hover {
+  background-color: #019875;
+  color: white;
+}
+
+.pagination{
+  height: 10vh;
+}
+
+
+.overaldiv{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

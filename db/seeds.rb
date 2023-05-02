@@ -31,15 +31,15 @@ users = User.create([
 ])
 
 categories = Category.create([
-    
+
     {
         name: 'Farm Products'
     },
     {
-        name: 'Animals'
+        name: 'Animal Products'
     },
     {
-        name: 'Lands'
+        name: 'Lands for Lease'
     }
 ])
 

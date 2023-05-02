@@ -1,0 +1,11 @@
+development: cloud_name: "dlmnwuk7x" 
+             api_key: "985682375716965" 
+             api_secret: "rVRNLjPkPe1VNadH12A_v3LTZno"
+               enhance_image_tag: true
+               static_file_support: false
+
+production: cloud_name: "dlmnwuk7x" 
+             api_key: "985682375716965" 
+             api_secret: "rVRNLjPkPe1VNadH12A_v3LTZno"
+               enhance_image_tag: true
+               static_file_support: true

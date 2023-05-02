@@ -128,7 +128,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/home/lewis/.rbenv/versions/3.0.3/include/ruby-3.0.0/x86_64-linux -I/home/lewis/.rbenv/versions/3.0.3/include/ruby-3.0.0/ruby/backward -I/home/lewis/.rbenv/versions/3.0.3/include/ruby-3.0.0 -I. -I/home/lewis/.rbenv/versions/3.0.3/include    -O3 -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC conftest.c  -L. -L/home/lewis/.rbenv/versions/3.0.3/lib -Wl,-rpath,/home/lewis/.rbenv/versions/3.0.3/lib -L. -L/home/lewis/.rbenv/versions/3.0.3/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/lewis/.rbenv/versions/3.0.3/lib -L/home/lewis/.rbenv/versions/3.0.3/lib -lruby  -lm   -lc"
-/usr/bin/ld: /tmp/cc48wuRW.o: in function `t':
+/usr/bin/ld: /tmp/ccFlIuQj.o: in function `t':
 /home/lewis/Farmart/vendor/bundle/ruby/3.0.0/gems/msgpack-1.7.0/ext/msgpack/conftest.c:17: undefined reference to `rb_hash_new_capa'
 collect2: error: ld returned 1 exit status
 checked program was:

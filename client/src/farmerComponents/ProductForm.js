@@ -38,16 +38,16 @@ const ProductForm = ({ current_user, addToFarmerProducts }) => {
             .then((product) => addToFarmerProducts(product));
     };
 
-    return (
-        <div id='product-form-container'>
-            <h2>Enter your item on sale below</h2>
-            <br></br>
-            <br></br>
-            <div id='product-form-and-preview'>
-                <form id='product-form' className="text-center">
+        return (
+            <div id='product-form-container'>
+                    <h2>Enter a new product below</h2>
+                    <br></br>
+                    <br></br>
+                    <div id='product-form-and-preview'>
+                    <form id='product-form' className="text-center">
                     <input
                         name='name'
-                        onChange={handleChange}
+                        onChange={this.handleChange}
                         value={name}
                         className="form-control mb-4"
                         placeholder="What product would you like to add?"
@@ -55,7 +55,7 @@ const ProductForm = ({ current_user, addToFarmerProducts }) => {
 
                     <input
                         name='price'
-                        onChange={handleChange}
+                        onChange={this.handleChange}
                         value={price}
                         className="form-control mb-4"
                         placeholder="Ksh"
@@ -68,11 +68,12 @@ const ProductForm = ({ current_user, addToFarmerProducts }) => {
                         placeholder="500g? 4 pieces? 1 bunch?"
                     />
                     <input
+                        type='file'
                         name='url_img'
-                        onChange={handleChange}
+                        onChange={this.handleChange}
                         value={url_img}
                         className="form-control mb-4"
-                        placeholder="Paste your produts/land for lease image url here"
+                        placeholder="Paste your image url here"
                     />
 
                     <input
@@ -86,9 +87,10 @@ const ProductForm = ({ current_user, addToFarmerProducts }) => {
                     <div>
                         <select className="form-control mb-4" id='select-product-category' onChange={handleCategory} value={category} >
                             <option value=''> -- Select a category -- </option>
-                            <option value="Vegetable">Farm Products</option>
-                            <option value="Fruit">Animals</option>
-                            <option value="Bakery">Lands</option>
+                            <option value="Farm Products">Farm Products</option>
+                            <option value="Animal Products">Animal Products</option>
+                            <option value="Lands for Lease">Lands for Lease</option>
+
                         </select>
                     </div>
                     <br></br>
@@ -104,8 +106,7 @@ const ProductForm = ({ current_user, addToFarmerProducts }) => {
 
                         <div className="card-body ">
                             <h5 className="grey-text pb-2 pt-1"> {category}</h5>
-
-                            <h4 className="font-weight-bold card-title">{name}</h4>
+                            <h4  className="font-weight-bold card-title">{name}</h4>
                             <p className="card-text">Ksh{price}</p>
                             <p className="card-text">{quantity}</p>
                             <p className="card-text">{farm}</p>

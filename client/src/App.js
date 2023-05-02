@@ -13,6 +13,7 @@ import Signin from './containers/Signin'
 import Signup from './containers/Signup'
 import CustomerContainer from './containers/CustomerContainer';
 import FarmerContainer from './containers/FarmerContainer';
+import ResourcesPage from './containers/ResourcesPage';
 
 
 class App extends Component {
@@ -56,8 +57,8 @@ class App extends Component {
 
   signout = () => {
       this.setState({email: '', current_user: ''})
+      this.setState({customerBasket: []})
       localStorage.removeItem('token')
-      this.setState({customerBasket:[]})
       this.props.history.push('/')
   }
    // def user type
@@ -231,6 +232,7 @@ class App extends Component {
             removeProduct={removeProduct}
             signout={signout}/>}
           />
+          <Route exact path="/resources" component={ResourcesPage} />
           <Route component={() => <h1>Page not found.</h1>} />
         </Switch>
     </div>

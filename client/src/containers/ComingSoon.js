@@ -12,7 +12,6 @@ class ComingSoon extends Component {
                     <hr></hr>
                 </div>
                 <div className="bottomleft">
-                    <p>FarmArt</p>
                 </div>
             </div>
          );

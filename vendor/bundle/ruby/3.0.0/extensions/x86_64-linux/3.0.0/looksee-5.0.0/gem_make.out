@@ -1,5 +1,5 @@
 current directory: /home/lewis/Farmart/vendor/bundle/ruby/3.0.0/gems/looksee-5.0.0/ext
-/home/lewis/.rbenv/versions/3.0.3/bin/ruby -I /home/lewis/.rbenv/versions/3.0.3/lib/ruby/3.0.0 -r ./siteconf20230427-86252-tfx6eh.rb extconf.rb
+/home/lewis/.rbenv/versions/3.0.3/bin/ruby -I /home/lewis/.rbenv/versions/3.0.3/lib/ruby/3.0.0 -r ./siteconf20230501-23745-ftgv3f.rb extconf.rb
 creating Makefile
 
 current directory: /home/lewis/Farmart/vendor/bundle/ruby/3.0.0/gems/looksee-5.0.0/ext
@@ -12,4 +12,4 @@ linking shared-object looksee/mri.so
 
 current directory: /home/lewis/Farmart/vendor/bundle/ruby/3.0.0/gems/looksee-5.0.0/ext
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 mri.so ./.gem.20230427-86252-uqui8h/looksee
+/usr/bin/install -c -m 0755 mri.so ./.gem.20230501-23745-edrng6/looksee
