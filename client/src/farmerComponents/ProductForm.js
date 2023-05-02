@@ -74,7 +74,7 @@ class ProductForm extends Component {
                         type='file'
                         name='url_img' 
                         onChange={this.handleChange} 
-                        value={url_img} 
+                        // value={url_img} 
                         className="form-control mb-4" 
                         placeholder="Paste your image url here" 
                     />
