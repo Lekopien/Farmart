@@ -370,14 +370,6 @@ a#product-category {
 } 
 
 
-
-
-
-
-
-
-
-
 @keyframes moveFromTop {
   0% {
     opacity: 0;
@@ -454,7 +446,9 @@ a#product-category {
   justify-content: space-around;
   padding-right: 4%;
   padding-left: 4%;  
-  padding-bottom: 100%;
+  /* padding-bottom: 100%; */
+  height: 80%;
+  overflow-y: hidden;
 }
 
 #preview-title {
@@ -987,6 +981,46 @@ form button:hover {
   padding: 5px 10px;
   border-radius: 3px;
 }
+
+.pagination-btn {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: grey;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  /* margin-bottom: 100px; */
+  /* padding-bottom: 100px; */
+
+}
+
+.pagination-btn:hover {
+  background-color: #019875;
+  color: white;
+}
+
+.pagination{
+  height: 10vh;
+}
+
+
+.overaldiv{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#root > div > nav{
+  background-color: white;
+}
+
+
+ 
 
 
 
