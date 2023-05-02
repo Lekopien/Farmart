@@ -29,6 +29,16 @@ In your terminal, cd into the project directory
 The server should start on http://localhost:3000
 
 
+
+### Installation of frontend
+In your terminal, cd into the project directory and cd into client
+- run `npm start'
+
+In your terminal ,cd into the project directory
+-run npm start--prefix client
+
+
+
 ### How to use?
 /TBD
 
