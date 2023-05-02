@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
     if product
       render json: product
     else
-      render json: {error: "Erorr creating product"}, status: 400
+      render json: {error: "Error creating product"}, status: 400
     end
   end
 
