@@ -66,3 +66,4 @@ gem 'jwt'
 
 gem 'rufo', require: false
 
+# gem 'carrierwave'

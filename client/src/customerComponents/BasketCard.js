@@ -10,7 +10,7 @@ class BasketCard extends Component {
       <Fragment>
         <div className="basket-card">
           <p className="basket-card__name font-weight-bold">{name}</p>
-          <p className="basket-card__price">ksh {price}</p>
+          <p className="basket-card__price">Ksh {price}</p>
           <button className="basket-card__delete btn btn-sm" onClick={() => this.props.deleteProduct(id, basket_id)}>Delete</button>
         </div>
       </Fragment>

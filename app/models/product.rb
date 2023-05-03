@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   has_many :basket_product
   has_many :basket, through: :basket_product
   # has_one_attached :image
+  # mount_uploader :url_img, ImageUploader
   # validates :image, presence: true
 
   
