@@ -37,3 +37,6 @@ The server should start on http://localhost:3000
 * Frank Kinuthia
 * Lewis Ndung'u
 * Calvince Ogwel
+* David Lekopien
+* Robert Thuku
+* Victor Kinoti
