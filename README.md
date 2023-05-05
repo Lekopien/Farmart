@@ -20,17 +20,14 @@ Build a fullstack app that uses Ruby for the backend with PostgreSQL and React f
 Fork and clone the project 
 
 
-In your terminal, cd into the project directory
-- run `rails db:create`
-- `rails db:migrate`
-- `rails db:seed`
-- `rails s`
-
-The server should start on http://localhost:3000
+### Deployment Backend
+https://sheltered-escarpment-73372.herokuapp.com/
 
 
-### How to use?
-/TBD
+### Deployment Frontend
+https://farmart-deploy.vercel.app/
+
+
 
 
 ### Author(s)
